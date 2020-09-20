@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dm002"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dm024"
+        android:paddingBottom="@dimen/dm024"
+        android:paddingLeft="@dimen/dm030"
+        android:paddingRight="@dimen/dm020">
+
+        <TextView
+            android:id="@+id/people_item_tilte_tv"
+            style="@style/px26_mainColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/edm_number_tv"
+            style="@style/px26_212121"
+            android:drawableRight="@drawable/ic_next"
+            android:drawablePadding="@dimen/dm020"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:text="" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dm030"
+        android:layout_marginLeft="@dimen/dm015"
+        android:layout_marginRight="@dimen/dm015"
+        android:background="@drawable/shape_eeeeee_15px"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dm015"
+        android:paddingRight="@dimen/dm015"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/material_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_title_height"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/material_size_title"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:gravity="center_vertical"
+                android:text="规格" />
+
+            <TextView
+                android:id="@+id/code_tv"
+                style="@style/px26_999"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:layout_marginLeft="@dimen/dm015"
+                android:layout_toRightOf="@id/material_size_title"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/material_numb_title"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:layout_marginLeft="@dimen/dm280"
+                android:gravity="center_vertical"
+                android:text="剩余数量" />
+
+            <TextView
+                android:id="@+id/spec_numb_tv"
+                style="@style/px26_999"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:layout_marginLeft="@dimen/dm015"
+                android:layout_toRightOf="@id/material_numb_title"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="-" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm001"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_title_height"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/top_tv_0"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计划进场人数" />
+
+            <TextView
+                android:id="@+id/top_tv_0_tv"
+                style="@style/px26_999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm015"
+                android:layout_toRightOf="@id/top_tv_0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/top_tv_1"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm260"
+                android:text="计划进场日期" />
+
+            <com.android.livevideo.view.MarqueTextView
+                android:id="@+id/top_tv_1_tv"
+                style="@style/px26_999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm015"
+                android:layout_toRightOf="@id/top_tv_1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="-" />
+        </RelativeLayout>
+
+        <include layout="@layout/layout_line_1px_white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_title_height"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/top_tv_2"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实际进场人数" />
+
+            <TextView
+                android:id="@+id/top_tv_2_tv"
+                style="@style/px26_999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm015"
+                android:layout_toRightOf="@id/top_tv_2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/top_tv_3"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm260"
+                android:text="实际进场日期" />
+
+            <com.android.livevideo.view.MarqueTextView
+                android:id="@+id/top_tv_3_tv"
+                style="@style/px26_999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm015"
+                android:layout_toRightOf="@id/top_tv_3"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="-" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_line_1px_white" />
+
+        <RelativeLayout
+            android:id="@+id/material_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_title_height"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/material_people"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:gravity="center_vertical"
+                android:text="保管人" />
+
+            <TextView
+                android:id="@+id/material_people_tv"
+                style="@style/px26_999"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:layout_marginLeft="@dimen/dm015"
+                android:layout_toRightOf="@id/material_people"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/top_tv_5"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:layout_marginLeft="@dimen/dm030"
+                android:layout_toRightOf="@id/material_people_tv"
+                android:gravity="center_vertical"
+                android:text="质量标准" />
+
+            <TextView
+                android:id="@+id/quality_tv"
+                style="@style/px26_999"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:layout_marginLeft="@dimen/dm015"
+                android:layout_toRightOf="@id/top_tv_5"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="-" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm001"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/material_bottom_4_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_title_height"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/top_tv_4"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:gravity="center_vertical"
+                android:text="厂家" />
+
+            <TextView
+                android:id="@+id/factory_tv"
+                style="@style/px26_999"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_title_height"
+                android:layout_marginLeft="@dimen/dm015"
+                android:layout_toRightOf="@id/top_tv_4"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="-" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm001"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

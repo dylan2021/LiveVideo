@@ -1,0 +1,36 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.soundcloud.android.crop.test" >
+4
+5    <uses-sdk
+5-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:5:5-73
+6        android:minSdkVersion="9"
+6-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:5:15-40
+7        android:targetSdkVersion="19" />
+7-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:5:41-70
+8
+9    <instrumentation
+9-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:11:5-15:82
+10        android:name="android.test.InstrumentationTestRunner"
+10-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:11:22-75
+11        android:functionalTest="false"
+11-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:14:22-52
+12        android:handleProfiling="false"
+12-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:13:22-53
+13        android:label="Tests for com.soundcloud.android.crop.test"
+13-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:15:22-80
+14        android:targetPackage="com.soundcloud.android.crop.test" />
+14-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:12:22-78
+15
+16    <application
+16-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:7:5-9:19
+17        android:allowBackup="false"
+17-->[__tested_artifact__::imglib] C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:18-45
+18        android:debuggable="true" >
+18-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:7:18-43
+19        <uses-library android:name="android.test.runner" />
+19-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:8:9-60
+19-->C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7443760772183730551.xml:8:23-57
+20    </application>
+21
+22</manifest>

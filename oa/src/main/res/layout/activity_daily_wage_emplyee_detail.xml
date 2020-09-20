@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center"></include>
+
+    <include layout="@layout/layout_line_1px_divider"></include>
+
+    <com.android.livevideo.view.PullScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/f5"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/line_height"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:paddingRight="@dimen/main_margin_left_x">
+
+            <RelativeLayout
+                android:id="@+id/leave_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/wage_daily_name_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/end_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="日期" />
+
+                <TextView
+                    android:id="@+id/wage_daily_time_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/project" />
+
+                <TextView
+                    android:id="@+id/wage_daily_proj_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/detail_hours_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="计时(小时)" />
+
+                <TextView
+                    android:id="@+id/wage_daily_hours_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/item_et_max_width"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableRight="@drawable/ic_next"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="计件" />
+
+
+                <TextView
+                    android:id="@+id/wage_daily_pieceNum_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/item_et_max_width"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableRight="@drawable/ic_next"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColorHint="@color/color_hint" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/detail_deduction_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/red_deduction"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="扣款(元)" />
+
+                <TextView
+                    android:id="@+id/deduction_tv"
+                    style="@style/px26_212121"
+                    android:textColor="@color/red_deduction"
+                    android:layout_width="@dimen/item_et_max_width"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableRight="@drawable/ic_next"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+            <!--备注-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/remark_title_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:gravity="center_vertical"
+                    android:text="备注" />
+
+                <TextView
+                    android:id="@+id/remark_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/remark_title_tv"
+                    android:paddingLeft="@dimen/dm030"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/dm010"
+                    android:paddingBottom="@dimen/dm010"
+                    android:gravity="center_vertical"
+                    android:hint="@string/input_hint"
+                    android:minHeight="@dimen/item_height"
+                    android:text=""
+                    android:textColorHint="@color/color_hint"
+                    android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </com.android.livevideo.view.PullScrollView>
+</LinearLayout>

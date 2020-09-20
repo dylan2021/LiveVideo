@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dm070"
+    android:layout_marginLeft="@dimen/main_margin_left_x"
+    android:layout_marginRight="@dimen/main_margin_left_x"
+    android:background="@drawable/shape_line_divider_left_right_bottom"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_time_tv"
+        style="@style/px26_212121"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dm070"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/main_margin_left_x"
+        android:text="" />
+
+    <View
+        android:layout_width="@dimen/dm001"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color" />
+
+    <EditText
+        android:id="@+id/item_hour_et"
+        style="@style/px26_212121"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:ellipsize="end"
+        android:inputType="numberDecimal"
+        android:gravity="center_vertical"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/main_margin_left_x"
+        android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+</LinearLayout>

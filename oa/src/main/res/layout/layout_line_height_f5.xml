@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/title_top_height_layout"
+    android:layout_height="@dimen/line_height"
+    android:background="@color/f5"
+    tools:showIn="@layout/layout_dialog_change_avatar"/>

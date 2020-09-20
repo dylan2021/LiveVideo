@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/main_margin_left_x"
+    android:paddingTop="@dimen/main_margin_left_x">
+
+    <TextView
+        android:id="@+id/apply_item_title_tv"
+        style="@style/px28_212121_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/main_margin_left_x"
+        android:drawablePadding="@dimen/dm020"
+        android:drawableRight="@drawable/ic_next"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/apply_item_time_tv"
+        style="@style/px24_a5a5a5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="@dimen/dm005"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/apply_item_type_tv"
+        style="@style/px26_999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingRight="@dimen/main_margin_left_x"
+        android:paddingTop="@dimen/dm015" />
+
+    <TextView
+        android:id="@+id/apply_item_start_time_tv"
+        style="@style/px26_999"
+        android:layout_width="match_parent"
+        android:paddingRight="@dimen/main_margin_left_x"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="@dimen/dm007" />
+
+    <TextView
+        android:id="@+id/apply_item_end_time_tv"
+        android:paddingRight="@dimen/main_margin_left_x"
+        style="@style/px26_999"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="@dimen/dm007" />
+
+    <TextView
+        android:id="@+id/apply_item_status_tv"
+        style="@style/px26_999"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/dm020"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dm015" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/divider_color"
+        android:layout_height="@dimen/dm002"/>
+</LinearLayout>

@@ -1,0 +1,382 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.android.livevideo"
+4    android:versionCode="30000"
+5    android:versionName="1.0.1" >
+6
+7    <uses-sdk
+7-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:6:5-44
+8        android:maxSdkVersion="23"
+8-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:6:15-41
+9        android:minSdkVersion="19"
+9-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:6:5-44
+10        android:targetSdkVersion="26" />
+10-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:6:5-44
+11
+12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+12-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:8:5-76
+12-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:8:22-73
+13    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+13-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:9:5-79
+13-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:9:22-76
+14    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+14-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:10:5-76
+14-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:10:22-73
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:11:5-67
+15-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:11:22-64
+16    <uses-permission android:name="android.permission.CALL_PHONE" />
+16-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:12:5-69
+16-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:12:22-66
+17    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+17-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:13:5-75
+17-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:13:22-72
+18    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+18-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:14:5-16:47
+18-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:15:9-68
+19
+20    <!-- 蓝牙操作权限 -->
+21    <uses-permission android:name="android.permission.BLUETOOTH" />
+21-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:19:5-68
+21-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:19:22-65
+22    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+22-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:20:5-74
+22-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:20:22-71
+23    <uses-permission android:name="android.permission.CAMERA" />
+23-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:21:5-65
+23-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:21:22-62
+24    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+24-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:22:5-80
+24-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:22:22-77
+25    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+25-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:23:5-81
+25-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:23:22-78
+26    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+26-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:24:5-75
+26-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:24:22-72
+27    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+27-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:25:5-81
+27-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:25:22-78
+28
+29    <!-- 百度推送权限 start -->
+30    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+30-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:28:5-30:47
+30-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:29:9-57
+31    <uses-permission android:name="android.permission.VIBRATE" />
+31-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:31:5-66
+31-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:31:22-63
+32    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+32-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:32:5-75
+32-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:32:22-72
+33    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+33-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:33:5-81
+33-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:33:22-78
+34    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+34-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:34:5-79
+34-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:34:22-76
+35    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+35-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:35:5-89
+35-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:35:22-86
+36    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+36-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:36:5-83
+36-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:36:22-80
+37    <uses-permission android:name="android.permission.WAKE_LOCK" />
+37-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:37:5-68
+37-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:37:22-65
+38    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+38-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:38:5-79
+38-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:38:22-76
+39
+40    <permission
+40-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:40:5-42:55
+41        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.android.livevideo"
+41-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:41:9-90
+42        android:protectionLevel="normal" />
+42-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:42:9-41
+43    <!-- 百度推送权限 end -->
+44
+45    <uses-feature
+45-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:45:5-47:36
+46        android:name="android.hardware.bluetooth_le"
+46-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:46:9-53
+47        android:required="false" />
+47-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:47:9-33
+48
+49    <meta-data
+49-->[com.android.support:design:26.0.0-alpha1] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\AndroidManifest.xml:25:5-27:41
+50        android:name="android.support.VERSION"
+50-->[com.android.support:design:26.0.0-alpha1] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\AndroidManifest.xml:26:9-47
+51        android:value="26.0.0-alpha1" />
+51-->[com.android.support:design:26.0.0-alpha1] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\AndroidManifest.xml:27:9-38
+52
+53    <application
+53-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:49:5-168:19
+54        android:name="com.android.livevideo.App"
+54-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:50:9-49
+55        android:allowBackup="false"
+55-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:51:9-36
+56        android:debuggable="true"
+57        android:icon="@drawable/ic_launcher"
+57-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:52:9-45
+58        android:label="@string/appName"
+58-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:53:9-40
+59        android:supportsRtl="true"
+59-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:54:9-35
+60        android:testOnly="true"
+61        android:theme="@style/theme_appcompat" >
+61-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:55:9-47
+62        <activity android:name="com.android.livevideo.act_video.VideoListActivity" />
+62-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:57:9-85
+62-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:57:19-83
+63        <activity
+63-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:58:9-61:47
+64            android:name="com.android.livevideo.act_video.PlayerLiveActivity"
+64-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:59:13-78
+65            android:configChanges="orientation|keyboardHidden|screenSize"
+65-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:60:13-74
+66            android:theme="@style/AppTheme" />
+66-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:61:13-44
+67        <activity
+67-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:62:9-66:47
+68            android:name="com.android.livevideo.act_video.HPlayerActivity"
+68-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:63:13-75
+69            android:configChanges="orientation|keyboardHidden|screenSize"
+69-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:64:13-74
+70            android:screenOrientation="portrait"
+70-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:65:13-49
+71            android:theme="@style/AppTheme" />
+71-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:66:13-44
+72        <activity
+72-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:68:9-71:47
+73            android:name="com.android.livevideo.act_video.OriginPlayerActivity"
+73-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:69:13-80
+74            android:configChanges="orientation|keyboardHidden|screenSize"
+74-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:70:13-74
+75            android:theme="@style/AppTheme" />
+75-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:71:13-44
+76        <activity
+76-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:73:9-76:47
+77            android:name="com.android.livevideo.act_video.PlayerActivity"
+77-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:74:13-74
+78            android:configChanges="orientation|keyboardHidden|screenSize"
+78-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:75:13-74
+79            android:theme="@style/AppTheme" />
+79-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:76:13-44
+80        <activity
+80-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:77:9-86:20
+81            android:name="com.android.livevideo.act_other.LoginActivity"
+81-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:78:13-73
+82            android:screenOrientation="portrait"
+82-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:79:13-49
+83            android:theme="@style/theme_appcompat_laucher"
+83-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:80:13-59
+84            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+84-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:81:13-72
+85            <intent-filter>
+85-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:82:13-85:29
+86                <action android:name="android.intent.action.MAIN" />
+86-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:83:17-69
+86-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:83:25-66
+87
+88                <category android:name="android.intent.category.LAUNCHER" />
+88-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:84:17-77
+88-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:84:27-74
+89            </intent-filter>
+90        </activity>
+91        <activity
+91-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:87:9-90:84
+92            android:name="com.android.livevideo.act_0.MainActivity"
+92-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:88:13-68
+93            android:screenOrientation="portrait"
+93-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:89:13-49
+94            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+94-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:90:13-72
+95        <activity android:name="com.android.livevideo.act_other.ChooseProjectActivity" />
+95-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:91:9-90
+95-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:91:19-87
+96        <activity android:name="com.android.livevideo.act_0.MsgDetailActivity" />
+96-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:92:9-91
+96-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:92:19-79
+97        <activity android:name="com.android.livevideo.act_1.WageDailyAddActivity" />
+97-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:93:9-94
+97-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:93:19-82
+98        <activity android:name="com.android.livevideo.act_1.WageDailyListActivity" />
+98-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:94:9-95
+98-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:94:19-83
+99        <activity android:name="com.android.livevideo.act_0.NoticeDetailUrlActivity" />
+99-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:95:9-97
+99-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:95:19-85
+100        <activity android:name="com.android.livevideo.act_1.PoolChooseActivity" />
+100-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:96:9-92
+100-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:96:19-80
+101        <activity
+101-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:97:9-101:67
+102            android:name="com.android.livevideo.act_2.SearchActivity"
+102-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:98:13-70
+103            android:launchMode="singleTask"
+103-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:99:13-44
+104            android:screenOrientation="portrait"
+104-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:100:13-49
+105            android:windowSoftInputMode="stateVisible" />
+105-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:101:13-55
+106        <activity
+106-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:103:9-105:52
+107            android:name="com.android.livevideo.act_other.GuideViewActivity"
+107-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:104:13-77
+108            android:screenOrientation="portrait" />
+108-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:105:13-49
+109        <activity
+109-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:107:9-111:63
+110            android:name="com.android.livevideo.act_other.RegisterActivity"
+110-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:108:13-76
+111            android:launchMode="singleTask"
+111-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:109:13-44
+112            android:screenOrientation="portrait"
+112-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:110:13-49
+113            android:theme="@android:style/Theme.NoTitleBar" />
+113-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:111:13-60
+114        <activity
+114-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:112:9-116:63
+115            android:name="com.android.livevideo.act_3.MeAttendanceActivity"
+115-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:113:13-76
+116            android:launchMode="singleTask"
+116-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:114:13-44
+117            android:screenOrientation="portrait"
+117-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:115:13-49
+118            android:theme="@android:style/Theme.NoTitleBar" />
+118-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:116:13-60
+119        <activity
+119-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:117:9-121:63
+120            android:name="com.android.livevideo.act_other.FindPwdActivity"
+120-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:118:13-75
+121            android:launchMode="singleTask"
+121-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:119:13-44
+122            android:screenOrientation="portrait"
+122-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:120:13-49
+123            android:theme="@android:style/Theme.NoTitleBar" />
+123-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:121:13-60
+124        <activity
+124-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:122:9-126:63
+125            android:name="com.android.livevideo.act_other.ChangePwdActivity"
+125-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:123:13-77
+126            android:launchMode="singleTask"
+126-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:124:13-44
+127            android:screenOrientation="portrait"
+127-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:125:13-49
+128            android:theme="@android:style/Theme.NoTitleBar" />
+128-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:126:13-60
+129        <activity
+129-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:128:9-131:66
+130            android:name="com.android.livevideo.act_other.SeePicActivity"
+130-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:129:13-74
+131            android:launchMode="singleTask"
+131-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:130:13-44
+132            android:theme="@style/pic_act_fullscree_animation" />
+132-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:131:13-63
+133        <activity android:name="com.android.livevideo.widget.mulpicture.MulPictureActivity" />
+133-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:133:9-95
+133-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:133:19-92
+134        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+134-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:134:9-82
+134-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:134:19-79
+135        <activity android:name="com.android.livevideo.act_1.Work124567911_12Activity" />
+135-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:135:9-89
+135-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:135:19-86
+136        <activity android:name="com.android.livevideo.act_1.Work1TripActivity" />
+136-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:136:9-82
+136-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:136:19-79
+137        <activity android:name="com.android.livevideo.act_1.Work8Activity" />
+137-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:137:9-78
+137-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:137:19-75
+138        <activity android:name="com.android.livevideo.act_1.Work_14_20Activity" />
+138-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:138:9-83
+138-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:138:19-80
+139        <activity android:name="com.android.livevideo.act_1.Work_13Activity" />
+139-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:139:9-80
+139-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:139:19-77
+140        <activity android:name="com.android.livevideo.act_1.ChooseEmplyeeActivity" />
+140-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:140:9-86
+140-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:140:19-83
+141        <activity android:name="com.android.livevideo.act_1.WageDailyEmplyeeDetailActivity" />
+141-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:141:9-95
+141-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:141:19-92
+142        <activity android:name="com.android.livevideo.act_1.WageMonthActivity" />
+142-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:142:9-82
+142-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:142:19-79
+143        <activity android:name="com.android.livevideo.act_1.WageMonthAddActivity" />
+143-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:143:9-85
+143-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:143:19-82
+144        <activity android:name="com.android.livevideo.act_1.WageMonthProjectListActivity" />
+144-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:144:9-93
+144-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:144:19-90
+145        <activity android:name="com.android.livevideo.act_1.WageEmplyeeListActivity" />
+145-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:145:9-88
+145-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:145:19-85
+146        <activity android:name="com.android.livevideo.act_1.WageMonthEmplyeeDetailActivity" />
+146-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:146:9-95
+146-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:146:19-92
+147        <activity android:name="com.android.livevideo.act_2.AddressListActivity" />
+147-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:147:9-84
+147-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:147:19-81
+148        <activity android:name="com.android.livevideo.act_3.MeApplyListActivity" />
+148-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:148:9-84
+148-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:148:19-81
+149        <activity android:name="com.android.livevideo.act_other.AndroidOPermissionActivity" />
+149-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:149:9-95
+149-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:149:19-92
+150        <activity android:name="com.android.livevideo.act_other.ChangeProjectActivity" />
+150-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:150:9-90
+150-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:150:19-87
+151        <activity android:name="com.android.livevideo.act_3.SysSettingsActivity" />
+151-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:151:9-84
+151-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:151:19-81
+152        <activity android:name="com.android.livevideo.act_3.MeProfileActivity" />
+152-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:152:9-82
+152-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:152:19-79
+153        <activity android:name="com.android.livevideo.act_other.ChangePhoneShowActivity" />
+153-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:153:9-92
+153-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:153:19-89
+154        <activity android:name="com.android.livevideo.act_other.ChangePhoneActivity" />
+154-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:154:9-88
+154-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:154:19-85
+155
+156        <!-- android 7.0 适配 -->
+157        <provider
+158            android:name="android.support.v4.content.FileProvider"
+158-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:158:13-67
+159            android:authorities="com.android.livevideo.fileprovider"
+159-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:159:13-64
+160            android:exported="false"
+160-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:160:13-37
+161            android:grantUriPermissions="true" >
+161-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:161:13-47
+162            <meta-data
+162-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:162:13-164:58
+163                android:name="android.support.FILE_PROVIDER_PATHS"
+163-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:163:17-67
+164                android:resource="@xml/provider_paths" />
+164-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:164:17-55
+165        </provider>
+166        <!-- 调用相机 -->
+167
+168        <meta-data
+168-->[com.android.support:design:26.0.0-alpha1] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\AndroidManifest.xml:25:5-27:41
+169            android:name="android.support.VERSION"
+169-->[com.android.support:design:26.0.0-alpha1] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\AndroidManifest.xml:26:9-47
+170            android:value="26.1.0" />
+170-->[com.android.support:design:26.0.0-alpha1] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\AndroidManifest.xml:27:9-38
+171        <meta-data
+171-->[com.google.android.gms:play-services-basement:8.4.0] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\8cf60bf748685cf1d9dbb6251e04231c\play-services-basement-8.4.0\AndroidManifest.xml:21:9-23:69
+172            android:name="com.google.android.gms.version"
+172-->[com.google.android.gms:play-services-basement:8.4.0] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\8cf60bf748685cf1d9dbb6251e04231c\play-services-basement-8.4.0\AndroidManifest.xml:22:13-58
+173            android:value="@integer/google_play_services_version" />
+173-->[com.google.android.gms:play-services-basement:8.4.0] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\8cf60bf748685cf1d9dbb6251e04231c\play-services-basement-8.4.0\AndroidManifest.xml:23:13-66
+174        <meta-data
+174-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\48fe5abcdd8e2b358f807c2141d3d6fa\runtime-1.0.0\AndroidManifest.xml:25:9-27:47
+175            android:name="android.arch.lifecycle.VERSION"
+175-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\48fe5abcdd8e2b358f807c2141d3d6fa\runtime-1.0.0\AndroidManifest.xml:26:13-58
+176            android:value="27.0.0-SNAPSHOT" />
+176-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\futur\.gradle\caches\transforms-2\files-2.1\48fe5abcdd8e2b358f807c2141d3d6fa\runtime-1.0.0\AndroidManifest.xml:27:13-44
+177    </application>
+178
+179</manifest>

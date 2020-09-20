@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_item_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dm035"
+        android:layout_marginRight="@dimen/dm035"
+        android:background="@color/f5"/>
+
+    <TextView
+        android:id="@+id/singer_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/dm035"
+        android:text="我"
+        android:textColor="@color/color212121"
+        android:textSize="16dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/dm035"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_next"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dm035"
+        android:layout_marginRight="@dimen/dm035"
+        android:background="@color/f5"/>
+</RelativeLayout>

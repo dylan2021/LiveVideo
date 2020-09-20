@@ -658,7 +658,7 @@ demo中原来的jniLibs目录下的文件，已经移除，都是使用上面的
 例如
 
 	<activity
-            android:name="com.dou361.jjdxm_ijkplayer.HPlayerActivity"
+            android:name="com.android.livevideo.act_video.HPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>

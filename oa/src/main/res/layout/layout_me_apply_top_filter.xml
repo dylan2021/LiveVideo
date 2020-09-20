@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:descendantFocusability="afterDescendants"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dm030">
+
+    <TextView
+        style="@style/px28_212121_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dm060"
+        android:text="类型" />
+
+
+    <com.android.livevideo.view.ExRadioGroup
+        android:id="@+id/apply_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dm050"
+        android:layout_marginTop="@dimen/dm030"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:lineSpacing="@dimen/dm020" />
+
+    <TextView
+        style="@style/px28_212121_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="时间" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:layout_marginTop="@dimen/dm020"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/filter_time_bt_0"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/me_filter_rb_height"
+            android:layout_weight="1"
+            android:background="@drawable/selector_rb_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:hint="开始日期"
+            android:textColor="@color/color_seletor_main_color_21"
+            android:textColorHint="@color/a5a5a5"
+            android:textSize="@dimen/dm026" />
+
+        <View
+            android:layout_width="@dimen/dm060"
+            android:layout_height="@dimen/dm001"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dm030"
+            android:layout_marginRight="@dimen/main_margin_left_x"
+            android:background="@color/eee"></View>
+
+        <TextView
+            android:id="@+id/filter_time_bt_1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/me_filter_rb_height"
+            android:layout_weight="1"
+            android:background="@drawable/selector_rb_bg"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:hint="结束日期"
+            android:textColor="@color/color_seletor_main_color_21"
+            android:textColorHint="@color/a5a5a5"
+            android:textSize="@dimen/dm026" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:layout_marginTop="@dimen/dm060"
+        android:paddingTop="@dimen/dm001"
+        android:background="@drawable/shape_line_divider_top">
+
+        <TextView
+            android:id="@+id/filter_cancel_bt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/close"
+            android:textColor="@color/color666"
+            android:textSize="@dimen/dm030" />
+
+        <TextView
+            android:id="@+id/filter_ok_bt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/mainColor"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dm030" />
+    </LinearLayout>
+
+
+</LinearLayout>

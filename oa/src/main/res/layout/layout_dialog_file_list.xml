@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dm035"
+    android:paddingRight="@dimen/dm035">
+
+    <com.android.livevideo.view.ScrollListView
+        android:id="@+id/horizontal_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dm020"
+        android:clipToPadding="false"
+        android:divider="@color/white"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="@color/transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none"></com.android.livevideo.view.ScrollListView>
+
+    <View
+        android:id="@+id/file_list_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:background="@color/divider_color"></View>
+
+    <TextView
+        android:id="@+id/remark_tv"
+        style="@style/px26_666"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dm020"
+        android:gravity="center_vertical" />
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_line_divider_bottom"
+    android:paddingBottom="@dimen/dm025"
+    android:paddingTop="@dimen/dm025">
+    <!--android:descendantFocusability="blocksDescendants"-->
+
+    <TextView
+        android:id="@+id/emplyee_icon_tv"
+        android:layout_width="@dimen/dm075"
+        android:layout_height="@dimen/dm075"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/dm025"
+        android:background="@drawable/shape_circle_main_color"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm026" />
+
+    <TextView
+        android:id="@+id/emplyee_name_tv"
+        style="@style/px28_212121"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/emplyee_icon_tv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/emplyee_phone_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emplyee_name_tv"
+        android:layout_toRightOf="@id/emplyee_icon_tv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        style="@style/px26_a5a5a5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dm012"
+        android:layout_toRightOf="@id/emplyee_icon_tv"
+        android:drawableRight="@drawable/ic_phone"
+        />
+</RelativeLayout>

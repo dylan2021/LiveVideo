@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+
+    <!-- 填充 -->
+    <solid android:color="@color/color_808080" />
+
+    <!-- 宽度和高度 -->
+    <size
+        android:width="@dimen/dm010"
+        android:height="@dimen/dm010"/>
+
+
+</shape>

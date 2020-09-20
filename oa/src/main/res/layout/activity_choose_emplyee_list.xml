@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm085"
+        android:layout_marginBottom="@dimen/dm010"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_et"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin_left_x"
+            android:layout_marginRight="@dimen/main_margin_left_x"
+            android:background="@drawable/shape_eee_7px"
+            android:drawableLeft="@drawable/ic_search_gray"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center_vertical"
+            android:hint="搜索姓名"
+            android:includeFontPadding="false"
+            android:maxLength="8"
+            android:paddingBottom="@dimen/dm012"
+            android:paddingLeft="@dimen/dm020"
+            android:paddingTop="@dimen/dm012"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+
+        <ImageButton
+            android:id="@+id/search_clear_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_margin_left_x"
+            android:background="@null"
+            android:button="@null"
+            android:clickable="true"
+            android:paddingLeft="@dimen/dm020"
+            android:paddingRight="@dimen/dm020"
+            android:src="@drawable/ic_delete_gray_circle" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_10px_f5"></include>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/emplyee_all_check_bt"
+        style="@style/px28_212121"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm085"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_circle_seleted"
+        android:drawablePadding="@dimen/dm030"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dm030"
+        android:text="全选"
+        android:theme="@style/mainColor999CheckBox" />
+
+    <include layout="@layout/layout_line_10px_f5"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.android.livevideo.view.PullScrollView
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/f5"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:id="@+id/emplyee_search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"></LinearLayout>
+
+
+        </com.android.livevideo.view.PullScrollView>
+
+        <com.gjiazhe.wavesidebar.WaveSideBar
+            android:id="@+id/waveSideBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/dm040"
+            android:padding="@dimen/dm030"
+            app:sidebar_text_color="@color/color212121"
+
+            app:sidebar_lazy_respond="true"
+            app:sidebar_max_offset="@dimen/dm300"
+            app:sidebar_position="right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:background="@drawable/shape_line_divider_top">
+
+        <TextView
+            android:id="@+id/seleted_num_tv"
+            style="@style/px24_mainColor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/dm015"
+            android:drawableRight="@drawable/ic_arrow_up_main_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="已选择:0人" />
+
+        <TextView
+            android:id="@+id/seleted_sure_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm055"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_margin_left_x"
+            android:background="@drawable/selector_login_bt"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dm020"
+            android:paddingRight="@dimen/dm020"
+            android:text="@string/sure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dm024" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/ll_title"
+        layout="@layout/layout_title_left_center" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_title"
+        android:paddingBottom="@dimen/main_bt_height"
+        android:background="@color/eee">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/line_height"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@color/divider_color"
+            android:dividerHeight="@dimen/dm001"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/dm020"
+            android:scrollbars="none" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dm300"
+        android:drawablePadding="@dimen/dm030"
+        android:drawableTop="@drawable/ic_bg_no_data"
+        android:gravity="center"
+        android:text="@string/no_data"
+        android:textColor="@color/color999"
+        android:textSize="@dimen/dm028"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bt_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_main_color"
+        android:gravity="center"
+        android:onClick="buildMonthWageClick"
+        android:text="生成月度工资"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm028" />
+</RelativeLayout>

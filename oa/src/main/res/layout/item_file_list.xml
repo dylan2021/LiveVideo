@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/dm010"
+    android:layout_height="@dimen/dm075">
+    <!--android:descendantFocusability="blocksDescendants"-->
+
+    <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_detail_file_list_item_iv"
+        android:layout_width="@dimen/card_detail_file_gv_item"
+        android:layout_height="@dimen/card_detail_file_gv_item"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        fresco:failureImage="@drawable/ic_error_img"
+        fresco:placeholderImage="@drawable/ic_error_img"
+        fresco:placeholderImageScaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/dialog_center_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dm020"
+        android:layout_marginRight="@dimen/dm040"
+        android:layout_marginTop="@dimen/dm005"
+        android:maxLines="1"
+        android:layout_toRightOf="@id/card_detail_file_list_item_iv"
+        android:text=""
+        android:ellipsize="end"
+        android:textColor="@color/color212121"
+        android:textSize="@dimen/dm024" />
+
+    <TextView
+        android:id="@+id/dialog_center_size_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_center_title_tv"
+        android:layout_marginLeft="@dimen/dm020"
+        android:layout_toRightOf="@id/card_detail_file_list_item_iv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        android:visibility="gone"
+        android:textColor="@color/color999"
+        android:textSize="@dimen/dm022" />
+
+    <Button
+        android:id="@+id/dialog_btn_sure"
+        android:layout_width="@dimen/dm060"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:drawableRight="@drawable/ic_delete_gray_circle"
+        android:paddingTop="@dimen/dm002" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" />
+</RelativeLayout>

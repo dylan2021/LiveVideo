@@ -1,0 +1,41 @@
+com/soundcloud/android/crop/BuildConfig.java
+ com.soundcloud.android.crop.BuildConfig
+com/soundcloud/android/crop/CropUtil.java
+ com.soundcloud.android.crop.CropUtil
+ com.soundcloud.android.crop.CropUtil$BackgroundJob
+ com.soundcloud.android.crop.CropUtil$BackgroundJob$1
+com/soundcloud/android/crop/CropImageActivity.java
+ com.soundcloud.android.crop.CropImageActivity
+ com.soundcloud.android.crop.CropImageActivity$1
+ com.soundcloud.android.crop.CropImageActivity$2
+ com.soundcloud.android.crop.CropImageActivity$3
+ com.soundcloud.android.crop.CropImageActivity$4
+ com.soundcloud.android.crop.CropImageActivity$4$1
+ com.soundcloud.android.crop.CropImageActivity$5
+ com.soundcloud.android.crop.CropImageActivity$6
+ com.soundcloud.android.crop.CropImageActivity$Cropper
+ com.soundcloud.android.crop.CropImageActivity$Cropper$1
+com/soundcloud/android/crop/RotateBitmap.java
+ com.soundcloud.android.crop.RotateBitmap
+com/soundcloud/android/crop/ImageViewTouchBase.java
+ com.soundcloud.android.crop.ImageViewTouchBase
+ com.soundcloud.android.crop.ImageViewTouchBase$1
+ com.soundcloud.android.crop.ImageViewTouchBase$2
+ com.soundcloud.android.crop.ImageViewTouchBase$Recycler
+com/soundcloud/android/crop/util/Log.java
+ com.soundcloud.android.crop.util.Log
+com/soundcloud/android/crop/MonitoredActivity.java
+ com.soundcloud.android.crop.MonitoredActivity
+ com.soundcloud.android.crop.MonitoredActivity$LifeCycleAdapter
+ com.soundcloud.android.crop.MonitoredActivity$LifeCycleListener
+com/soundcloud/android/crop/util/VisibleForTesting.java
+ com.soundcloud.android.crop.util.VisibleForTesting
+com/soundcloud/android/crop/Crop.java
+ com.soundcloud.android.crop.Crop
+ com.soundcloud.android.crop.Crop$Extra
+com/soundcloud/android/crop/CropImageView.java
+ com.soundcloud.android.crop.CropImageView
+com/soundcloud/android/crop/HighlightView.java
+ com.soundcloud.android.crop.HighlightView
+ com.soundcloud.android.crop.HighlightView$HandleMode
+ com.soundcloud.android.crop.HighlightView$ModifyMode

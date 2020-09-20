@@ -1,0 +1,186 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("MMdd", TimeZone.getTimeZone("UTC"))
+}
+
+/*Properties props = new Properties()
+props.load(new FileInputStream(file(rootProject.file("signing.properties"))))*/
+android {
+    aaptOptions {
+        cruncherEnabled = false
+        //useNewCruncher = false
+    }
+    lintOptions {
+        abortOnError false
+    }
+    signingConfigs {
+    }
+    compileSdkVersion 26
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+    }
+    defaultConfig {
+        applicationId "com.android.livevideo"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 30000
+        versionName "1.0.1"
+
+        ndk {
+            moduleName "Crc8Jni"
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+        // Enabling multidex support.
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+    /*  signingConfigs {
+          debug {
+              storeFile file('debug.keystore')
+              storePassword "android"
+              keyAlias "androiddebugkey"
+              keyPassword "android"
+          }
+      }*/
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            /* //minifyEnabled false
+            // signingConfigs signingConfigs.debug
+            // proguardFiles 'proguard-rules.pro'*/
+//            versionNameSuffix "-debug"
+            // minifyEnabled true
+//            zipAlignEnabled false
+            shrinkResources false
+            //signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+        release {
+            //signingConfig signingConfigs.release
+            /*minifyEnabled false
+            signingConfigs signingConfigs.debug
+            proguardFiles 'proguard-rules.pro'*/
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //编译输出的名字
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "MonitorSystem-V${variant.versionName}.apk"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            //jni.srcDirs = []                          //设置禁止gradle生成Android.mk
+            //jniLibs.srcDirs = ['src/main/jniLibs']      //设置目标的so存放路径
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []
+        }
+    }
+
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+
+
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.facebook.fresco:fresco:0.11.0'
+    implementation 'com.facebook.fresco:animated-gif:0.12.0'
+    implementation 'net.lingala.zip4j:zip4j:1.3.2'
+    //文件压缩
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation project(path: ':imglib')
+    implementation 'com.google.android.gms:play-services-appindexing:8.4.0'
+    implementation 'com.android.support:design:26.0.0-alpha1'
+    implementation files('libs/mpermissions.jar')
+    implementation 'com.android.support:multidex:1.0.2'
+    //解决 multidex
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+    implementation 'cn.jzvd:jiaozivideoplayer:6.1.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.androidkun:XTabLayout:1.1.3'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation 'com.jzxiang.pickerview:TimePickerDialog:0.9.2'
+    //时间选择器
+    implementation 'com.lijiankun24:shadowlayout:1.0.0'
+    implementation 'com.daasuu:BubbleLayout:1.0.0'
+    //泡泡弹框
+    implementation 'com.gjiazhe:wavesidebar:1.0.2'
+    implementation 'com.afollestad.material-dialogs:core:0.9.1.0'
+/*
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'*/
+    implementation rootProject.ext.jjdxm_v7
+    implementation('com.jakewharton:butterknife:8.6.0') {
+        exclude module: 'support-compat'
+    }
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation project(':jjdxm-ijkplayer')
+
+    testImplementation 'junit:junit:4.12'
+//    根据需要支持去拓展，在jjdxm-ijkplayer中默认加入了armv7a的了
+    //implementation 'com.dou361.ijkplayer-armv7a:jjdxm-ijkplayer-armv7a:1.0.0'
+    implementation 'com.dou361.ijkplayer-armv5:jjdxm-ijkplayer-armv5:1.0.0'
+    implementation 'com.dou361.ijkplayer-arm64:jjdxm-ijkplayer-arm64:1.0.0'
+    implementation 'com.dou361.ijkplayer-x86:jjdxm-ijkplayer-x86:1.0.0'
+    implementation 'com.dou361.ijkplayer-x86_64:jjdxm-ijkplayer-x86_64:1.0.0'
+
+
+    //网络获取直播视频
+    implementation 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    implementation 'com.squareup.okhttp3:okhttp:3.0.1'
+    implementation 'com.alibaba:fastjson:1.2.14'
+
+}

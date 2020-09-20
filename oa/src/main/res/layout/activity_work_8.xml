@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center"></include>
+
+    <com.android.livevideo.view.PullScrollView
+        android:id="@+id/report_psv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:background="@color/eee"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dm100"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/layout_item_layout_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawablePadding="@dimen/dm020"
+                android:gravity="center"
+                android:onClick="onWorkAddClick11"
+                android:padding="@dimen/dm020"
+                android:paddingLeft="@dimen/dm025"
+                android:paddingRight="@dimen/dm025"
+                android:text="+ 添加报销明细"
+                android:textColor="@color/mainColor"
+                android:textSize="@dimen/dm026" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm065"
+                android:background="@color/eee">
+
+                <TextView
+                    android:id="@+id/total_sum"
+                    style="@style/px22_a5a5a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:text="总报销金额(元)：" />
+
+                <TextView
+                    android:id="@+id/total_sum_tv"
+                    style="@style/px22_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/total_sum"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_title_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:text="关联出差" />
+
+                <TextView
+                    android:id="@+id/connect_trip_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/item_et_max_width"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableRight="@drawable/ic_next"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:hint="请选择"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/next_padding_right"
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line_height"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/main_margin_left_x"
+                android:paddingRight="@dimen/main_margin_left_x">
+
+                <include layout="@layout/layout_file_upload_layout" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/px28_212121"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_title_height"
+                android:layout_marginTop="@dimen/line_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/main_margin_left_x"
+                android:text="@string/approval_process_title"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/approval_process_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dm080"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dm030"
+                android:paddingTop="@dimen/dm010"
+                android:visibility="gone">
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.android.livevideo.view.PullScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bt_height"
+        android:layout_marginBottom="@dimen/dm015"
+        android:layout_marginLeft="@dimen/dm025"
+        android:layout_marginRight="@dimen/dm025"
+        android:layout_marginTop="@dimen/dm015"
+        android:background="@drawable/selector_login_bt"
+        android:onClick="onReportCommitClick"
+        android:text="@string/commit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm030" />
+</LinearLayout>

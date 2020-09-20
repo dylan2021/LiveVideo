@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dm085"
+    android:background="@drawable/shape_line_divider_bottom"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_expand_child"
+        android:layout_width="@dimen/dm060"
+        android:layout_height="@dimen/dm060"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/dm100"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_circle_main_color"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm024" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/expand_child_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:drawablePadding="@dimen/dm130"
+        style="@style/px28_212121"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_circle_seleted"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dm030"
+        android:theme="@style/mainColor999CheckBox" />
+
+    <!--  android:scaleX="0.8"
+        android:scaleY="0.8" 选中框大小-->
+</RelativeLayout>

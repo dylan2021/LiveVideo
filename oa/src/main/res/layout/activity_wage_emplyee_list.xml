@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tabs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/activity_title_layout"
+        layout="@layout/layout_title_left_center" />
+
+    <android.support.design.widget.TabLayout xmlns:tabs="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment0_report_top_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        android:layout_below="@id/activity_title_layout"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@drawable/shape_line_divider_bottom"
+        tabs:tabIndicatorColor="@color/mainColor"
+        tabs:tabIndicatorHeight="@dimen/tab_line_height"
+        tabs:tabSelectedTextColor="@color/mainColor"
+        tabs:tabTextAppearance="@style/TabLayout_TextStyle_px26"
+        tabs:tabTextColor="@color/tab_nomal_color" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment0_report_top_tab">
+
+        <ListView
+            android:id="@+id/common_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/dm002"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@color/divider_color"
+            android:dividerHeight="@dimen/dm001"
+            android:listSelector="@drawable/selector_item_bg"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/dm020"
+            android:scrollbars="none" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:background="@color/eee"
+        android:layout_below="@id/activity_title_layout"></View>
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dm030">
+
+    <TextView
+        style="@style/px28_999"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dm080"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dm005"
+        android:text="项目" />
+
+    <TextView
+        android:id="@+id/filter_proj_tv"
+        style="@style/px28_212121"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:clickable="true"
+        android:drawablePadding="@dimen/dm015"
+        android:drawableRight="@drawable/ic_next"
+        android:gravity="right|center_vertical"
+        android:hint="@string/hint_selete"
+        android:paddingLeft="@dimen/dm110"
+        android:paddingRight="@dimen/main_margin_left_x"
+        android:textColorHint="@color/color_hint" />
+
+    <TextView
+        android:id="@+id/pay_type_tv"
+        style="@style/px28_212121"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:paddingLeft="@dimen/dm110"
+        android:layout_below="@id/filter_proj_tv"
+        android:clickable="true"
+        android:drawablePadding="@dimen/dm015"
+        android:drawableRight="@drawable/ic_next"
+        android:gravity="right|center_vertical"
+        android:hint="@string/hint_selete"
+        android:paddingRight="@dimen/main_margin_left_x"
+        android:textColorHint="@color/color_hint" />
+
+    <TextView
+        style="@style/px28_999"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dm080"
+        android:layout_below="@id/filter_proj_tv"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dm005"
+        android:text="部门" />
+
+    <TextView
+        android:id="@+id/filter_time_bt_1"
+        style="@style/px28_212121"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:layout_below="@id/pay_type_tv"
+        android:clickable="true"
+        android:drawablePadding="@dimen/dm015"
+        android:drawableRight="@drawable/ic_next"
+        android:gravity="right|center_vertical"
+        android:hint="@string/hint_selete"
+        android:paddingRight="@dimen/main_margin_left_x"
+        android:textColorHint="@color/color_hint" />
+
+    <TextView
+        style="@style/px28_999"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dm080"
+        android:layout_below="@id/pay_type_tv"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dm005"
+        android:text="日期" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_below="@id/filter_time_bt_1"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:background="@color/dfdfdf"
+        android:visibility="gone"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_time_bt_1"
+        android:layout_marginTop="@dimen/dm030"
+        android:background="@drawable/shape_white_bottom_left_20px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/menu_ok_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_height"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/dm055"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/dm028" />
+
+        <TextView
+            android:id="@+id/menu_cancel_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_height"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dm055"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/dm028" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

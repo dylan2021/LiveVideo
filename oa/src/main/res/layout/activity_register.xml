@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center" />
+
+    <EditText
+        android:id="@+id/et_login_user"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:layout_marginLeft="@dimen/login_bt_margin_left_right"
+        android:layout_marginRight="@dimen/login_bt_margin_left_right"
+        android:layout_marginTop="@dimen/dm040"
+        android:background="@null"
+        android:hint="@string/register_mobile"
+        android:maxLength="30"
+        android:singleLine="true"
+        android:textColor="@color/color212121"
+        android:textColorHint="@color/color_hint"
+        android:textSize="@dimen/dm028" />
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm088"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/login_bt_margin_left_right"
+        android:layout_marginRight="@dimen/login_bt_margin_left_right">
+
+        <EditText
+            android:id="@+id/et_captcha"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm088"
+            android:background="@null"
+            android:hint="@string/register_captcha"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="@color/color212121"
+            android:textColorHint="@color/color_hint"
+            android:textSize="@dimen/dm028" />
+
+        <TextView
+            android:id="@+id/tv_captcha"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm035"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dm020"
+            android:background="@drawable/shape_bg_verif_code_bt_send"
+            android:gravity="center"
+            android:text="@string/get_sms"
+            android:textColor="@color/time_nomal_text_color"
+            android:textSize="@dimen/dm020" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm088"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/login_bt_margin_left_right"
+        android:layout_marginRight="@dimen/login_bt_margin_left_right">
+
+
+        <EditText
+            android:id="@+id/et_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm088"
+            android:layout_toRightOf="@+id/img_2"
+            android:background="@null"
+            android:hint="@string/register_password"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColor="@color/color212121"
+            android:textColorHint="@color/color_hint"
+            android:textSize="@dimen/dm028" />
+
+        <ImageButton
+            android:id="@+id/bt_show_pwd"
+            android:layout_width="@dimen/dm060"
+            android:layout_height="@dimen/dm060"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dm035"
+            android:background="@drawable/selector_eye_open_close"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm070"
+        android:layout_marginBottom="@dimen/dm020"
+        android:layout_marginLeft="@dimen/login_bt_margin_left_right"
+        android:layout_marginRight="@dimen/login_bt_margin_left_right"
+        android:layout_marginTop="@dimen/dm050"
+        android:background="@drawable/selector_login_bt"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm028" />
+
+
+</LinearLayout>

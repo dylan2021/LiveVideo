@@ -1,0 +1,39 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\eccf55fba6ea1b18ce43505b89ceb222\\core-0.9.1.0\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,428",
+                        "endLines": "8,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "423,855"
+                    },
+                    "to": {
+                        "startLines": "21,28",
+                        "startColumns": "4,4",
+                        "startOffsets": "1317,1690",
+                        "endLines": "27,36",
+                        "endColumns": "12,12",
+                        "endOffsets": "1685,2117"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\899b8389eb97a31634fdce923efc2df7\\appcompat-v7-26.1.0\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2,7,8,9,15",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,331,402,485,895",
+                        "endLines": "6,7,8,14,20",
+                        "endColumns": "12,70,82,12,12",
+                        "endOffsets": "326,397,480,890,1312"
+                    }
+                }
+            ]
+        }
+    ]
+}

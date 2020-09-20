@@ -1,0 +1,2 @@
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\debug\AndroidManifest.xml:53
+-keep class com.android.livevideo.App { <init>(); }

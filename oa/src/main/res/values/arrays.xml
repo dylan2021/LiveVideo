@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="aduit_dept_arr">
+        <item>部门</item>
+        <item>厂长</item>
+        <item>董事长</item>
+    </string-array>
+    <string-array name="whether_leave_arr">
+        <item>是(换取调休)</item>
+        <item>否(计入加班时长)</item>
+    </string-array>
+</resources>

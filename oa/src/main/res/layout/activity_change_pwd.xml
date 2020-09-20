@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:text="修改密码"
+        android:layout_marginTop="@dimen/dm030"
+        android:textColor="@color/color212121"
+        android:textSize="@dimen/dm040"
+        android:textStyle="bold" />
+
+    <TextView
+        style="@style/px26_999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:layout_marginTop="@dimen/dm020"
+        android:text="@string/change_pwd_tip" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:layout_marginTop="@dimen/dm110"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/px28_212121_bold"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm080"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:maxLength="16"
+            android:singleLine="true"
+            android:text="原密码" />
+
+        <EditText
+            android:id="@+id/old_pwd_et"
+            style="@style/px28_212121"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm080"
+            android:background="@null"
+            android:hint="请填写原密码"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="@dimen/dm180"
+            android:singleLine="true"
+            android:textColorHint="@color/a5a5a5" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/px28_212121_bold"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm080"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:maxLength="16"
+            android:singleLine="true"
+            android:text="新密码"
+            android:textColorHint="@color/color_hint" />
+
+        <EditText
+            android:id="@+id/new_pwd_et1"
+            style="@style/px28_212121"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm080"
+            android:background="@null"
+            android:hint="请输入新密码"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="@dimen/dm180"
+            android:textColorHint="@color/a5a5a5" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_find_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bt_height"
+        android:layout_marginBottom="@dimen/dm025"
+        android:layout_marginLeft="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:layout_marginTop="@dimen/dm080"
+        android:background="@drawable/selector_login_bt"
+        android:onClick="onLoginClick"
+        android:text="@string/change"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm028" />
+
+</LinearLayout>

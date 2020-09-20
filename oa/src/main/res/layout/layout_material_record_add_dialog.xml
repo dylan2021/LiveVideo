@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:descendantFocusability="afterDescendants"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/material_dialog_rg"
+        android:layout_width="@dimen/dm450"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dm015"
+        android:layout_marginTop="@dimen/dm060"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/material_dialog_rb_1"
+            android:layout_width="@dimen/dm100"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/dm100"
+            android:background="@drawable/selector_rb_bg"
+            android:checked="true"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dm007"
+            android:paddingTop="@dimen/dm007"
+            android:text="入库"
+            android:textColor="@color/color_seletor_main_color_21"
+            android:textSize="@dimen/dm026" />
+        <RadioButton
+            android:id="@+id/material_dialog_rb_0"
+            android:layout_width="@dimen/dm100"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm035"
+            android:background="@drawable/selector_rb_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dm007"
+            android:paddingTop="@dimen/dm007"
+            android:text="出库"
+            android:textColor="@color/color_seletor_main_color_21"
+            android:textSize="@dimen/dm026" />
+
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm150"
+        android:layout_marginBottom="@dimen/dm020"
+        android:gravity="center_vertical">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/material_dialog_numb_et"
+            android:layout_width="@dimen/dm220"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dm102"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:hint=" 请填写数量"
+            android:inputType="number"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textColor="@color/color212121"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
+            android:textSize="@dimen/dm030"
+            app:met_autoValidate="true"
+            app:met_baseColor="@color/color212121"
+            app:met_clearButton="false"
+            app:met_errorColor="@color/color666"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelPadding="@dimen/dm010"
+            app:met_floatingLabelText="数量"
+            app:met_floatingLabelTextColor="@color/color999"
+            app:met_maxCharacters="10"
+            app:met_primaryColor="@color/mainColor"
+     />
+
+        <TextView
+            style="@style/px28_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm020"
+            android:text="吨" />
+    </LinearLayout>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/material_dialog_used_people_et"
+        android:layout_width="@dimen/dm220"
+        android:layout_height="@dimen/dm150"
+        android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/dm102"
+        android:layout_marginTop="@dimen/dm_030"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:hint=" 请填写领用人"
+        android:maxLength="10"
+        android:singleLine="true"
+        android:textColor="@color/color212121"
+        android:textColorHint="@color/color_hint"
+        android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
+        android:textSize="@dimen/dm030"
+        app:met_autoValidate="true"
+        app:met_baseColor="@color/color212121"
+        app:met_clearButton="false"
+        app:met_errorColor="@color/color666"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelPadding="@dimen/dm010"
+        app:met_floatingLabelText="领用人"
+        app:met_floatingLabelTextColor="@color/color999"
+        app:met_maxCharacters="10"
+        app:met_primaryColor="@color/mainColor"
+       />
+
+    <include layout="@layout/layout_line_1px_divider_dark"></include>
+
+    <TextView
+        android:id="@+id/menu_ok_bt"
+        android:layout_width="@dimen/dm400"
+        android:layout_height="@dimen/dm080"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/sure"
+        android:textColor="@color/mainColor"
+        android:textSize="@dimen/dm026" />
+
+</LinearLayout>

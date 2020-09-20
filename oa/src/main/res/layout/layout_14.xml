@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="产品名称" />
+
+        <TextView
+            android:id="@+id/product_name_tv"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/item_et_max_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@color/white">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="产地" />
+
+        <EditText
+            android:id="@+id/tv_14_address"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm400"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/input_hint"
+            android:maxLines="1"
+            android:paddingRight="@dimen/main_margin_left_x"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@color/white">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="车牌号" />
+
+        <EditText
+            android:id="@+id/tv_14_car_num"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm400"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/input_hint"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="驾驶员" />
+
+        <EditText
+            android:id="@+id/tv_14_driver_name"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm400"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/input_hint"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="驾驶员电话" />
+
+        <EditText
+            android:id="@+id/tv_14_driver_phone"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm400"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/input_hint"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/end_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="过磅时间" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="关联原料检验单" />
+
+        <TextView
+            android:id="@+id/connect_in_pool_num_tv"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/item_et_max_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/px22_a5a5a5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm060"
+        android:background="@color/eee"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dm020"
+        android:text="过磅明细" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@color/white">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="毛重(kg)" />
+
+        <EditText
+            android:id="@+id/tv_14_weight_rough"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm400"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/input_hint"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@color/white">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="皮重(kg)" />
+
+        <EditText
+            android:id="@+id/tv_14_weight_tare"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm400"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/input_hint"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="扣杂(kg)" />
+
+        <EditText
+            android:id="@+id/tv_14_weight_deduct"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm400"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/input_hint"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="单价(元)" />
+
+        <EditText
+            android:id="@+id/tv_14_price"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm400"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/input_hint"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+    </RelativeLayout>
+
+</LinearLayout>

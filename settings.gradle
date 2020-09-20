@@ -1,1 +1,1 @@
-include ':app','jjdxm-ijkplayer'
+include ':oa', 'jjdxm-ijkplayer', ':imglib'

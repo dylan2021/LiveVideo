@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_layout_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:gravity="center"
+        android:text="预警消息"
+        android:textColor="@color/color212121"
+        android:textSize="@dimen/dm030"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/msg_tab_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/msg_tab_0"
+            style="@style/seletor_tab"
+            android:layout_width="wrap_content"
+            android:checked="true"
+            android:text="消息" />
+
+        <RadioButton
+            android:id="@+id/msg_tab_1"
+            style="@style/seletor_tab"
+            android:layout_width="wrap_content"
+            android:text="预警消息" />
+    </RadioGroup>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout_tv">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/f5"
+            android:clipToPadding="false"
+            android:divider="@color/divider_color"
+            android:dividerHeight="@dimen/dm000"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:paddingTop="@dimen/dm015"
+            android:paddingBottom="@dimen/dm010"
+            android:scrollbars="none"></ListView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dm300"
+        android:drawableTop="@drawable/ic_bg_no_data"
+        android:drawablePadding="@dimen/dm030"
+        android:gravity="center"
+        android:text="@string/no_data"
+        android:textColor="@color/color999"
+        android:textSize="@dimen/dm028"
+        android:visibility="gone" />
+</RelativeLayout>

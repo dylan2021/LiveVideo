@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/tools"
+    xmlns:tabs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center" />
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+    <RelativeLayout
+        android:id="@+id/main_me_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:paddingLeft="@dimen/dm005">
+
+        <TextView
+            android:id="@+id/me_icon_tv"
+            android:layout_width="@dimen/dm065"
+            android:layout_height="@dimen/dm065"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/dm030"
+            android:background="@drawable/shape_circle_main_color"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dm024" />
+
+
+        <TextView
+            android:id="@+id/me_name_tv"
+            style="@style/px28_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dm030"
+            android:layout_toRightOf="@id/me_icon_tv"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/me_department_tv"
+            style="@style/px24_a5a5a5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/me_name_tv"
+            android:layout_toRightOf="@id/me_icon_tv"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/me_month_seleted_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/dm008"
+            android:drawableRight="@drawable/ic_arrow_down"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/dm040"
+            android:paddingRight="@dimen/main_margin_left_x"
+            android:paddingTop="@dimen/dm040"
+            android:text=""
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/dm028" />
+    </RelativeLayout>
+
+    <com.android.livevideo.view.PullScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/f5"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dm080"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:paddingRight="@dimen/dm020">
+
+        </LinearLayout>
+
+    </com.android.livevideo.view.PullScrollView>
+</LinearLayout>
