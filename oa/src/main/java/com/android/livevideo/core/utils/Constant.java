@@ -19,10 +19,10 @@ package com.android.livevideo.core.utils;
  * @author Gool Lee
  */
 public class Constant {
-    private static final boolean IS_OFFICIAL = true;//正式服务器
+    private static final boolean IS_OFFICIAL = false;//正式服务器
 
     public static final String WEB_SITE_OFFICIAL = "http://api.oa.gztongzhiyuan.com";//正式
-    public static final String WEB_SITE_TEST = "http://api.tzy.waylinkage.com";//测试
+    public static final String WEB_SITE_TEST = "http://106.58.168.63:58822";//测试
     public static final String WEB_SITE = IS_OFFICIAL ? WEB_SITE_OFFICIAL : WEB_SITE_TEST;
 
     public static final String WEB_FILE_SEE_OFFICIAL = "http://file.gztongzhiyuan.com/";
@@ -37,7 +37,7 @@ public class Constant {
     public static final String CFG_RECEIVE_MSG = "ReceiveMsg";
     public static final String CFG_DELETE_APK = "DeleteApk";
     public static final String CFG_ALLOW_4G_LOAD = "AllowLoadBy4G";
-    public static final String URL_USER_LOGIN = "/authorization/oauth/token";
+    public static final String URL_USER_LOGIN = "/ai/user/login";
     public static final String URL_USER_REGISTER = "/user/userRegistration";
     public static final String DICT_STATUS_USED = "1";
     public static final int NET_STATUS_DISCONNECT = 0x0010;//网络未连接

@@ -334,11 +334,15 @@ com/android/livevideo/core/utils/TextUtil.java
 com/android/livevideo/act_2/FragmentAddress.java
  com.android.livevideo.act_2.FragmentAddress
  com.android.livevideo.act_2.FragmentAddress$1
+ com.android.livevideo.act_2.FragmentAddress$10
  com.android.livevideo.act_2.FragmentAddress$2
  com.android.livevideo.act_2.FragmentAddress$3
  com.android.livevideo.act_2.FragmentAddress$4
  com.android.livevideo.act_2.FragmentAddress$5
  com.android.livevideo.act_2.FragmentAddress$6
+ com.android.livevideo.act_2.FragmentAddress$7
+ com.android.livevideo.act_2.FragmentAddress$8
+ com.android.livevideo.act_2.FragmentAddress$9
 com/android/livevideo/view/MyVideoPlayerStandard.java
  com.android.livevideo.view.MyVideoPlayerStandard
 android/support/graphics/drawable/R.java
@@ -358,6 +362,9 @@ com/android/livevideo/util/PhoneUtils.java
  com.android.livevideo.util.PhoneUtils
 com/android/livevideo/act_other/CommonBaseActivity.java
  com.android.livevideo.act_other.CommonBaseActivity
+com/android/livevideo/bean/CamerasListInfo.java
+ com.android.livevideo.bean.CamerasListInfo
+ com.android.livevideo.bean.CamerasListInfo$DataBean
 com/android/livevideo/act_1/Work_14_20Activity.java
  com.android.livevideo.act_1.Work_14_20Activity
  com.android.livevideo.act_1.Work_14_20Activity$1
@@ -555,6 +562,9 @@ android/support/coreutils/R.java
  android.support.coreutils.R$string
  android.support.coreutils.R$style
  android.support.coreutils.R$styleable
+com/android/livevideo/bean/CameraInfo.java
+ com.android.livevideo.bean.CameraInfo
+ com.android.livevideo.bean.CameraInfo$DataBean
 com/android/livevideo/exception/NoSDCardException.java
  com.android.livevideo.exception.NoSDCardException
 com/android/livevideo/act_1/PoolChooseAdapter.java
@@ -1298,8 +1308,6 @@ com/android/livevideo/util/ToastUtil.java
  com.android.livevideo.util.ToastUtil
 com/android/livevideo/core/utils/CircleTransform.java
  com.android.livevideo.core.utils.CircleTransform
-com/android/livevideo/bean/ThreadInfo.java
- com.android.livevideo.bean.ThreadInfo
 com/facebook/fbcore/R.java
  com.facebook.fbcore.R
 com/android/livevideo/bean/Contact.java

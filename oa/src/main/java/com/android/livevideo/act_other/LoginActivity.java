@@ -6,27 +6,27 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.method.DigitsKeyListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.livevideo.act_0.MainActivity;
-import com.android.livevideo.util.DialogUtils;
-import com.android.livevideo.util.Utils;
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.android.livevideo.App;
 import com.android.livevideo.R;
+import com.android.livevideo.act_0.MainActivity;
 import com.android.livevideo.core.utils.Constant;
 import com.android.livevideo.core.utils.DialogHelper;
 import com.android.livevideo.core.utils.KeyConst;
 import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.core.utils.TextUtil;
+import com.android.livevideo.util.DialogUtils;
 import com.android.livevideo.util.ToastUtil;
+import com.android.livevideo.util.Utils;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import org.json.JSONException;
@@ -60,10 +60,10 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
         isFirstLuncher = sp.getBoolean(KeyConst.IS_FIRST_LUNCHER_SP, true);
 
         et_user = (MaterialEditText) findViewById(R.id.et_login_user);
-        et_user. setKeyListener(DigitsKeyListener.getInstance(getString(R.string.account_digits)));
+        et_user.setKeyListener(DigitsKeyListener.getInstance(getString(R.string.account_digits)));
         et_pwd = (MaterialEditText) findViewById(R.id.et_login_pwd);
-        username = sp.getString(KeyConst.username, "13100637291");
-        pwd = sp.getString(Constant.sp_pwd, "111111");
+        username = sp.getString(KeyConst.username, "admin");//统之源 13100637291 111111
+        pwd = sp.getString(Constant.sp_pwd, "admin123");
 
         welcomeIv = (ImageView) findViewById(R.id.welcome_iv);
         bt_find_pwd = (TextView) findViewById(R.id.tv_find_pwd);
@@ -127,57 +127,62 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
     }
 
     private void doLogin(final boolean isAutoLogin) {
-        String url = Constant.WEB_SITE + Constant.URL_USER_LOGIN;
-        StringRequest jsonObjRequest = new StringRequest(Request.Method.POST, url,
+        String url = Constant.WEB_SITE + Constant.URL_USER_LOGIN
+                + "?username=" + username + "&password=" + pwd;
+        Log.d("数据", "数据" + url);
+
+        StringRequest versionRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String result) {
+                        Log.d("数据", "数据" + result);
+                        if (null != context && !context.isFinishing()) {
+                            dialogHelper.hideAlert();
+                        }
                         if (result == null) {
                             if (isAutoLogin) {
                                 startActivity(new Intent(context, MainActivity.class));
                                 context.finish();
                                 return;
                             }
-                            if (null != context && !context.isFinishing()) {
-                                dialogHelper.hideAlert();
-                            }
                             ToastUtil.show(context, getString(R.string.server_exception));
                             return;
                         }
                         try {
-                            JSONObject jsonObject = new JSONObject(result);
-                            accessToken = jsonObject.getString(KeyConst.access_token);
-                        } catch (JSONException e) {
-                            accessToken = null;
-                        }
-                        if (TextUtil.isEmpty(accessToken)) {
-                            if (isAutoLogin) {
+                            JSONObject object = new JSONObject(result);
+                            int code = object.getInt(KeyConst.code);
+                            String msg = object.getString(KeyConst.msg);
+                            if (0 == code) {
+                                SharedPreferences.Editor editor = sp.edit();
+                                editor.putString(Constant.SP_TOKEN, accessToken);
+                                editor.putString(KeyConst.username, username);
+                                editor.putString(Constant.sp_pwd, pwd);
+                                editor.apply();
+                                App.token = accessToken;
+                                App.passWord = pwd;
+                                App.username = username;
+                                App.phone = username;
+                                App.phone = username;
                                 startActivity(new Intent(context, MainActivity.class));
                                 context.finish();
                                 return;
+                            } else {
+                                //DialogUtils.showTipDialog(context, msg);
                             }
-                            if (null != context && !context.isFinishing()) {
-                                dialogHelper.hideAlert();
-                            }
-                            ToastUtil.show(context, getString(R.string.server_exception));
+                        } catch (JSONException e) {
+                        }
+                        ToastUtil.show(context, R.string.request_failed_retry_later);
+                        if (isAutoLogin) {
+                            startActivity(new Intent(context, MainActivity.class));
+                            context.finish();
                             return;
                         }
-                        SharedPreferences.Editor editor = sp.edit();
-                        editor.putString(Constant.SP_TOKEN, accessToken);
-                        editor.putString(KeyConst.username, username);
-                        editor.putString(Constant.sp_pwd, pwd);
-                        editor.apply();
-                        App.token = accessToken;
-                        App.passWord = pwd;
-                        App.username = username;
-                        App.phone = username;
-                        startActivity(new Intent(context, MainActivity.class));
-                        context.finish();
                     }
                 }, new Response.ErrorListener() {
 
             @Override
             public void onErrorResponse(VolleyError error) {
+                Log.d("数据", "数2据" + error);
                 if (isAutoLogin) {
                     startActivity(new Intent(context, MainActivity.class));
                     context.finish();
@@ -209,26 +214,16 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
                 ToastUtil.show(context, R.string.server_exception);
             }
         }) {
-
             @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
+            public Map<String, String> getHeaders() {
                 Map<String, String> params = new HashMap<>();
-                params.put(KeyConst.Content_Type, Constant.application_form);
-                params.put(KeyConst.Authorization, Constant.authorization);
+                params.put("X-Requested-With", "XMLHttpRequest");
+                //params.put(KeyConst.Content_Type,Constant.application_json);
+
                 return params;
             }
-
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put(KeyConst.username, username);
-                params.put(KeyConst.password, pwd);
-                params.put(KeyConst.grant_type, KeyConst.password);
-                return params;
-            }
-
         };
+        App.requestQueue.add(versionRequest);
 
-        App.requestQueue.add(jsonObjRequest);
     }
 }

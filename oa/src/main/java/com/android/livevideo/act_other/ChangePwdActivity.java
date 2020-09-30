@@ -112,8 +112,7 @@ public class ChangePwdActivity extends BaseFgActivity {
         map.put(KeyConst.oldPassword, oldPwdStr);
         JSONObject mapObj = new JSONObject(map);
         JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, url,
-                mapObj,
-                new Response.Listener<JSONObject>() {
+                mapObj, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject result) {
                         if (result == null) {

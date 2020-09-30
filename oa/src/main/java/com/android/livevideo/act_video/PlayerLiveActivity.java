@@ -66,7 +66,6 @@ public class PlayerLiveActivity extends BaseFgActivity {
         setContentView(rootView);
 
         ((TextView) findViewById(R.id.app_title_tv)).setText(title);
-        /**常亮*/
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         wakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "liveTAG");
         wakeLock.acquire();
@@ -92,12 +91,10 @@ public class PlayerLiveActivity extends BaseFgActivity {
         new Thread() {
             @Override
             public void run() {
-                //这里多有得罪啦，网上找的直播地址，如有不妥之处，可联系删除
                 list = ApiServiceUtils.getLiveList();
                 mHandler.sendEmptyMessage(0);
             }
         }.start();
-
     }
 
     @Override

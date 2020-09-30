@@ -3,6 +3,7 @@ package com.android.livevideo.act_2;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -12,7 +13,8 @@ import com.android.livevideo.R;
 import com.android.livevideo.act_0.MainActivity;
 import com.android.livevideo.act_video.PlayerLiveActivity;
 import com.android.livevideo.base.fragment.BaseSearchFragment;
-import com.android.livevideo.bean.DeptInfo;
+import com.android.livevideo.bean.CameraInfo;
+import com.android.livevideo.bean.CamerasListInfo;
 import com.android.livevideo.core.net.GsonRequest;
 import com.android.livevideo.core.utils.Constant;
 import com.android.livevideo.core.utils.KeyConst;
@@ -26,7 +28,6 @@ import com.android.volley.VolleyError;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +40,6 @@ public class FragmentAddress extends BaseSearchFragment {
     private int id;
     private MainActivity context;
     private View view;
-    private List<DeptInfo> deptInfos = new ArrayList<>();
     private LinearLayout deptLayout;
     private TextView topNameTv;
 
@@ -62,7 +62,6 @@ public class FragmentAddress extends BaseSearchFragment {
 
         initView();
         getData();
-        initLayout(deptInfos);
     }
 
     @Override
@@ -73,91 +72,114 @@ public class FragmentAddress extends BaseSearchFragment {
         }
     }
 
-    private void initLayout(List<DeptInfo> infoList) {
+    private void initLayout(List<CamerasListInfo.DataBean> infoList) {
         deptLayout.removeAllViews();
         if (infoList == null || infoList.size() == 0) {
             ToastUtil.show(context, "无数据");
             return;
         }
-        DeptInfo dataInfo = deptInfos.get(0);
-        App.companyName = TextUtil.remove_N(dataInfo.getTitle());
-        context.setCompanyName();
-        int total = dataInfo.getTotal();
-        topNameTv.setText(App.companyName + "(" + total + "人)");
-        List<DeptInfo.ChildrenBeanX> deptInfoChildren = dataInfo.getChildren();
-        if (deptInfoChildren == null || deptInfoChildren.size() == 0) {
-            return;
-        }
-        for (DeptInfo.ChildrenBeanX deptInfo : deptInfoChildren) {
+        for (CamerasListInfo.DataBean bean : infoList) {
             View itemView = View.inflate(context, R.layout.item_address, null);
             TextView nameTv = (TextView) itemView.findViewById(R.id.address_name_tv);
-            TextView addressTv = (TextView) itemView.findViewById(R.id.address_tv);
+            TextView descTv = (TextView) itemView.findViewById(R.id.address_tv);
             TextView statusTv = (TextView) itemView.findViewById(R.id.address_number_tv);
+            if (bean != null) {
+                final int id = bean.getCameraId();
+                final String onlineStatus = bean.getOnlineStatus();
 
-            if (deptInfo != null) {
-                final int id = deptInfo.getId();
-                final String title = deptInfo.getTitle();
-                final int employeeCount = deptInfo.getTotal();
-                final List<DeptInfo.ChildrenBeanX.ChildrenBean> childrenList = deptInfo.getChildren();
-                nameTv.setText("摄像头" + id);
-                addressTv.setText("武汉市江夏区光谷大道" + id + "号");
-                statusTv.setText(id < 10 ? "无信号" : "正常");
-
-                 //String url = "rtmp://58.200.131.2:1935/livetv/hunantv";
-                 String url = "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8";
+                final String title = bean.getCameraAddr();
+                final String employeeCount = bean.getCameraMsg();
+                nameTv.setText(title);
+                descTv.setText(employeeCount);
+                statusTv.setText("1".equals(onlineStatus) ? "无信号" : "正常");
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Bundle bundle = new Bundle();
-                        bundle.putSerializable(KeyConst.OBJ_INFO, (Serializable) childrenList);
-
-                        Intent intent = new Intent(context, PlayerLiveActivity.class);
-                        intent.putExtra(KeyConst.id, id);
-                        intent.putExtras(bundle);
-                        intent.putExtra(KeyConst.url, url);
-                        intent.putExtra(KeyConst.title, nameTv.getText()+"");
-                        context.startActivity(intent);
+                        //请求单个摄像头播放地址
+                        getItemData(id, title);
                     }
                 });
-                //产值
                 deptLayout.addView(itemView);
             }
         }
     }
 
-    private void getData() {
-        DeptInfo info = new DeptInfo();
-        deptInfos.add(info);
-
+    private void getItemData(int id, String title) {
         if (!NetUtil.isNetworkConnected(context)) {
             return;
         }
-        String url = Constant.WEB_SITE + "/upms/departments/tree";
+        String url = Constant.WEB_SITE + "/ai/camera/getLive?cameraSeq=" + id;
 
-        Response.Listener<List<DeptInfo>> successListener = new Response
-                .Listener<List<DeptInfo>>() {
+        Response.Listener<CameraInfo> successListener = new Response
+                .Listener<CameraInfo>() {
             @Override
-            public void onResponse(List<DeptInfo> result) {
-                if (null == context) {
+            public void onResponse(CameraInfo result) {
+                CameraInfo.DataBean data = result.getData();
+                if (null == context || data == null) {
                     return;
                 }
-                deptInfos = result;
-                initLayout(deptInfos);
+                String liveUrl = data.getLiveUrl();
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(KeyConst.OBJ_INFO, (Serializable) null);
+
+                Intent intent = new Intent(context, PlayerLiveActivity.class);
+                intent.putExtra(KeyConst.id, id);
+                intent.putExtra(KeyConst.url, liveUrl);
+                intent.putExtras(bundle);
+                intent.putExtra(KeyConst.title, title);
+                context.startActivity(intent);
             }
         };
 
-        Request<List<DeptInfo>> versionRequest = new
-                GsonRequest<List<DeptInfo>>(Request.Method.GET, url,
+        Request<CameraInfo> versionRequest = new
+                GsonRequest<CameraInfo>(Request.Method.GET, url,
                         successListener, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                     }
-                }, new TypeToken<List<DeptInfo>>() {
+                }, new TypeToken<CameraInfo>() {
                 }.getType()) {
                     @Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
                         Map<String, String> params = new HashMap<>();
                         params.put(KeyConst.Authorization, KeyConst.Bearer + App.token);
+                        return params;
+                    }
+                };
+        App.requestQueue.add(versionRequest);
+    }
+
+    private void getData() {
+        if (!NetUtil.isNetworkConnected(context)) {
+            return;
+        }
+        String url = Constant.WEB_SITE + "/ai/camera/list";
+        Response.Listener<CamerasListInfo> successListener = new Response
+                .Listener<CamerasListInfo>() {
+            @Override
+            public void onResponse(CamerasListInfo result) {
+                Log.d(TAG, "数据返回" + result.getCode());
+                Log.d(TAG, "数据返回" + result.getMsg());
+                if (null == context || result == null) {
+                    return;
+                }
+                initLayout(result.getData());
+            }
+        };
+
+        Request<CamerasListInfo> versionRequest = new
+                GsonRequest<CamerasListInfo>(Request.Method.GET, url,
+                        successListener, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        Log.d(TAG, "数据返回错误" + TextUtil.getErrorMsg(volleyError));
+                    }
+                }, new TypeToken<CamerasListInfo>() {
+                }.getType()) {
+                    @Override
+                    public Map<String, String> getHeaders() throws AuthFailureError {
+                        Map<String, String> params = new HashMap<>();
+                        params.put("X-Requested-With", "XMLHttpRequest");
                         return params;
                     }
                 };

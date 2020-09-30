@@ -33,7 +33,7 @@ public class PlayerActivity extends Activity {
         setContentView(rootView);
         String url = "http://183.6.245.249/v.cctv.com/flash/mp4video6/TMS/2011/01/05/cf752b1c12ce452b3040cab2f90bc265_h264818000nero_aac32-1.mp4";
         player = new PlayerView(this, rootView)
-                .setTitle("什么")
+                .setTitle("摄像头")
                 .setScaleType(PlayStateParams.fitparent)
                 .forbidTouch(false)
                 .hideMenu(true)

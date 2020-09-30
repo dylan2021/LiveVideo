@@ -76,6 +76,7 @@ public class KeyConst {
     public static final String startTime ="startTime";
     public static final String endTime ="endTime";
     public static final String code="code";
+    public static final String msg="msg";
 
     public static final String vehicle="vehicle";
     public static final String String="String";
