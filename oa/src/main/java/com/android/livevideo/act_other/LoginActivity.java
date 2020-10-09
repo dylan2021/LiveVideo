@@ -172,6 +172,8 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
                         } catch (JSONException e) {
                         }
                         ToastUtil.show(context, R.string.request_failed_retry_later);
+                        startActivity(new Intent(context, MainActivity.class));
+                        context.finish();
                         if (isAutoLogin) {
                             startActivity(new Intent(context, MainActivity.class));
                             context.finish();

@@ -87,10 +87,7 @@
                 android:focusableInTouchMode="false"
                 android:orientation="vertical"></LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dm080"
-                android:background="@color/f5" />
+
         </LinearLayout>
     </com.android.livevideo.view.PullScrollView>
 </RelativeLayout>
