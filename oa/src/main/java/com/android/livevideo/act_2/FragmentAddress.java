@@ -158,8 +158,8 @@ public class FragmentAddress extends BaseSearchFragment {
                 .Listener<CamerasListInfo>() {
             @Override
             public void onResponse(CamerasListInfo result) {
-                Log.d(TAG, "数据返回" + result.getCode());
-                Log.d(TAG, "数据返回" + result.getMsg());
+                Log.d(TAG, "获取失败,code:" + result.getCode());
+                Log.d(TAG, "获取失败,msg:" + result.getMsg());
                 if (null == context || result == null) {
                     return;
                 }

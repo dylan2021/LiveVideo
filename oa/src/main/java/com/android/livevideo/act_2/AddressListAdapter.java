@@ -126,7 +126,6 @@ public class AddressListAdapter extends BaseExpandableListAdapter {
             String name = statInfo.getName();
             groupViewHolder.tvTitle.setText(name);
             groupViewHolder.tvNumber.setSelected(isExpanded);
-            Log.d("市场部数据", name + ":" + details);
      /*       if (details == null || details.size() == 0) {
             Log.d("市场部数据", name + ":" + details);
                 groupViewHolder.tvNumber.setText("0人");

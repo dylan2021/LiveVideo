@@ -22,7 +22,7 @@ public class Constant {
     private static final boolean IS_OFFICIAL = false;//正式服务器
 
     public static final String WEB_SITE_OFFICIAL = "http://api.oa.gztongzhiyuan.com";//正式
-    public static final String WEB_SITE_TEST = "http://106.58.168.63:58822";//测试
+    public static final String WEB_SITE_TEST = "http://106.58.168.63:58822/v";//测试
     public static final String WEB_SITE = IS_OFFICIAL ? WEB_SITE_OFFICIAL : WEB_SITE_TEST;
 
     public static final String WEB_FILE_SEE_OFFICIAL = "http://file.gztongzhiyuan.com/";
