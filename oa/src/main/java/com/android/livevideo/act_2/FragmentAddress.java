@@ -21,16 +21,13 @@ import com.android.livevideo.core.utils.KeyConst;
 import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.core.utils.TextUtil;
 import com.android.livevideo.util.ToastUtil;
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Gool Lee
@@ -139,12 +136,12 @@ public class FragmentAddress extends BaseSearchFragment {
                     }
                 }, new TypeToken<CameraInfo>() {
                 }.getType()) {
-                    @Override
+                   /* @Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
                         Map<String, String> params = new HashMap<>();
                         params.put(KeyConst.Authorization, KeyConst.Bearer + App.token);
                         return params;
-                    }
+                    }*/
                 };
         App.requestQueue.add(versionRequest);
     }
@@ -158,8 +155,6 @@ public class FragmentAddress extends BaseSearchFragment {
                 .Listener<CamerasListInfo>() {
             @Override
             public void onResponse(CamerasListInfo result) {
-                Log.d(TAG, "获取失败,code:" + result.getCode());
-                Log.d(TAG, "获取失败,msg:" + result.getMsg());
                 if (null == context || result == null) {
                     return;
                 }
@@ -176,12 +171,12 @@ public class FragmentAddress extends BaseSearchFragment {
                     }
                 }, new TypeToken<CamerasListInfo>() {
                 }.getType()) {
-                    @Override
+                   /* @Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
                         Map<String, String> params = new HashMap<>();
                         params.put("X-Requested-With", "XMLHttpRequest");
                         return params;
-                    }
+                    }*/
                 };
         App.requestQueue.add(versionRequest);
     }

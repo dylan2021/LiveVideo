@@ -101,7 +101,6 @@ public class MainActivity extends BaseFgActivity {
         initStatusBar();
         setContentView(R.layout.activity_main);
         context = this;
-        checkAppUpdate();
         sp = getSharedPreferences(Constant.CONFIG_FILE_NAME, MODE_PRIVATE);
         editor = sp.edit();
         chooseId = sp.getInt(KeyConst.SP_CHOOSE_ID, 0);
@@ -144,6 +143,11 @@ public class MainActivity extends BaseFgActivity {
         video.setOnClickListener(mTabClickListener);
         manager.setOnClickListener(mTabClickListener);
 
+        //checkAppUpdate();
+
+        mMenuNameTv.setText(App.username);
+        iconTv.setText(TextUtil.getLast2(App.username));
+        deptNameTv.setText("武汉盛世利华科技有限公司");
     }
 
     private void getAmPmTime() {
@@ -187,10 +191,9 @@ public class MainActivity extends BaseFgActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        getUserData();
+    /*    getUserData();
         Utils.requestDictData(context);
-        getAmPmTime();
-
+        getAmPmTime();*/
         if (mDownloadManager != null) {
             mDownloadManager.resume();
         }
@@ -409,7 +412,7 @@ public class MainActivity extends BaseFgActivity {
                     return;
                 }
                 accountInfo = info;
-                App.employeeName = "李国良";
+                App.employeeName = "";
                 App.employeeId = info.employeeId;
 
                 mMenuNameTv.setText(App.employeeName);

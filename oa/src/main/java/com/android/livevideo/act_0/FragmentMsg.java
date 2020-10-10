@@ -14,8 +14,12 @@ import android.widget.TextView;
 import com.android.livevideo.App;
 import com.android.livevideo.R;
 import com.android.livevideo.act_other.LoginActivity;
+import com.android.livevideo.base.fragment.BaseSearchFragment;
 import com.android.livevideo.bean.MsgInfo;
-import com.android.livevideo.core.utils.TextUtil;
+import com.android.livevideo.core.net.GsonRequest;
+import com.android.livevideo.core.utils.Constant;
+import com.android.livevideo.core.utils.KeyConst;
+import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.dialogfragment.SimpleDialogFragment;
 import com.android.livevideo.util.ToastUtil;
 import com.android.livevideo.util.Utils;
@@ -23,11 +27,6 @@ import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.livevideo.base.fragment.BaseSearchFragment;
-import com.android.livevideo.core.net.GsonRequest;
-import com.android.livevideo.core.utils.Constant;
-import com.android.livevideo.core.utils.KeyConst;
-import com.android.livevideo.core.utils.NetUtil;
 import com.google.gson.reflect.TypeToken;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -51,7 +50,7 @@ public class FragmentMsg extends BaseSearchFragment {
     private MainActivity context;
     private RefreshLayout mRefreshLayout;
     private MsgAdapter msgAdapter;
-    private int TYPE=1;
+    private int TYPE = 1;
     private ListView lv;
     private List<MsgInfo> noticeList, msgList;
     private SharedPreferences.Editor sp;
@@ -112,7 +111,10 @@ public class FragmentMsg extends BaseSearchFragment {
 
     //获取消息数据
     private void getMsgData(final int tabType) {
-        TextUtil.initEmptyTv(context, emptyTv);
+        if (true) {
+            mRefreshLayout.finishRefresh(0);
+            return;
+        }
         if (!NetUtil.isNetworkConnected(context)) {
             mRefreshLayout.finishRefresh(0);
             msgAdapter.setDate(null, TYPE);

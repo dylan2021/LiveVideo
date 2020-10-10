@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.method.DigitsKeyListener;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -62,8 +61,8 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
         et_user = (MaterialEditText) findViewById(R.id.et_login_user);
         et_user.setKeyListener(DigitsKeyListener.getInstance(getString(R.string.account_digits)));
         et_pwd = (MaterialEditText) findViewById(R.id.et_login_pwd);
-        username = sp.getString(KeyConst.username, "admin");//统之源 13100637291 111111
-        pwd = sp.getString(Constant.sp_pwd, "admin123");
+        username = sp.getString(KeyConst.username, "Dylan");//统之源 13100637291 111111
+        pwd = sp.getString(Constant.sp_pwd, "Dylan");
 
         welcomeIv = (ImageView) findViewById(R.id.welcome_iv);
         bt_find_pwd = (TextView) findViewById(R.id.tv_find_pwd);
@@ -129,13 +128,11 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
     private void doLogin(final boolean isAutoLogin) {
         String url = Constant.WEB_SITE + Constant.URL_USER_LOGIN
                 + "?username=" + username + "&password=" + pwd;
-        Log.d("数据", "数据" + url);
 
         StringRequest versionRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String result) {
-                        Log.d("数据", "数据" + result);
                         if (null != context && !context.isFinishing()) {
                             dialogHelper.hideAlert();
                         }
@@ -167,13 +164,10 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
                                 context.finish();
                                 return;
                             } else {
-                                //DialogUtils.showTipDialog(context, msg);
+                                DialogUtils.showTipDialog(context, msg);
                             }
                         } catch (JSONException e) {
                         }
-                        ToastUtil.show(context, R.string.request_failed_retry_later);
-                        startActivity(new Intent(context, MainActivity.class));
-                        context.finish();
                         if (isAutoLogin) {
                             startActivity(new Intent(context, MainActivity.class));
                             context.finish();
@@ -184,7 +178,6 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("数据", "数2据" + error);
                 if (isAutoLogin) {
                     startActivity(new Intent(context, MainActivity.class));
                     context.finish();
