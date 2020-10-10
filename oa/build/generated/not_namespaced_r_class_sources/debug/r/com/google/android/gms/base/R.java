@@ -102,8 +102,8 @@ public final class R {
         public static final int none = 0x7f090232;
         public static final int normal = 0x7f090233;
         public static final int standard = 0x7f0902b0;
-        public static final int wide = 0x7f09033e;
-        public static final int wrap_content = 0x7f090370;
+        public static final int wide = 0x7f09033d;
+        public static final int wrap_content = 0x7f09036f;
     }
     public static final class integer {
         private integer() {}

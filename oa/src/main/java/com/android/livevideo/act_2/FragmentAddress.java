@@ -3,7 +3,6 @@ package com.android.livevideo.act_2;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -19,12 +18,14 @@ import com.android.livevideo.core.net.GsonRequest;
 import com.android.livevideo.core.utils.Constant;
 import com.android.livevideo.core.utils.KeyConst;
 import com.android.livevideo.core.utils.NetUtil;
-import com.android.livevideo.core.utils.TextUtil;
 import com.android.livevideo.util.ToastUtil;
+import com.android.livevideo.util.Utils;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.google.gson.reflect.TypeToken;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.io.Serializable;
 import java.util.List;
@@ -39,6 +40,7 @@ public class FragmentAddress extends BaseSearchFragment {
     private View view;
     private LinearLayout deptLayout;
     private TextView topNameTv;
+    private RefreshLayout mRefreshLayout;
 
     public FragmentAddress() {
     }
@@ -155,7 +157,9 @@ public class FragmentAddress extends BaseSearchFragment {
                 .Listener<CamerasListInfo>() {
             @Override
             public void onResponse(CamerasListInfo result) {
+                mRefreshLayout.finishRefresh();
                 if (null == context || result == null) {
+                    ToastUtil.show(context,R.string.no_data);
                     return;
                 }
                 initLayout(result.getData());
@@ -167,7 +171,7 @@ public class FragmentAddress extends BaseSearchFragment {
                         successListener, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Log.d(TAG, "数据返回错误" + TextUtil.getErrorMsg(volleyError));
+                        mRefreshLayout.finishRefresh();
                     }
                 }, new TypeToken<CamerasListInfo>() {
                 }.getType()) {
@@ -190,6 +194,16 @@ public class FragmentAddress extends BaseSearchFragment {
         });
         topNameTv = (TextView) view.findViewById(R.id.top_name_tv);
         deptLayout = (LinearLayout) view.findViewById(R.id.department_list_layout);
+
+        mRefreshLayout = (RefreshLayout) view.findViewById(R.id.refreshLayout);
+        Utils.setLoadHeaderFooter(context, mRefreshLayout);
+        mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(RefreshLayout refreshlayout) {
+                getData();
+            }
+        });
+        mRefreshLayout.autoRefresh();
     }
 
     @Override

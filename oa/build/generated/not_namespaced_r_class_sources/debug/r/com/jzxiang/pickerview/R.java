@@ -578,14 +578,14 @@ public final class R {
         public static final int title_template = 0x7f0902cf;
         public static final int toolbar = 0x7f0902d4;
         public static final int topPanel = 0x7f0902d6;
-        public static final int tv_cancel = 0x7f090306;
-        public static final int tv_sure = 0x7f090311;
-        public static final int tv_title = 0x7f090313;
-        public static final int up = 0x7f090317;
-        public static final int useLogo = 0x7f090318;
-        public static final int withText = 0x7f09033f;
-        public static final int wrap_content = 0x7f090370;
-        public static final int year = 0x7f090371;
+        public static final int tv_cancel = 0x7f090305;
+        public static final int tv_sure = 0x7f090310;
+        public static final int tv_title = 0x7f090312;
+        public static final int up = 0x7f090316;
+        public static final int useLogo = 0x7f090317;
+        public static final int withText = 0x7f09033e;
+        public static final int wrap_content = 0x7f09036f;
+        public static final int year = 0x7f090370;
     }
     public static final class integer {
         private integer() {}

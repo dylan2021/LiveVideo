@@ -864,16 +864,16 @@ public final class R {
         public static final int title_template = 0x7f0902cf;
         public static final int top = 0x7f0902d5;
         public static final int topPanel = 0x7f0902d6;
-        public static final int touch_outside = 0x7f0902ef;
-        public static final int transition_current_scene = 0x7f0902f0;
-        public static final int transition_layout_save = 0x7f0902f1;
-        public static final int transition_scene_layoutid_cache = 0x7f0902f2;
-        public static final int up = 0x7f090317;
-        public static final int useLogo = 0x7f090318;
-        public static final int view_offset_helper = 0x7f09032a;
-        public static final int visible = 0x7f09032e;
-        public static final int withText = 0x7f09033f;
-        public static final int wrap_content = 0x7f090370;
+        public static final int touch_outside = 0x7f0902ee;
+        public static final int transition_current_scene = 0x7f0902ef;
+        public static final int transition_layout_save = 0x7f0902f0;
+        public static final int transition_scene_layoutid_cache = 0x7f0902f1;
+        public static final int up = 0x7f090316;
+        public static final int useLogo = 0x7f090317;
+        public static final int view_offset_helper = 0x7f090329;
+        public static final int visible = 0x7f09032d;
+        public static final int withText = 0x7f09033e;
+        public static final int wrap_content = 0x7f09036f;
     }
     public static final class integer {
         private integer() {}

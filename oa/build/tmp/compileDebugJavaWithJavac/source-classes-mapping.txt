@@ -335,6 +335,7 @@ com/android/livevideo/act_2/FragmentAddress.java
  com.android.livevideo.act_2.FragmentAddress
  com.android.livevideo.act_2.FragmentAddress$1
  com.android.livevideo.act_2.FragmentAddress$10
+ com.android.livevideo.act_2.FragmentAddress$11
  com.android.livevideo.act_2.FragmentAddress$2
  com.android.livevideo.act_2.FragmentAddress$3
  com.android.livevideo.act_2.FragmentAddress$4

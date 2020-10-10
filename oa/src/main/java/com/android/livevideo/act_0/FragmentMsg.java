@@ -73,9 +73,6 @@ public class FragmentMsg extends BaseSearchFragment {
     @Override
     protected void initViewsAndEvents(View view) {
         context = (MainActivity) getActivity();
-        mRefreshLayout = (RefreshLayout) view.findViewById(R.id.refreshLayout);
-        Utils.setLoadHeaderFooter(context, mRefreshLayout);
-
 
         lv = (ListView) view.findViewById(R.id.listView);
         msgAdapter = new MsgAdapter(context);
@@ -93,6 +90,8 @@ public class FragmentMsg extends BaseSearchFragment {
             }
         });
 
+        mRefreshLayout = (RefreshLayout) view.findViewById(R.id.refreshLayout);
+        Utils.setLoadHeaderFooter(context, mRefreshLayout);
         mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
