@@ -203,7 +203,6 @@ public class FragmentAddress extends BaseSearchFragment {
                 getData();
             }
         });
-        mRefreshLayout.autoRefresh();
     }
 
     @Override
