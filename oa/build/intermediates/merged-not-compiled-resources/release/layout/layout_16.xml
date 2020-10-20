@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="配料桶次" />
+
+        <TextView
+            android:id="@+id/pltc_tv"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/item_et_max_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="池号" />
+
+        <TextView
+            android:id="@+id/choose_pool_tv"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/item_et_max_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/hint_selete"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/end_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="配料入池时间" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="产品名称" />
+
+        <TextView
+            android:id="@+id/product_name_tv"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/item_et_max_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="产品规格" />
+
+        <TextView
+            android:id="@+id/product_spec_tv"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/item_et_max_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="配料员" />
+
+        <TextView
+            android:id="@+id/tv_16_creator"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:hint="@string/hint_auto_get"
+            android:maxLines="1"
+            android:paddingRight="@dimen/main_margin_left_x"
+            android:textColorHint="@color/color_hint" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/px22_a5a5a5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm060"
+        android:background="@color/eee"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/main_margin_left_x"
+        android:text="配料明细" />
+
+    <!--16-19-20 item -->
+    <LinearLayout
+        android:id="@+id/layout_16_19_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" />
+</LinearLayout>

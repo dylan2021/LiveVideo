@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dm016">
+
+    <TextView
+        android:id="@+id/go_out_title_tv"
+        style="@style/px24_a5a5a5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm050"
+        android:background="@color/eee"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dm020" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dm016">
+
+        <TextView
+            android:id="@+id/keyTv0"
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/item_key_width"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/valueTv0"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dm016">
+
+        <TextView
+            android:id="@+id/keyTv1"
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/item_key_width"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/valueTv1"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dm016">
+
+        <TextView
+            android:id="@+id/keyTv2"
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/item_key_width"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/valueTv2"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detail_layout2_item3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dm016">
+
+        <TextView
+            android:id="@+id/keyTv3"
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/item_key_width"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/valueTv3"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detail_layout2_item4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dm016">
+
+        <TextView
+            android:id="@+id/keyTv4"
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/item_key_width"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/valueTv4"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detail_layout2_item5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dm016">
+
+        <TextView
+            android:id="@+id/keyTv5"
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/item_key_width"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/valueTv5"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detail_layout2_item6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dm016"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/keyTv6"
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/item_key_width"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/valueTv6"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_left" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/detail_layout2_item7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dm016"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/keyTv7"
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/item_key_width"
+            android:layout_height="wrap_content"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/valueTv7"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_left" />
+    </LinearLayout>
+</LinearLayout>

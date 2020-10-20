@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dm010">
+
+    <TextView
+        android:id="@+id/dialog_btn_cancel"
+        style="@style/px28_212121"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dm030"
+        android:paddingRight="@dimen/dm030"
+        android:text="@string/close" />
+
+    <TextView
+        style="@style/px28_212121_bold"
+        android:id="@+id/dept_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/emplyee_seleted_save_bt"
+        style="@style/px28_mainColor"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dm040"
+        android:paddingRight="@dimen/dm030"
+        android:text="@string/sure" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_below="@id/dialog_btn_cancel"
+        android:background="@color/f5"></View>
+
+    <com.android.livevideo.view.PullScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dialog_btn_cancel"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@color/f5"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/f5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/emplyee_seleted_items_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.android.livevideo.view.PullScrollView>
+
+</RelativeLayout>

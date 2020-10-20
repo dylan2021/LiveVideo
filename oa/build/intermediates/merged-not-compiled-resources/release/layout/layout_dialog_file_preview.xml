@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/file_preview_wv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+
+    <Button
+        android:id="@+id/dialog_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:visibility="visible"
+        android:textColor="@color/color666"
+        android:drawableLeft="@drawable/ic_delete_gray"
+        android:paddingLeft="@dimen/dm040"
+        android:paddingBottom="@dimen/dm020"
+        android:paddingRight="@dimen/dm030"
+        android:paddingTop="@dimen/dm060" />
+
+
+</RelativeLayout>

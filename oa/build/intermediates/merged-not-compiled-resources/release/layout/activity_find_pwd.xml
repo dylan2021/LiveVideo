@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/find_pwd"
+        android:textColor="@color/color212121"
+        android:layout_marginLeft="@dimen/dm030"
+        android:textSize="@dimen/dm040"
+        android:layout_marginTop="@dimen/dm030"
+        android:layout_marginBottom="@dimen/dm060"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm088"
+        android:layout_marginLeft="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <TextView
+            style="@style/px28_212121_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/phone" />
+
+        <EditText
+            android:id="@+id/et_login_user"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm088"
+            android:layout_marginLeft="@dimen/dm120"
+            android:background="@null"
+            android:hint="@string/register_mobile"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/dm020"
+            android:singleLine="true"
+            android:textColor="@color/color212121"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
+            android:textSize="@dimen/dm028" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm088"
+
+        android:layout_marginLeft="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <TextView
+            style="@style/px28_212121_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="验证码" />
+
+        <EditText
+            android:id="@+id/et_captcha"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm088"
+            android:layout_marginLeft="@dimen/dm120"
+            android:background="@null"
+            android:hint="@string/register_captcha"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="@dimen/dm020"
+            android:textColor="@color/color212121"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
+            android:textSize="@dimen/dm028" />
+
+        <TextView
+            android:id="@+id/tv_captcha"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm038"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dm010"
+            android:background="@drawable/shape_bg_verif_code_bt_send"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dm006"
+            android:paddingRight="@dimen/dm006"
+            android:text="@string/get_sms"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/dm018" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm088"
+
+        android:layout_marginLeft="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <TextView
+            style="@style/px28_212121_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="新密码" />
+
+        <EditText
+            android:id="@+id/et_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm088"
+            android:layout_marginLeft="@dimen/dm120"
+            android:background="@null"
+            android:hint="@string/find_new"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="@dimen/dm020"
+            android:textColor="@color/color212121"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
+            android:textSize="@dimen/dm028" />
+
+        <ImageButton
+            android:id="@+id/bt_show_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dm010"
+            android:background="@drawable/selector_eye_open_close"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/bt_find_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bt_height"
+        android:layout_marginLeft="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:layout_marginTop="@dimen/dm080"
+        android:background="@drawable/selector_login_bt"
+        android:onClick="onLoginClick"
+        android:text="@string/commit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm028" />
+
+</LinearLayout>

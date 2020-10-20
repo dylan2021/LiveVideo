@@ -29,7 +29,7 @@ android {
         applicationId "com.android.livevideo"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 30000
+        versionCode 1001
         versionName "1.0.1"
 
         ndk {
@@ -64,7 +64,8 @@ android {
 //            versionNameSuffix "-debug"
             // minifyEnabled true
 //            zipAlignEnabled false
-            shrinkResources false
+            //shrinkResources false
+            minifyEnabled false
             //signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
@@ -75,20 +76,21 @@ android {
             signingConfigs signingConfigs.debug
             proguardFiles 'proguard-rules.pro'*/
             // 不显示Log
+            minifyEnabled false
             buildConfigField "boolean", "LOG_DEBUG", "true"
-            minifyEnabled true
             //Zipalign优化
             zipAlignEnabled true
             // 移除无用的resource文件
-            shrinkResources true
+            //shrinkResources true
             //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
     }
     //编译输出的名字
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "MonitorSystem-V${variant.versionName}.apk"
+            outputFileName = "videomonitoringsystem_v${defaultConfig.versionCode}.apk"
         }
     }
 
@@ -104,8 +106,8 @@ android {
         main {
             //jni.srcDirs = []                          //设置禁止gradle生成Android.mk
             //jniLibs.srcDirs = ['src/main/jniLibs']      //设置目标的so存放路径
-            jniLibs.srcDir 'libs'
-            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+           /* jni.srcDirs = []*/
         }
     }
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/emplyee_check_box"
+        style="@style/px28_212121"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm095"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_circle_seleted"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dm030"
+        android:text=""
+        android:theme="@style/mainColor999CheckBox" />
+
+    <TextView
+        android:id="@+id/emplyee_icon_tv"
+        android:layout_width="@dimen/dm068"
+        android:layout_height="@dimen/dm068"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dm090"
+        android:layout_marginRight="@dimen/dm020"
+        android:background="@drawable/shape_circle_main_color"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm025" />
+
+    <TextView
+        android:id="@+id/emplyee_name_tv"
+        style="@style/px28_212121"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dm010"
+        android:layout_toRightOf="@id/emplyee_icon_tv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/emplyee_phone_tv"
+        style="@style/px26_a5a5a5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emplyee_name_tv"
+        android:layout_toRightOf="@id/emplyee_icon_tv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_alignLeft="@id/emplyee_icon_tv"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_color" />
+</RelativeLayout>

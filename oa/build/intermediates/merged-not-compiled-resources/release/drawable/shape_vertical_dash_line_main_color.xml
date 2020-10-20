@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="-300dp"
+        android:right="-300dp">
+        <rotate
+            android:fromDegrees="90"
+            android:visible="true">
+            <shape android:shape="line">
+                <stroke
+                    android:width="@dimen/dm001"
+                    android:color="@color/mainColor"
+                    android:dashGap="@dimen/dm003"
+                    android:dashWidth="@dimen/dm004"/><!--dashGap  间隔的宽度-->
+            </shape>
+        </rotate>
+    </item>
+</layer-list>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:showIn="@layout/activity_work_023456_10_11">
+
+    <TextView
+        android:id="@+id/item_title_tv"
+        style="@style/px26_212121"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dm030"
+        android:paddingTop="@dimen/dm020"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/item_desc_tv"
+        style="@style/px22_a5a5a5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_title_tv"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dm030"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/copyer_item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dm015"
+        android:paddingRight="@dimen/dm010"
+        android:paddingTop="@dimen/dm005"></LinearLayout>
+
+
+    <View
+        android:id="@+id/item_top_line"
+        android:layout_width="@dimen/dm001"
+        android:layout_height="@dimen/dm028"
+        android:layout_marginLeft="@dimen/dm010"
+        android:background="@color/dcdcdc"
+        android:layerType="software" />
+
+    <View
+        android:layout_width="@dimen/dm020"
+        android:layout_height="@dimen/dm020"
+        android:layout_below="@id/item_top_line"
+        android:background="@drawable/shape_circle_dcdcdc" />
+
+    <View
+        android:id="@+id/item_bottom_line"
+        android:layout_width="@dimen/dm001"
+        android:layout_height="@dimen/dm100"
+        android:layout_below="@id/item_top_line"
+        android:layout_marginLeft="@dimen/dm010"
+        android:background="@color/dcdcdc"
+        android:layerType="software" />
+</RelativeLayout>

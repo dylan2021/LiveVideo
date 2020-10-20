@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <!-- 实现图片横向滑动组件声明 -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/imagePages"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 底部圆点 -->
+    <LinearLayout
+        android:id="@+id/pointGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/show_view_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_def_logo_720_288"
+        android:visibility="gone" />
+
+</FrameLayout>
+
+
+

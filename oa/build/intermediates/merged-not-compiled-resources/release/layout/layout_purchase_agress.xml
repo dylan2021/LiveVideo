@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:id="@+id/hours_layout"
+        android:layout_marginTop="@dimen/dm050"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="采购总价格(元)" />
+
+        <EditText
+            android:id="@+id/total_amount_tv"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/item_et_max_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="right|center_vertical"
+            android:hint="@string/input_hint"
+            android:inputType="number"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:paddingRight="@dimen/main_margin_left_x"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:background="@drawable/shape_line_divider_bottom">
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="支付方式" />
+
+        <TextView
+            android:id="@+id/pay_type_tv"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/dialog_remark_tv"
+        style="@style/px26_212121"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/work_remark_title_tv"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:focusableInTouchMode="true"
+        android:gravity="top"
+        android:hint="备注(选填)"
+        android:minHeight="@dimen/item_height"
+        android:padding="@dimen/main_margin_left_x"
+        android:text=""
+        android:textColorHint="@color/color_hint"
+        android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_height"
+    android:background="@color/f5"
+    android:paddingLeft="@dimen/dm030">
+
+    <TextView
+        android:id="@+id/expand_child"
+        style="@style/px28_212121"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_line_white_bg_f5_bottom"
+        android:gravity="center_vertical|left" />
+
+    <TextView
+        android:id="@+id/position_name_tv"
+        style="@style/px24_a5a5a5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/expand_child" />
+
+    <TextView
+        android:id="@+id/child_number_tv"
+        style="@style/px28_212121"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="left"
+        android:paddingLeft="@dimen/dm220" />
+
+    <ImageView
+        android:id="@+id/child_phone_iv"
+        android:layout_width="@dimen/dm055"
+        android:layout_height="@dimen/dm055"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_phone" />
+</RelativeLayout>

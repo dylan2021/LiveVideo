@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#EFEFEF">
+    <!-- 标题栏 -->
+    <include layout="@layout/layout_title_left_center"
+        android:id="@+id/mul_picture_title_view"/>
+
+    <GridView
+        android:id="@+id/gv_mul_picture"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/mul_picture_title_view"
+        android:horizontalSpacing="2dp"
+        android:listSelector="#660D92DD"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp"
+        android:layout_marginBottom="55dp">
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/rl_select_picture_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/f5" >
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginTop="1dp" >
+
+            <LinearLayout
+                android:id="@+id/ll_selected_picture_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

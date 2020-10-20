@@ -5,11 +5,6 @@
     <color name="crop__button_text">#666666</color>
     <color name="crop__selector_focused">#77000000</color>
     <color name="crop__selector_pressed">#1a000000</color>
-    <declare-styleable name="CropImageView"><attr format="reference|color" name="highlightColor"/><attr format="boolean" name="showThirds"/><attr name="showHandles">
-          <enum name="changing" value="0"/>
-          <enum name="always" value="1"/>
-          <enum name="never" value="2"/>
-        </attr></declare-styleable>
     <dimen name="crop__bar_height">48dp</dimen>
     <string name="crop__cancel" ns1:ignore="ButtonCase">取消</string>
     <string name="crop__done">完成</string>
@@ -51,4 +46,13 @@
         <item name="android:dividerPadding" ns1:ignore="NewApi">12dp</item>
         <item name="android:background">@color/crop__button_bar</item>
     </style>
+    <declare-styleable name="CropImageView">
+        <attr format="reference|color" name="highlightColor"/>
+        <attr format="boolean" name="showThirds"/>
+        <attr name="showHandles">
+          <enum name="changing" value="0"/>
+          <enum name="always" value="1"/>
+          <enum name="never" value="2"/>
+        </attr>
+    </declare-styleable>
 </resources>

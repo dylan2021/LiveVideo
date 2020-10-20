@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/work_center_title_tv"
+        style="@style/titlesize_212121_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="@dimen/dm010"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="" />
+
+    <com.android.livevideo.view.PullScrollView
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/work_center_title_tv"
+        android:background="@color/f5"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_height"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/work_title_0"
+                style="@style/px28_212121_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dm030"
+                android:paddingLeft="@dimen/dm028"
+                android:paddingTop="@dimen/dm031"
+                android:text="出勤休假" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dm010">
+
+                <TextView
+                    android:id="@+id/work_bt_1"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_01"
+                    android:gravity="center"
+                    android:text="请假" />
+
+                <TextView
+                    android:id="@+id/work_bt_2"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_02"
+                    android:gravity="center"
+                    android:text="出差" />
+
+                <TextView
+                    android:id="@+id/work_bt_3"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_03"
+                    android:gravity="center"
+                    android:text="加班" />
+
+                <TextView
+                    android:id="@+id/work_bt_4"
+                    style="@style/px24_666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:gravity="center"
+                    android:text=""
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/work_title_1"
+                style="@style/px28_212121_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm028"
+                android:layout_marginTop="@dimen/dm030"
+                android:paddingBottom="@dimen/dm030"
+                android:paddingTop="@dimen/dm020"
+                android:text="人事" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dm010">
+
+                <TextView
+                    android:id="@+id/work_bt_5"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_05"
+                    android:gravity="center"
+
+                    android:text="转正" />
+
+                <TextView
+                    android:id="@+id/work_bt_6"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_06"
+                    android:gravity="center"
+                    android:text="招聘" />
+
+                <TextView
+                    android:id="@+id/work_bt_7"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_07"
+                    android:gravity="center"
+                    android:text="离职" />
+
+                <TextView
+                    android:id="@+id/work_bt_8"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_08"
+                    android:gravity="center"
+                    android:text="公文" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/work_title_2"
+                style="@style/px28_212121_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm028"
+                android:layout_marginTop="@dimen/dm030"
+                android:paddingBottom="@dimen/dm030"
+                android:paddingTop="@dimen/dm020"
+                android:text="工资" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dm010">
+
+                <TextView
+                    android:id="@+id/work_bt_9"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_09"
+                    android:gravity="center"
+                    android:text="工时录入" />
+
+                <TextView
+                    android:id="@+id/daily_wage_bt"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_10"
+                    android:gravity="center"
+                    android:text="每日工资" />
+
+                <TextView
+                    android:id="@+id/work_bt_xlb"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_09"
+                    android:gravity="center"
+                    android:text="小料包录入" />
+
+                <TextView
+                    android:id="@+id/work_bt_16"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_11"
+                    android:gravity="center"
+                    android:text="小料包计件" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/work_bt_10"
+                style="@style/px24_666"
+                android:layout_width="@dimen/work_icon_max_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm028"
+                android:layout_marginRight="@dimen/work_icon_margin_right"
+                android:layout_marginTop="@dimen/main_margin_left_x"
+                android:background="@null"
+                android:drawablePadding="@dimen/dm010"
+                android:drawableTop="@drawable/ic_work_12"
+                android:gravity="center"
+                android:text="月度工资" />
+
+            <TextView
+                android:id="@+id/work_title_3"
+                style="@style/px28_212121_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm028"
+                android:layout_marginTop="@dimen/dm030"
+                android:paddingBottom="@dimen/dm030"
+                android:paddingTop="@dimen/dm020"
+                android:text="财务" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dm010">
+
+                <TextView
+                    android:id="@+id/work_bt_11"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_13"
+                    android:gravity="center"
+                    android:text="报销" />
+
+                <TextView
+                    android:id="@+id/work_bt_12"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_14"
+                    android:gravity="center"
+
+                    android:text="备用金申请" />
+
+                <TextView
+                    android:id="@+id/work_bt_13"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_15"
+                    android:gravity="center"
+                    android:text="付款申请" />
+
+                <TextView
+                    android:id="@+id/work_bt_14"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/work_icon_margin_left"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_16"
+                    android:gravity="center"
+                    android:text="请购单" />
+            </LinearLayout>
+
+            <!-- ====================================================================-->
+
+            <LinearLayout
+                android:id="@+id/work_layout_production"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/px28_212121_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dm028"
+                    android:layout_marginTop="@dimen/dm030"
+                    android:paddingBottom="@dimen/dm030"
+                    android:paddingTop="@dimen/dm020"
+                    android:text="生产" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dm010">
+
+                    <TextView
+                        android:id="@+id/work_bt_17"
+                        style="@style/px24_666"
+                        android:layout_width="@dimen/work_icon_max_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/work_icon_margin_left"
+                        android:layout_marginRight="@dimen/work_icon_margin_right"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/dm010"
+                        android:drawableTop="@drawable/ic_work_17"
+                        android:gravity="center"
+
+                        android:text="过磅单" />
+
+                    <TextView
+                        android:id="@+id/work_bt_18"
+                        style="@style/px24_666"
+                        android:layout_width="@dimen/work_icon_max_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/work_icon_margin_left"
+                        android:layout_marginRight="@dimen/work_icon_margin_right"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/dm010"
+                        android:drawableTop="@drawable/ic_work_18"
+                        android:gravity="center"
+                        android:text="入池单" />
+
+                    <TextView
+                        android:id="@+id/work_bt_19"
+                        style="@style/px24_666"
+                        android:layout_width="@dimen/work_icon_max_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/work_icon_margin_left"
+                        android:layout_marginRight="@dimen/work_icon_margin_right"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/dm010"
+                        android:drawableTop="@drawable/ic_work_19"
+                        android:gravity="center"
+                        android:text="配料入池单" />
+
+                    <TextView
+                        android:id="@+id/work_bt_20"
+                        style="@style/px24_666"
+                        android:layout_width="@dimen/work_icon_max_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/work_icon_margin_left"
+                        android:layout_marginRight="@dimen/work_icon_margin_right"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/dm010"
+                        android:drawableTop="@drawable/ic_work_20"
+                        android:gravity="center"
+                        android:text="回淋单" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/work_bt_21"
+                    style="@style/px24_666"
+                    android:layout_width="@dimen/work_icon_max_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dm028"
+                    android:layout_marginRight="@dimen/work_icon_margin_right"
+                    android:layout_marginTop="@dimen/main_margin_left_x"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dm010"
+                    android:drawableTop="@drawable/ic_work_21"
+                    android:gravity="center"
+                    android:text="起池单" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/work_layout_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/px28_212121_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dm028"
+                    android:layout_marginTop="@dimen/dm030"
+                    android:paddingBottom="@dimen/dm030"
+                    android:paddingTop="@dimen/dm020"
+                    android:text="质检" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dm010">
+
+                    <TextView
+                        android:id="@+id/work_bt_22"
+                        style="@style/px24_666"
+                        android:layout_width="@dimen/work_icon_max_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/work_icon_margin_left"
+                        android:layout_marginRight="@dimen/work_icon_margin_right"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/dm010"
+                        android:drawableTop="@drawable/ic_work_22"
+                        android:gravity="center"
+                        android:text="原料入池检验单" />
+
+                    <TextView
+                        android:id="@+id/work_bt_23"
+                        style="@style/px24_666"
+                        android:layout_width="@dimen/work_icon_max_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/work_icon_margin_left"
+                        android:layout_marginRight="@dimen/work_icon_margin_right"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/dm010"
+                        android:drawableTop="@drawable/ic_work_23"
+                        android:gravity="center"
+                        android:text="半成品检验单" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- ====================================================================-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm100"
+                android:background="@color/white"></View>
+        </LinearLayout>
+
+    </com.android.livevideo.view.PullScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_below="@id/work_center_title_tv"
+        android:background="@color/divider_color"></View>
+
+</RelativeLayout>

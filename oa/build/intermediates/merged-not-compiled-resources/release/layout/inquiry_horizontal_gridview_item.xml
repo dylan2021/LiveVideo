@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--android:descendantFocusability="blocksDescendants"-->
+    <RelativeLayout
+        android:layout_width="@dimen/dm190"
+        android:layout_height="@dimen/dm190">
+
+        <ImageView
+            android:id="@+id/iv_horizontal_gridview_item"
+            android:layout_width="@dimen/dm190"
+            android:layout_height="@dimen/dm190"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dm025"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_error_img" />
+
+        <ImageButton
+            android:id="@+id/btn_horizontal_gridview_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dm018"
+            android:paddingRight="@dimen/dm005"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_delete_gray"
+            android:button="@null"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+</LinearLayout>

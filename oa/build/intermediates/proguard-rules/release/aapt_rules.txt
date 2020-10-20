@@ -1,0 +1,365 @@
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:155
+-keep class android.support.v4.content.FileProvider { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:53
+-keep class com.android.livevideo.App { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:89
+-keep class com.android.livevideo.act_0.MainActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:94
+-keep class com.android.livevideo.act_0.MsgDetailActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:97
+-keep class com.android.livevideo.act_0.NoticeDetailUrlActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:138
+-keep class com.android.livevideo.act_1.ChooseEmplyeeActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:98
+-keep class com.android.livevideo.act_1.PoolChooseActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:95
+-keep class com.android.livevideo.act_1.WageDailyAddActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:139
+-keep class com.android.livevideo.act_1.WageDailyEmplyeeDetailActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:96
+-keep class com.android.livevideo.act_1.WageDailyListActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:143
+-keep class com.android.livevideo.act_1.WageEmplyeeListActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:140
+-keep class com.android.livevideo.act_1.WageMonthActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:141
+-keep class com.android.livevideo.act_1.WageMonthAddActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:144
+-keep class com.android.livevideo.act_1.WageMonthEmplyeeDetailActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:142
+-keep class com.android.livevideo.act_1.WageMonthProjectListActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:133
+-keep class com.android.livevideo.act_1.Work124567911_12Activity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:134
+-keep class com.android.livevideo.act_1.Work1TripActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:135
+-keep class com.android.livevideo.act_1.Work8Activity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:137
+-keep class com.android.livevideo.act_1.Work_13Activity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:136
+-keep class com.android.livevideo.act_1.Work_14_20Activity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:145
+-keep class com.android.livevideo.act_2.AddressListActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:99
+-keep class com.android.livevideo.act_2.SearchActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:146
+-keep class com.android.livevideo.act_3.MeApplyListActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:112
+-keep class com.android.livevideo.act_3.MeAttendanceActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:150
+-keep class com.android.livevideo.act_3.MeProfileActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:149
+-keep class com.android.livevideo.act_3.SysSettingsActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:147
+-keep class com.android.livevideo.act_other.AndroidOPermissionActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:152
+-keep class com.android.livevideo.act_other.ChangePhoneActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:151
+-keep class com.android.livevideo.act_other.ChangePhoneShowActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:148
+-keep class com.android.livevideo.act_other.ChangeProjectActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:122
+-keep class com.android.livevideo.act_other.ChangePwdActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:93
+-keep class com.android.livevideo.act_other.ChooseProjectActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:117
+-keep class com.android.livevideo.act_other.FindPwdActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:104
+-keep class com.android.livevideo.act_other.GuideViewActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:78
+-keep class com.android.livevideo.act_other.LoginActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:107
+-keep class com.android.livevideo.act_other.RegisterActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:127
+-keep class com.android.livevideo.act_other.SeePicActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:65
+-keep class com.android.livevideo.act_video.HPlayerActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:70
+-keep class com.android.livevideo.act_video.OriginPlayerActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:74
+-keep class com.android.livevideo.act_video.PlayerActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:61
+-keep class com.android.livevideo.act_video.PlayerLiveActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:60
+-keep class com.android.livevideo.act_video.VideoListActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:131
+-keep class com.android.livevideo.widget.mulpicture.MulPictureActivity { <init>(); }
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\merged_manifests\release\AndroidManifest.xml:132
+-keep class com.soundcloud.android.crop.CropImageActivity { <init>(); }
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\res\layout\design_bottom_navigation_item.xml:26
+-keep class android.support.design.internal.BaselineLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\res\layout\design_navigation_item.xml:17
+-keep class android.support.design.internal.NavigationMenuItemView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\res\layout\design_navigation_menu.xml:17
+-keep class android.support.design.internal.NavigationMenuView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\res\layout\design_layout_snackbar_include.xml:18
+-keep class android.support.design.internal.SnackbarContentLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\res\layout\design_text_input_password_icon.xml:18
+-keep class android.support.design.widget.CheckableImageButton { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\res\layout\design_bottom_sheet_dialog.xml:17
+-keep class android.support.design.widget.CoordinatorLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\c5aa5acfa1539d688933ad21ec16d6d4\design-26.0.0-alpha1\res\layout\design_layout_snackbar.xml:18
+-keep class android.support.design.widget.Snackbar$SnackbarLayout { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_wage_emplyee_list.xml:15
+-keep class android.support.design.widget.TabLayout { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_banner_view.xml:6
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_show_view.xml:9
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_guide_view.xml:6
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_alert_dialog_material.xml:41
+-keep class android.support.v4.widget.NestedScrollView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_alert_dialog_title_material.xml:56
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_alert_dialog_material.xml:52
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_alert_dialog_button_bar_material.xml:43
+-keep class android.support.v4.widget.Space { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_select_dialog_material.xml:23
+-keep class android.support.v7.app.AlertController$RecycleListView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_action_menu_item_layout.xml:17
+-keep class android.support.v7.view.menu.ActionMenuItemView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_expanded_menu_layout.xml:17
+-keep class android.support.v7.view.menu.ExpandedMenuView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_popup_menu_item_layout.xml:17
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_list_menu_item_layout.xml:17
+-keep class android.support.v7.view.menu.ListMenuItemView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_screen_toolbar.xml:27
+-keep class android.support.v7.widget.ActionBarContainer { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_screen_toolbar.xml:43
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_action_mode_bar.xml:19
+-keep class android.support.v7.widget.ActionBarContextView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_screen_toolbar.xml:17
+-keep class android.support.v7.widget.ActionBarOverlayLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_action_menu_layout.xml:17
+-keep class android.support.v7.widget.ActionMenuView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_activity_chooser_view.xml:19
+-keep class android.support.v7.widget.ActivityChooserView$InnerLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_alert_dialog_material.xml:18
+-keep class android.support.v7.widget.AlertDialogLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_listitem_multichoice.xml:15
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\item_expand_group.xml:35
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\item_expand_child.xml:23
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\item_emplyee_choose.xml:7
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_choose_emplyee_list.xml:58
+-keep class android.support.v7.widget.AppCompatCheckBox { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_listitem_singlechoice.xml:15
+-keep class android.support.v7.widget.AppCompatRadioButton { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_alert_dialog_button_bar_material.xml:26
+-keep class android.support.v7.widget.ButtonBarLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_screen_content_include.xml:19
+-keep class android.support.v7.widget.ContentFrameLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_alert_dialog_title_material.xml:45
+-keep class android.support.v7.widget.DialogTitle { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_screen_simple_overlay_action_mode.xml:23
+-keep class android.support.v7.widget.FitWindowsFrameLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_screen_simple.xml:17
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_dialog_title_material.xml:22
+-keep class android.support.v7.widget.FitWindowsLinearLayout { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_list_check.xml:39
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_list.xml:39
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_choose_project.xml:21
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_change_project.xml:23
+-keep class android.support.v7.widget.RecyclerView { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_search_view.xml:75
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_screen_toolbar.xml:36
+-keep class android.support.v7.widget.Toolbar { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_screen_simple_overlay_action_mode.xml:32
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\899b8389eb97a31634fdce923efc2df7\appcompat-v7-26.1.0\res\layout\abc_screen_simple.xml:25
+-keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_stub_actionbuttons.xml:4
+-keep class com.afollestad.materialdialogs.internal.MDButton { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_progress_indeterminate_horizontal.xml:1
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_progress_indeterminate.xml:1
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_progress.xml:1
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_list_check.xml:1
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_list.xml:1
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_input_check.xml:1
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_input.xml:1
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_custom.xml:1
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_basic_check.xml:1
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\eccf55fba6ea1b18ce43505b89ceb222\core-0.9.1.0\res\layout\md_dialog_basic.xml:1
+-keep class com.afollestad.materialdialogs.internal.MDRootLayout { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\item_msg_lv_1.xml:32
+-keep class com.android.livevideo.view.BorderLabelTextView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_me_apply_top_filter.xml:22
+-keep class com.android.livevideo.view.ExRadioGroup { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_title_left_center.xml:26
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\item_edm_summary.xml:139
+-keep class com.android.livevideo.view.MarqueTextView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_choose_emplyee_list_old.xml:24
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_address_list.xml:87
+-keep class com.android.livevideo.view.MyExpandableListView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_main_me_bottom_layout.xml:2
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_dialog_update_change.xml:40
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_dialog_product_name.xml:47
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_dialog_emplyee_seleted.xml:22
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_dialog_emplyee_choose.xml:48
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_dialog_emplyee_all_work_money.xml:47
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\fragment_work.xml:19
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_8.xml:13
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_14_20.xml:13
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_13.xml:14
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_1.xml:15
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_023456_10_11.xml:15
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_wage_month_add.xml:16
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_user_center.xml:19
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_search.xml:49
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_msg_notice_detail.xml:14
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_msg_detail.xml:14
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_month_wage_emplyee_detail.xml:15
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_me_attendance.xml:73
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_daily_wage_emplyee_detail.xml:15
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_daily_wage_add.xml:16
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_choose_project.xml:14
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_choose_emplyee_list.xml:80
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_change_phone_show.xml:14
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_address_list.xml:13
+-keep class com.android.livevideo.view.PullScrollView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_file_upload_layout.xml:30
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_file_see_layout.xml:17
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_dialog_file_list.xml:10
+-keep class com.android.livevideo.view.ScrollListView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_dialog_file_detail.xml:8
+-keep class com.android.livevideo.widget.TouchImageView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_dialog_download.xml:20
+-keep class com.daimajia.numberprogressbar.NumberProgressBar { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\jjdxm-ijkplayer\build\intermediates\packaged_res\release\layout\simple_player_view_player.xml:13
+-keep class com.dou361.ijkplayer.widget.IjkVideoView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_proj_add_gridlayout_adv.xml:7
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_avatar_item.xml:10
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\item_fragment1_item.xml:15
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\item_file_list.xml:9
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_user_center.xml:57
+-keep class com.facebook.drawee.view.SimpleDraweeView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_choose_emplyee_list.xml:99
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_change_project.xml:29
+-keep class com.gjiazhe.wavesidebar.WaveSideBar { <init>(...); }
+
+# Referenced at C:\Users\futur\.gradle\caches\transforms-2\files-2.1\9f77faf0ebef730a3f095ceb8d93c23c\TimePickerDialog-0.9.2\res\layout\timepicker_layout.xml:26
+-keep class com.jzxiang.pickerview.wheel.WheelView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_material_record_add_dialog.xml:57
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_dialog_add_people_group.xml:20
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_login.xml:52
+-keep class com.rengwuxian.materialedittext.MaterialEditText { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\fragment_msg.xml:42
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\fragment_address.xml:19
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_wage_month.xml:14
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_wage_emplyee_list.xml:28
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_wage_daily.xml:14
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_pool_choose_list.xml:15
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_local_mateail_list.xml:15
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_apply_list.xml:15
+-keep class com.scwang.smartrefresh.layout.SmartRefreshLayout { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\imglib\build\intermediates\packaged_res\release\layout\crop__activity_crop.xml:12
+-keep class com.soundcloud.android.crop.CropImageView { <init>(...); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_wage_month.xml:52
+-keepclassmembers class * { *** buildMonthWageClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_search.xml:36
+-keepclassmembers class * { *** onCancelClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_me_settings.xml:17
+-keepclassmembers class * { *** onChangePwdClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_wage_month_two_item.xml:23
+-keepclassmembers class * { *** onEmplyeeMonthDetailClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_1.xml:160
+-keepclassmembers class * { *** onFellowPeopleClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_13.xml:145
+-keepclassmembers class * { *** onItemAddClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_login.xml:137
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_find_pwd.xml:145
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_change_pwd.xml:99
+-keepclassmembers class * { *** onLoginClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_me_settings.xml:113
+-keepclassmembers class * { *** onLogoutClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_main_me_bottom_layout.xml:75
+-keepclassmembers class * { *** onMe00Click(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_main_me_bottom_layout.xml:34
+-keepclassmembers class * { *** onMe01Click(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_main_me_bottom_layout.xml:111
+-keepclassmembers class * { *** onMe02Click(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_main_me_bottom_layout.xml:127
+-keepclassmembers class * { *** onMe03Click(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_main_me_bottom_layout.xml:155
+-keepclassmembers class * { *** onMe04Click(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_main_me_bottom_layout.xml:170
+-keepclassmembers class * { *** onMe05Click(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_15.xml:200
+-keepclassmembers class * { *** onPoolAddClick11(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\layout_wage_month_two_item.xml:11
+-keepclassmembers class * { *** onProjsMonthDetailClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_8.xml:153
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_14_20.xml:172
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_13.xml:303
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_1.xml:236
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_023456_10_11.xml:657
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_daily_wage_add.xml:396
+-keepclassmembers class * { *** onReportCommitClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_1.xml:77
+-keepclassmembers class * { *** onTravelAddClick(android.view.View); }
+
+# Referenced at C:\Projects_LiveVideo\LiveVideo\oa\src\main\res\layout\activity_work_8.xml:38
+-keepclassmembers class * { *** onWorkAddClick11(android.view.View); }
+

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_line_divider_bottom"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/px28_212121_bold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/main_margin_left_x"
+        android:paddingRight="@dimen/main_margin_left_x"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:paddingTop="@dimen/dm015">
+
+        <TextView
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/dm105"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="总计时" />
+
+
+        <TextView
+            android:id="@+id/item_value_2"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm180"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/dm130"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="计时工资" />
+
+        <TextView
+            android:id="@+id/item_value_2_2"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm130"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:paddingBottom="@dimen/main_margin_left_x"
+        android:paddingTop="@dimen/dm010">
+
+        <TextView
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/dm105"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="总计件" />
+
+
+        <TextView
+            android:id="@+id/item_value_3"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm180"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            style="@style/px26_a5a5a5"
+            android:layout_width="@dimen/dm130"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="计件工资" />
+
+        <TextView
+            android:id="@+id/item_value_3_2"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm130"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_line_height_f5" />
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dm115"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <View
+        android:id="@+id/view_unread_tag"
+        android:layout_width="@dimen/dm012"
+        android:layout_height="match_parent"
+        android:background="@color/status_rejuct"></View>
+
+    <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment1_item_head_photo_iv"
+        android:layout_width="@dimen/dm065"
+        android:layout_height="@dimen/dm065"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dm028"
+        android:layout_marginRight="@dimen/dm020"
+        android:scaleType="centerInside"
+        fresco:actualImageScaleType="centerInside"
+        fresco:failureImage="@drawable/ic_def_logo_188_188"
+        fresco:placeholderImage="@drawable/ic_def_logo_188_188"
+        fresco:placeholderImageScaleType="centerInside"
+        fresco:progressBarImage="@drawable/ic_def_logo_188_188"
+        fresco:roundAsCircle="true" />
+
+
+    <TextView
+        android:id="@+id/fragment1_item_msg_type_user"
+        style="@style/style_18px_808080"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dm012"
+        android:layout_toRightOf="@id/fragment1_item_head_photo_iv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxWidth="@dimen/dm400" />
+
+    <TextView
+        android:id="@+id/fragment1_item_msg_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/fragment1_item_head_photo_iv"
+        android:singleLine="true"
+        android:text="[@我]"
+        android:textColor="@color/status_rejuct"
+        android:textSize="@dimen/dm022" />
+
+    <TextView
+        android:id="@+id/fragment1_item_msg_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dm032"
+        android:layout_toRightOf="@id/fragment1_item_msg_tag"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color212121"
+        android:textSize="@dimen/dm022"
+         />
+
+    <TextView
+        android:id="@+id/fragment1_item_project_name_card_name"
+        style="@style/style_18px_808080"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dm012"
+        android:layout_marginRight="@dimen/dm032"
+        android:layout_toRightOf="@id/fragment1_item_head_photo_iv"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/fragment1_item_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dm032"
+        android:layout_marginTop="@dimen/dm012"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/ccc"
+        android:textSize="@dimen/dm018" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_alignParentBottom="true"
+        android:background="@color/f0f0f0"></View>
+</RelativeLayout>

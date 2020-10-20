@@ -1,0 +1,38 @@
+R_DEF: Internal format may change without notice
+local
+attr cropImageStyle
+attr? highlightColor
+attr? showHandles
+attr? showThirds
+color crop__button_bar
+color crop__button_text
+color crop__selector_focused
+color crop__selector_pressed
+dimen crop__bar_height
+drawable crop__divider
+drawable crop__ic_cancel
+drawable crop__ic_done
+drawable crop__selectable_background
+drawable crop__texture
+drawable crop__tile
+id always
+id btn_cancel
+id btn_done
+id changing
+id crop_image
+id done_cancel_bar
+id never
+layout crop__activity_crop
+layout crop__layout_done_cancel
+string crop__cancel
+string crop__done
+string crop__pick_error
+string crop__saving
+string crop__wait
+style Crop
+style Crop.ActionButton
+style Crop.ActionButtonText
+style Crop.ActionButtonText.Cancel
+style Crop.ActionButtonText.Done
+style Crop.DoneCancelBar
+styleable CropImageView highlightColor showThirds showHandles

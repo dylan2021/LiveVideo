@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_me_item_affiche"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--名称-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/px26_mainColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/title_norm_tv"
+            style="@style/px22_a5a5a5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dm005"
+            android:layout_toRightOf="@id/title_tv"
+            android:gravity="center_vertical"
+            android:text="" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@color/white">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            android:id="@+id/keyTv2"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="检测结果" />
+
+        <EditText
+            android:id="@+id/check_item_determination_et"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm400"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/input_hint"
+            android:paddingRight="@dimen/main_margin_left_x"
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height">
+
+        <include layout="@layout/layout_must_input_pic" />
+
+        <TextView
+            android:id="@+id/keyTv3"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:text="判定" />
+
+        <TextView
+            android:id="@+id/check_item_result_tv"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/item_et_max_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:hint="@string/hint_selete"
+            android:maxLines="1"
+            android:paddingRight="@dimen/next_padding_right"
+            android:textColorHint="@color/color_hint" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1px_divider_dark" />
+</LinearLayout>

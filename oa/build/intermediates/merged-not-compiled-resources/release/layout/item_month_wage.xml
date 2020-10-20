@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dm035"
+    android:paddingTop="@dimen/dm025">
+
+    <TextView
+        android:id="@+id/name_tv"
+        style="@style/px28_212121_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dm008"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/dialy_wage_item_time_tv"
+        style="@style/px22_999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:layout_marginBottom="@dimen/dm010"
+        android:layout_marginTop="@dimen/dm005"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/remark_tv"
+        style="@style/px24_999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dm030"
+        android:drawableRight="@drawable/ic_next"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name_tv"
+        android:layout_below="@id/dialy_wage_item_time_tv"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dm025">
+
+        <TextView
+            style="@style/px26_a5a5a5"
+            android:id="@+id/total_wage_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dm010"
+            android:text=""
+           />
+
+        <TextView
+            android:id="@+id/emplyee_number_tv"
+            style="@style/px26_a5a5a5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dm005"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/status_tv"
+            style="@style/px26_a5a5a5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dm005"
+            android:text="" />
+    </LinearLayout>
+
+</RelativeLayout>

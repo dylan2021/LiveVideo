@@ -103,7 +103,7 @@ public class KeyConst {
     public static final String leaveType ="leaveType";
 
     public static final String peers ="peers";
-    public static final String productDetailSpec ="productDetailSpec";
+    public static final String versionCode ="versionCode";
     public static final String bizProcessList ="bizProcessList";
 
     public static final String summary ="summary";

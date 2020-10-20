@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-large-land-v4\\values-large-land-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Projects_LiveVideo\\LiveVideo\\imglib\\build\\intermediates\\packaged_res\\release\\values-large-land-v4\\values-large-land-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "47",
+                        "endOffsets": "98"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/emplyee_choosed_name_tv"
+        style="@style/px26_212121"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/selector_circle_seleted"
+        android:drawablePadding="@dimen/dm030"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dm030"
+        android:text="" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_below="@id/emplyee_choosed_name_tv"
+        android:layout_marginLeft="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:background="@color/divider_color"></View>
+</RelativeLayout>

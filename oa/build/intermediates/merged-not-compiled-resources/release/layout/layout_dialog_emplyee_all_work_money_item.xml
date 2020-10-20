@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/emplyee_name_tv"
+        style="@style/px26_212121"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_height"
+        android:drawableLeft="@drawable/selector_circle_seleted"
+        android:drawablePadding="@dimen/dm030"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dm030"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/emplyee_type_tv"
+        style="@style/px24_a5a5a5"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_height"
+        android:layout_toRightOf="@id/emplyee_name_tv" />
+
+    <TextView
+        android:id="@+id/emplyee_sex_tv"
+        style="@style/px26_a5a5a5"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/dm030"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_height"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_below="@id/emplyee_name_tv"
+        android:layout_marginLeft="@dimen/dm030"
+        android:background="@color/divider_color"></View>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dm030"
+    android:paddingRight="@dimen/dm030">
+
+    <TextView
+        android:id="@+id/msg_item_title_tv"
+        style="@style/px28_212121_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dm020"
+        android:drawableRight="@drawable/ic_next"
+        android:ellipsize="end"
+        android:paddingTop="@dimen/dm025"
+        android:singleLine="true" />
+
+
+    <TextView
+        android:id="@+id/msg_item_content_tv"
+        style="@style/px28_666"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/msg_item_title_tv"
+        android:maxLines="2"
+        android:paddingRight="@dimen/dm020"
+        android:paddingBottom="@dimen/dm015"
+        android:paddingTop="@dimen/dm015" />
+
+    <TextView
+        android:id="@+id/msg_item_publisher_name_tv"
+        style="@style/px24_a5a5a5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/msg_item_content_tv"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/msg_item_time_tv"
+        style="@style/px24_a5a5a5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/msg_item_content_tv"
+        android:text="" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm002"
+        android:background="@color/divider_color"
+        android:layout_below="@id/msg_item_publisher_name_tv"
+        android:layout_marginTop="@dimen/dm020" />
+</RelativeLayout>

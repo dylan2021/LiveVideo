@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              android:background="@drawable/shape_simple_dialog_white"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cancel_like_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm140"
+        android:gravity="center"
+        android:text="弹框消息"
+        android:textColor="@color/mainColorTransparent"
+        android:textSize="@dimen/dm030"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cancel_like_title_tv"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/choose_cancel_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dm100"
+            android:background="@drawable/shape_dialog_bt_left_red"
+            android:gravity="center"
+            android:text="再想想"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dm030"
+            />
+
+        <TextView
+            android:id="@+id/choose_right_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dm100"
+            android:background="@drawable/shape_dialog_bt_right_gray"
+            android:gravity="center"
+            android:text="累觉不爱"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dm030"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

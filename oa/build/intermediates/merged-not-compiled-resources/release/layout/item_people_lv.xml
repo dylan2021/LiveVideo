@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dm085"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/people_lv_1_tv"
+        style="@style/px28_666"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dm085"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dm030" />
+
+    <TextView
+        android:id="@+id/people_lv_2_tv"
+        style="@style/px28_666"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/people_lv_next_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dm085"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/dm030"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_next" />
+
+    <TextView
+        android:id="@+id/people_lv_3_tv"
+        style="@style/px28_666"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/dm060"
+        android:privateImeOptions="@dimen/dm100"
+        android:text="" />
+    <View
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"></View>
+</RelativeLayout>

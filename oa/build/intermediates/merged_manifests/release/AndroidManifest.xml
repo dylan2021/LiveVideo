@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.livevideo"
+    android:versionCode="1001"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:maxSdkVersion="23"
+        android:minSdkVersion="19"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 蓝牙操作权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 百度推送权限 start -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.android.livevideo"
+        android:protectionLevel="normal" />
+    <!-- 百度推送权限 end -->
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="26.0.0-alpha1" />
+
+    <application
+        android:name="com.android.livevideo.App"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/appName"
+        android:supportsRtl="true"
+        android:theme="@style/theme_appcompat" >
+        <activity android:name="com.android.livevideo.act_video.VideoListActivity" />
+        <activity
+            android:name="com.android.livevideo.act_video.PlayerLiveActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.android.livevideo.act_video.HPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.android.livevideo.act_video.OriginPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.android.livevideo.act_video.PlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.android.livevideo.act_other.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/theme_appcompat_laucher"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.livevideo.act_0.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name="com.android.livevideo.act_other.ChooseProjectActivity" />
+        <activity android:name="com.android.livevideo.act_0.MsgDetailActivity" />
+        <activity android:name="com.android.livevideo.act_1.WageDailyAddActivity" />
+        <activity android:name="com.android.livevideo.act_1.WageDailyListActivity" />
+        <activity android:name="com.android.livevideo.act_0.NoticeDetailUrlActivity" />
+        <activity android:name="com.android.livevideo.act_1.PoolChooseActivity" />
+        <activity
+            android:name="com.android.livevideo.act_2.SearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.android.livevideo.act_other.GuideViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.livevideo.act_other.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.android.livevideo.act_3.MeAttendanceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.android.livevideo.act_other.FindPwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.android.livevideo.act_other.ChangePwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.android.livevideo.act_other.SeePicActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/pic_act_fullscree_animation" />
+        <activity android:name="com.android.livevideo.widget.mulpicture.MulPictureActivity" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity android:name="com.android.livevideo.act_1.Work124567911_12Activity" />
+        <activity android:name="com.android.livevideo.act_1.Work1TripActivity" />
+        <activity android:name="com.android.livevideo.act_1.Work8Activity" />
+        <activity android:name="com.android.livevideo.act_1.Work_14_20Activity" />
+        <activity android:name="com.android.livevideo.act_1.Work_13Activity" />
+        <activity android:name="com.android.livevideo.act_1.ChooseEmplyeeActivity" />
+        <activity android:name="com.android.livevideo.act_1.WageDailyEmplyeeDetailActivity" />
+        <activity android:name="com.android.livevideo.act_1.WageMonthActivity" />
+        <activity android:name="com.android.livevideo.act_1.WageMonthAddActivity" />
+        <activity android:name="com.android.livevideo.act_1.WageMonthProjectListActivity" />
+        <activity android:name="com.android.livevideo.act_1.WageEmplyeeListActivity" />
+        <activity android:name="com.android.livevideo.act_1.WageMonthEmplyeeDetailActivity" />
+        <activity android:name="com.android.livevideo.act_2.AddressListActivity" />
+        <activity android:name="com.android.livevideo.act_3.MeApplyListActivity" />
+        <activity android:name="com.android.livevideo.act_other.AndroidOPermissionActivity" />
+        <activity android:name="com.android.livevideo.act_other.ChangeProjectActivity" />
+        <activity android:name="com.android.livevideo.act_3.SysSettingsActivity" />
+        <activity android:name="com.android.livevideo.act_3.MeProfileActivity" />
+        <activity android:name="com.android.livevideo.act_other.ChangePhoneShowActivity" />
+        <activity android:name="com.android.livevideo.act_other.ChangePhoneActivity" />
+
+        <!-- android 7.0 适配 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.android.livevideo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!-- 调用相机 -->
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

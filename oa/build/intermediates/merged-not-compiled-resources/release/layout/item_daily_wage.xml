@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dm030"
+    android:paddingRight="@dimen/dm030"
+    android:paddingTop="@dimen/dm025">
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        style="@style/px28_212121_bold"
+        android:layout_width="@dimen/dm450"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dm008"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/next_tv"
+        style="@style/px24_999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawablePadding="@dimen/dm006"
+        android:drawableRight="@drawable/ic_next"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/dialy_wage_item_time_tv"
+        style="@style/px22_999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:paddingBottom="@dimen/dm010"
+        android:paddingTop="@dimen/dm005"
+        android:singleLine="true"
+        android:text="" />
+
+
+    <LinearLayout
+        android:id="@+id/plan_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name_tv"
+        android:layout_below="@id/dialy_wage_item_time_tv"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dm030">
+
+        <LinearLayout
+            android:layout_width="@dimen/dm300"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/total_wage_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/daily_item_tv_padding_top"
+                android:text="@string/plan_invest"
+                android:textColor="@color/red"
+                android:textSize="@dimen/dm026" />
+
+            <TextView
+                android:id="@+id/every_hours_wage_tv"
+                style="@style/px26_666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/daily_item_tv_padding_top"
+                android:text="@string/actual_invest" />
+
+            <TextView
+                android:id="@+id/every_number_wage_tv"
+                style="@style/px26_666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/daily_item_tv_padding_top"
+                android:text="@string/actual_start_end_date" />
+
+            <TextView
+                android:id="@+id/status_tv"
+                style="@style/px26_666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/daily_item_tv_padding_top"
+                android:text="@string/plan_start_end_date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dm030">
+
+            <TextView
+                android:id="@+id/employee_number_tv"
+                style="@style/px26_666"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:paddingTop="@dimen/daily_item_tv_padding_top" />
+
+            <TextView
+                android:id="@+id/total_hours_tv"
+                style="@style/px26_666"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:paddingTop="@dimen/daily_item_tv_padding_top" />
+
+            <TextView
+                android:id="@+id/total_sum_number_tv"
+                style="@style/px26_666"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:paddingTop="@dimen/daily_item_tv_padding_top" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/audit_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/dm070"
+        android:layout_below="@id/plan_bottom_layout"
+        android:background="@drawable/shape_line_divider_top"
+        android:paddingTop="@dimen/dm001">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="@dimen/dm002"
+            android:layout_height="@dimen/dm020"
+            android:layout_centerInParent="true"
+            android:background="@color/divider_color_dark" />
+
+        <Button
+            android:id="@+id/audit_bt_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/line"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/agress"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/dm028" />
+
+        <Button
+            android:id="@+id/audit_bt_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/line"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/reject"
+            android:textColor="@color/status_rejuct"
+            android:textSize="@dimen/dm028" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -210,30 +210,28 @@ public class MainActivity extends BaseFgActivity {
                 ActivityCompat.requestPermissions(context, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
             }
         } else {
-            String url = Constant.WEB_SITE + "/biz/appVersion/lastVersion";
+            String url = Constant.WEB_SITE + "http://106.58.168.63:58822/apk/check.json";
             StringRequest jsonObjRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String result) {
-                            Log.d(TAG, "app:成功" + result);
                             if (result != null) {
                                 int serverVersionCode = 0;
                                 String apkUrl = "";
                                 String remark = "无";
-                                int localVersionCode = Utils.getVersionName(context);
                                 try {
                                     JSONObject info = new JSONObject(result);
-                                    serverVersionCode = info.getInt(KeyConst.name);
+                                    serverVersionCode = info.getInt(KeyConst.versionCode);
                                     remark = info.getString(KeyConst.remark);
                                     //把除了头之外的内容读取出来 存为新的jsonobject 对象
-                                    JSONObject appFile = info.getJSONObject(KeyConst.appFile);
-                                    apkUrl = appFile.getString(KeyConst.url);
+                                    apkUrl = info.getString(KeyConst.url);
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
                                 //有新版本
+                                int localVersionCode = Utils.getVersionName(context);
                                 if (serverVersionCode > localVersionCode) {
-                                    showUpdateDialog("新版本更新", remark, apkUrl);
+                                    showUpdateDialog("更新", remark, apkUrl);
                                 }
                             }
                         }
