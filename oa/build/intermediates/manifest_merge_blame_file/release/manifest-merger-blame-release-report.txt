@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.android.livevideo"
-4    android:versionCode="1001"
-5    android:versionName="1.0.1" >
+4    android:versionCode="1002"
+5    android:versionName="1.0.2" >
 6
 7    <uses-sdk
 7-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:6:5-44

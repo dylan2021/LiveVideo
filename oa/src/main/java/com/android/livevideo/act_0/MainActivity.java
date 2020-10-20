@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -28,25 +29,26 @@ import com.android.livevideo.act_1.FragmentWork;
 import com.android.livevideo.act_2.FragmentAddress;
 import com.android.livevideo.act_3.MeApplyListActivity;
 import com.android.livevideo.act_3.MeAttendanceActivity;
-import com.android.livevideo.act_3.SysSettingsActivity;
 import com.android.livevideo.act_3.MeProfileActivity;
+import com.android.livevideo.act_3.SysSettingsActivity;
+import com.android.livevideo.act_other.BaseFgActivity;
 import com.android.livevideo.bean.AccountInfo;
+import com.android.livevideo.bean.ContractInfo;
 import com.android.livevideo.core.net.GsonRequest;
 import com.android.livevideo.core.utils.AppDownloadManager;
-import com.android.livevideo.util.Utils;
+import com.android.livevideo.core.utils.Constant;
+import com.android.livevideo.core.utils.KeyConst;
+import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.core.utils.TextUtil;
+import com.android.livevideo.core.utils.UrlConstant;
 import com.android.livevideo.dialogfragment.SimpleDialogFragment;
+import com.android.livevideo.util.PermissionsUtils;
 import com.android.livevideo.util.ToastUtil;
+import com.android.livevideo.util.Utils;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.livevideo.act_other.BaseFgActivity;
-import com.android.livevideo.bean.ContractInfo;
-import com.android.livevideo.core.utils.Constant;
-import com.android.livevideo.core.utils.KeyConst;
-import com.android.livevideo.core.utils.NetUtil;
-import com.android.livevideo.core.utils.UrlConstant;
 import com.android.volley.toolbox.StringRequest;
 import com.daimajia.numberprogressbar.NumberProgressBar;
 import com.google.gson.JsonObject;
@@ -143,12 +145,43 @@ public class MainActivity extends BaseFgActivity {
         video.setOnClickListener(mTabClickListener);
         manager.setOnClickListener(mTabClickListener);
 
-        //checkAppUpdate();
+        checkAppUpdate();
 
         mMenuNameTv.setText(App.username);
         iconTv.setText(TextUtil.getLast2(App.username));
         deptNameTv.setText("武汉盛世利华科技有限公司");
     }
+
+    private void requestPermissions() {
+        //两个日历权限和一个数据读写权限
+        String[] permissions = new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE};
+//        PermissionsUtils.showSystemSetting = false;//是否支持显示系统设置权限设置窗口跳转
+        //这里的this不是上下文，是Activity对象！
+        PermissionsUtils.getInstance().chekPermissions(this, permissions, permissionsResult);
+    }
+
+    //创建监听权限的接口对象
+    PermissionsUtils.IPermissionsResult permissionsResult = new PermissionsUtils.IPermissionsResult() {
+        @Override
+        public void passPermissons() {
+            //权限通过
+            checkAppUpdate();
+        }
+
+        @Override
+        public void forbitPermissons() {
+//            finish();
+            //权限不通过
+        }
+    };
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        //就多一个参数this
+        PermissionsUtils.getInstance().onRequestPermissionsResult(this, requestCode, permissions, grantResults);
+    }
+
 
     private void getAmPmTime() {
         if (!NetUtil.isNetworkConnected(context)) {
@@ -203,18 +236,20 @@ public class MainActivity extends BaseFgActivity {
         mDownloadManager = new AppDownloadManager(context);
         if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions();
             //用户已经拒绝过一次，再次弹出权限申请对话框需要给用户一个解释
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission
                     .WRITE_EXTERNAL_STORAGE)) {
-                ToastUtil.show(context, R.string.no_store_permission);
                 ActivityCompat.requestPermissions(context, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
             }
+            ToastUtil.show(context, R.string.no_store_permission);
         } else {
-            String url = Constant.WEB_SITE + "http://106.58.168.63:58822/apk/check.json";
+            String url = "http://106.58.168.63:58822/apk/check.json";
             StringRequest jsonObjRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String result) {
+                            Log.d("更新下载", ""+result);
                             if (result != null) {
                                 int serverVersionCode = 0;
                                 String apkUrl = "";
@@ -226,7 +261,7 @@ public class MainActivity extends BaseFgActivity {
                                     //把除了头之外的内容读取出来 存为新的jsonobject 对象
                                     apkUrl = info.getString(KeyConst.url);
                                 } catch (JSONException e) {
-                                    e.printStackTrace();
+                                    Log.d(TAG, "更新下载解析失败: "+e.toString());
                                 }
                                 //有新版本
                                 int localVersionCode = Utils.getVersionName(context);
@@ -239,17 +274,15 @@ public class MainActivity extends BaseFgActivity {
 
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Log.d(TAG, "app:失败" + TextUtil.getErrorMsg(error));
                 }
             }) {
 
-                @Override
+          /*      @Override
                 public Map<String, String> getHeaders() throws AuthFailureError {
                     Map<String, String> params = new HashMap<>();
-                    params.put(KeyConst.Content_Type, Constant.application_json);
-                    params.put(KeyConst.Authorization, KeyConst.Bearer + App.token);
+                    params.put(KeyConst.Content_Type,Constant.application_json);
                     return params;
-                }
+                }*/
 
             };
 

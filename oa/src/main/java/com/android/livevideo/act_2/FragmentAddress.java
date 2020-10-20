@@ -18,6 +18,7 @@ import com.android.livevideo.core.net.GsonRequest;
 import com.android.livevideo.core.utils.Constant;
 import com.android.livevideo.core.utils.KeyConst;
 import com.android.livevideo.core.utils.NetUtil;
+import com.android.livevideo.core.utils.TextUtil;
 import com.android.livevideo.util.ToastUtil;
 import com.android.livevideo.util.Utils;
 import com.android.volley.Request;
@@ -84,13 +85,14 @@ public class FragmentAddress extends BaseSearchFragment {
             TextView statusTv = (TextView) itemView.findViewById(R.id.address_number_tv);
             if (bean != null) {
                 final int id = bean.getCameraId();
-                final String onlineStatus = bean.getOnlineStatus();
+                final int onlineStatus = bean.getOnlineStatus();
 
                 final String title = bean.getCameraAddr();
                 final String employeeCount = bean.getCameraMsg();
                 nameTv.setText(title);
                 descTv.setText(employeeCount);
-                statusTv.setText("1".equals(onlineStatus) ? "无信号" : "正常");
+
+                statusTv.setText(TextUtil.getCameraStatus(onlineStatus));
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

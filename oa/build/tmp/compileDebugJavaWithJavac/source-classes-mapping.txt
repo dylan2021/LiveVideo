@@ -239,6 +239,11 @@ com/dou361/ijkplayer/R.java
  com.dou361.ijkplayer.R$string
  com.dou361.ijkplayer.R$style
  com.dou361.ijkplayer.R$styleable
+com/android/livevideo/util/PermissionsUtils.java
+ com.android.livevideo.util.PermissionsUtils
+ com.android.livevideo.util.PermissionsUtils$1
+ com.android.livevideo.util.PermissionsUtils$2
+ com.android.livevideo.util.PermissionsUtils$IPermissionsResult
 com/android/livevideo/view/EasyPickerView.java
  com.android.livevideo.view.EasyPickerView
  com.android.livevideo.view.EasyPickerView$OnScrollChangedListener
@@ -491,6 +496,7 @@ com/android/livevideo/act_0/MainActivity.java
  com.android.livevideo.act_0.MainActivity$13
  com.android.livevideo.act_0.MainActivity$14
  com.android.livevideo.act_0.MainActivity$15
+ com.android.livevideo.act_0.MainActivity$16
  com.android.livevideo.act_0.MainActivity$2
  com.android.livevideo.act_0.MainActivity$3
  com.android.livevideo.act_0.MainActivity$4
@@ -498,9 +504,9 @@ com/android/livevideo/act_0/MainActivity.java
  com.android.livevideo.act_0.MainActivity$6
  com.android.livevideo.act_0.MainActivity$7
  com.android.livevideo.act_0.MainActivity$8
- com.android.livevideo.act_0.MainActivity$8$1
- com.android.livevideo.act_0.MainActivity$8$2
  com.android.livevideo.act_0.MainActivity$9
+ com.android.livevideo.act_0.MainActivity$9$1
+ com.android.livevideo.act_0.MainActivity$9$2
 me/zhanghai/android/materialprogressbar/R.java
  me.zhanghai.android.materialprogressbar.R
  me.zhanghai.android.materialprogressbar.R$anim

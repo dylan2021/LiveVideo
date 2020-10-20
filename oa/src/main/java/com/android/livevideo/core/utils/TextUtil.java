@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.android.livevideo.act_other.BaseFgActivity;
 import com.android.livevideo.R;
+import com.android.livevideo.act_other.BaseFgActivity;
 import com.android.volley.VolleyError;
 
 import java.math.BigDecimal;
@@ -360,7 +360,7 @@ public class TextUtil {
      * 设置只能输入小数点后两位
      */
     public static void setInput2Dot(final EditText editText) {
-        editText.setFilters(new InputFilter[]{new MyInputFilter(Constant.INPUT_DOT_LENGTH),new InputFilter.LengthFilter(Constant.INPUT_MAX_LENGTH)});
+        editText.setFilters(new InputFilter[]{new MyInputFilter(Constant.INPUT_DOT_LENGTH), new InputFilter.LengthFilter(Constant.INPUT_MAX_LENGTH)});
     }
 
     //------------只能输入1位小数--------------
@@ -535,6 +535,18 @@ public class TextUtil {
 
 
         return result;
+
+    }
+
+    public static String getCameraStatus(int onlineStatus) {
+        switch (onlineStatus) {
+            case 1:
+                return "在线";
+            case 2:
+                return "不在线";
+            default:
+                return "未知";
+        }
 
     }
 }

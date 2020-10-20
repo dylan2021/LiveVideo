@@ -49,7 +49,7 @@ public class CamerasListInfo implements Serializable{
         private String cameraAddr;
         private String cameraMsg;
         private int cameraOrder;
-        private String onlineStatus;
+        private int onlineStatus;
 
         public int getCameraId() {
             return cameraId;
@@ -83,12 +83,9 @@ public class CamerasListInfo implements Serializable{
             this.cameraOrder = cameraOrder;
         }
 
-        public String getOnlineStatus() {
+        public int getOnlineStatus() {
             return onlineStatus;
         }
 
-        public void setOnlineStatus(String onlineStatus) {
-            this.onlineStatus = onlineStatus;
-        }
     }
 }
