@@ -3,6 +3,7 @@ package com.android.livevideo.act_0;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import com.android.livevideo.App;
 import com.android.livevideo.R;
 import com.android.livevideo.act_other.LoginActivity;
 import com.android.livevideo.base.fragment.BaseSearchFragment;
+import com.android.livevideo.bean.DataInfo;
 import com.android.livevideo.bean.MsgInfo;
 import com.android.livevideo.core.net.GsonRequest;
 import com.android.livevideo.core.utils.Constant;
@@ -23,7 +25,6 @@ import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.dialogfragment.SimpleDialogFragment;
 import com.android.livevideo.util.ToastUtil;
 import com.android.livevideo.util.Utils;
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -34,9 +35,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -52,7 +51,7 @@ public class FragmentMsg extends BaseSearchFragment {
     private MsgAdapter msgAdapter;
     private int TYPE = 1;
     private ListView lv;
-    private List<MsgInfo> noticeList, msgList;
+    private DataInfo noticeList, msgList;
     private SharedPreferences.Editor sp;
     private TextView emptyTv;
     private RadioGroup msgTabRg;
@@ -85,8 +84,8 @@ public class FragmentMsg extends BaseSearchFragment {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 TYPE = radioGroup.indexOfChild(radioGroup.findViewById(i));
-                msgAdapter.setDate(TYPE == 0 ? msgList : noticeList, TYPE);
-                getMsgData(TYPE);
+                //msgAdapter.setDate(TYPE == 0 ? msgList : noticeList, TYPE);
+                getMsgData();
             }
         });
 
@@ -95,7 +94,7 @@ public class FragmentMsg extends BaseSearchFragment {
         mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
-                getMsgData(TYPE);
+                getMsgData();
             }
         });
         mRefreshLayout.autoRefresh();
@@ -105,50 +104,40 @@ public class FragmentMsg extends BaseSearchFragment {
     @Override
     public void onStart() {
         super.onStart();
-        getMsgData(TYPE);
+        getMsgData();
     }
 
     //获取消息数据
-    private void getMsgData(final int tabType) {
-        if (true) {
-            mRefreshLayout.finishRefresh(0);
-            return;
-        }
+    private void getMsgData() {
         if (!NetUtil.isNetworkConnected(context)) {
             mRefreshLayout.finishRefresh(0);
             msgAdapter.setDate(null, TYPE);
             return;
         }
-       /* String url = Constant.WEB_SITE + "/biz/process/" + (tabType == 0 ?
-                "message" : "notice/all");*/
-        String url = Constant.WEB_SITE + "/biz/process/notice/all";
-        Response.Listener<List<MsgInfo>> successListener = new Response
-                .Listener<List<MsgInfo>>() {
+        String url = Constant.WEB_SITE + "/ai/cameraAll/aiList?pageNum=1&pageSize=100";
+        Response.Listener<DataInfo> successListener = new Response
+                .Listener<DataInfo>() {
             @Override
-            public void onResponse(List<MsgInfo> result) {
+            public void onResponse(DataInfo result) {
+                Log.d(TAG, "犯规: "+result.toString());
                 if (null != context && !context.isFinishing()) {
                     mRefreshLayout.finishRefresh(0);
                 }
-                if (result == null || result.size() == 0) {
+                DataInfo.DataBean bean = result.getData();
+                List<MsgInfo> data =  bean.getList();
+                msgAdapter.setDate(data, 0);
+
+                if (data == null || data.size() == 0) {
                     emptyTv.setText(context.getString(R.string.no_data));
                     emptyTv.setVisibility(View.VISIBLE);
-                    msgAdapter.setDate(null, tabType);
                     return;
                 }
                 emptyTv.setVisibility(View.GONE);
-                if (tabType == 0) {
-                    msgList = result;
-                } else {
-                    noticeList = result;
-                }
-                if (tabType == TYPE) {
-                    msgAdapter.setDate(result, tabType);
-                }
             }
         };
 
-        Request<List<MsgInfo>> versionRequest = new
-                GsonRequest<List<MsgInfo>>(
+        Request<DataInfo> versionRequest = new
+                GsonRequest<DataInfo>(
                         Request.Method.GET, url,
                         successListener, new Response.ErrorListener() {
                     @Override
@@ -172,14 +161,14 @@ public class FragmentMsg extends BaseSearchFragment {
                         }
                         ToastUtil.show(context, R.string.server_exception);
                     }
-                }, new TypeToken<List<MsgInfo>>() {
+                }, new TypeToken<DataInfo>() {
                 }.getType()) {
-                    @Override
+                    /*@Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
                         Map<String, String> params = new HashMap<>();
-                        params.put(KeyConst.Authorization, KeyConst.Bearer + App.token);
+                        params.put("X-Requested-With", "XMLHttpRequest");
                         return params;
-                    }
+                    }*/
                 };
         App.requestQueue.add(versionRequest);
     }

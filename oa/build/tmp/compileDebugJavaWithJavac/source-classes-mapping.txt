@@ -569,6 +569,9 @@ android/support/coreutils/R.java
  android.support.coreutils.R$string
  android.support.coreutils.R$style
  android.support.coreutils.R$styleable
+com/android/livevideo/bean/DataInfo.java
+ com.android.livevideo.bean.DataInfo
+ com.android.livevideo.bean.DataInfo$DataBean
 com/android/livevideo/bean/CameraInfo.java
  com.android.livevideo.bean.CameraInfo
  com.android.livevideo.bean.CameraInfo$DataBean
@@ -630,7 +633,6 @@ com/android/livevideo/act_1/WageDailyAddActivity.java
 com/android/livevideo/act_0/MsgAdapter.java
  com.android.livevideo.act_0.MsgAdapter
  com.android.livevideo.act_0.MsgAdapter$1
- com.android.livevideo.act_0.MsgAdapter$2
  com.android.livevideo.act_0.MsgAdapter$ViewHolder
 com/android/livevideo/act_1/WageDailyEmplyeeDetailActivity.java
  com.android.livevideo.act_1.WageDailyEmplyeeDetailActivity

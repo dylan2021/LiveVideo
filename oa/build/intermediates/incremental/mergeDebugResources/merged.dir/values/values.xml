@@ -594,6 +594,8 @@
     <dimen name="me_filter_rb_height">@dimen/dm064</dimen>
     <dimen name="me_item_line_margin_left">@dimen/dm100</dimen>
     <dimen name="month_title_height">@dimen/dm100</dimen>
+    <dimen name="msg_pic_height">@dimen/dm180</dimen>
+    <dimen name="msg_pic_width">@dimen/dm300</dimen>
     <dimen name="next_padding_right">@dimen/dm020</dimen>
     <dimen name="notification_action_icon_size">32dp</dimen>
     <dimen name="notification_action_text_size">13sp</dimen>
@@ -1098,10 +1100,10 @@
         <item name="android:windowExitAnimation">@anim/anim_bottomdialog_out</item>
     </style>
     <style name="AppTheme" parent="Base.Theme.AppCompat.Light">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/mainColor</item>
         <item name="android:popupMenuStyle">@style/MyPopupMenu</item>
-        <!--自定义AlertDialog-->
+        
         <item name="alertDialogTheme">@style/DialogSelfColor</item>
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
@@ -2205,26 +2207,26 @@
         <item name="android:windowAnimationStyle">@style/AnimationPicker</item>
     </style>
     <style name="DialogSelfColor" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
-        <!--修改AlertDialog按钮的颜色-->
+        
         <item name="colorAccent">@color/mainColor</item>
     </style>
     <style name="Dialog_From_Bottom_Style" parent="@android:style/Theme.Holo.Dialog.MinWidth">
         <item name="android:windowNoTitle">true</item>
-        <!-- 背景透明 -->
-        <item name="android:windowBackground">@color/transparent_light1</item><!--dilog全屏-->
+        
+        <item name="android:windowBackground">@color/transparent_light1</item>
         <item name="android:windowContentOverlay">@null</item>
-        <!-- 边框 -->
+        
         <item name="android:windowFrame">@null</item>
-        <!-- 半透明 -->
+        
         <item name="android:colorBackground">@color/transparent_light1</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <!-- Dialog进入及退出动画 -->
-        <!--      <item name="android:windowAnimationStyle">@style/Animation_Bottom</item>-->
+        
+        
     </style>
     <style name="Dialog_add_card" parent="@android:style/Theme.Holo.Light.Dialog">
-        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上 -->
-        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
-        <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
     </style>
     <style name="Dialog_right_left" parent="@android:style/Theme.Holo.Dialog.MinWidth">
         <item name="android:windowNoTitle">true</item>
@@ -2234,7 +2236,7 @@
         <item name="android:colorBackground">@color/transparent_light2</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="android:windowAnimationStyle">@style/activity_right_in_style
-        </item> <!-- 进入/退出动画 -->
+        </item> 
     </style>
     <style name="FullscreenTheme" parent="AppTheme">
         <item name="android:windowActionBarOverlay">true</item>
@@ -2998,45 +3000,45 @@
     <style name="dialog_appcompat_theme" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
     </style>
     <style name="dialog_appcompat_theme_fullscreen" parent="android:Theme.Holo.Light.NoActionBar.Fullscreen">
-        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
-        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
     <style name="dialog_fullscree_animation" parent="android:Theme.Holo.Light.NoActionBar.Fullscreen">
-        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
-        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@style/enter_center_anim</item>
     </style>
     <style name="dialog_fullscreen" parent="android:Theme.Holo.Light">
-        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
-        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowFullscreen">true</item>
         <item name="windowActionBar">false</item>
     </style>
     <style name="dialog_top_to_bottom" parent="@android:style/Theme.Holo.Light.Dialog">
         <item name="android:windowNoTitle">true</item>
 
-        <!-- 背景透明 -->
-        <item name="android:windowBackground">@color/transparent_light2</item><!--dilog全屏-->
+        
+        <item name="android:windowBackground">@color/transparent_light2</item>
         <item name="android:windowContentOverlay">@null</item>
 
-        <!-- 边框 -->
+        
         <item name="android:windowFrame">@null</item>
-        <!-- 半透明 -->
+        
         <item name="android:colorBackground">@color/transparent_light2</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <!-- Dialog进入及退出动画 -->
+        
         <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
     </style>
     <style name="dialog_top_to_bottom_bg_white" parent="@android:style/Theme.Holo.Light.Dialog">
         <item name="android:windowNoTitle">true</item>
 
-        <!-- 背景透明 -->
-        <item name="android:windowBackground">@color/white</item><!--dilog全屏-->
+        
+        <item name="android:windowBackground">@color/white</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowFrame">@null</item>
         <item name="android:colorBackground">@color/white</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <!-- Dialog进入及退出动画 -->
+        
         <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
     </style>
     <style name="enter_center_anim" parent="@android:style/Animation.Dialog">
@@ -3044,25 +3046,25 @@
         <item name="android:windowExitAnimation">@anim/anim_exit_to_center</item>
     </style>
     <style name="fullscreen_theme_dialog" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
-        <!-- 是否有边框 -->
+        
         <item name="android:windowFrame">@null</item>
-        <!--是否在悬浮Activity之上  -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!--标题  -->
+        
         <item name="android:windowNoTitle">true</item>
-        <!--阴影  -->
-        <item name="android:windowIsTranslucent">true</item><!--半透明-->
-        <!-- 点外边可以消失  -->
+        
+        <item name="android:windowIsTranslucent">true</item>
+        
         <item name="android:windowCloseOnTouchOutside">false</item>
     </style>
     <style name="inputDialog" parent="@android:style/Theme.Holo.Light.Dialog">
-        <item name="android:windowFrame">@android:color/transparent</item><!-- 边框 -->
-        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上 -->
-        <item name="android:windowIsTranslucent">false</item><!-- 半透明 -->
-        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
-        <item name="android:windowBackground">@android:color/transparent</item><!-- 自己想要的背景 -->
-        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
-        <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
+        <item name="android:windowFrame">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
     </style>
     <style name="jz_popup_toast_anim" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
@@ -3093,16 +3095,14 @@
         <item name="android:textColor">@color/color212121</item>
     </style>
     <style name="me_top_item_switch_style">
-        <!-- Active switch 打开时的拇指按钮的颜色 轨迹颜色默认为30%这个颜色 -->
+        
         <item name="colorControlActivated">@color/mainColor</item>
-        <!-- Inactive thumb color switch关闭时的拇指按钮的颜色 -->
-        <!--  <item name="colorSwitchThumbNormal">@color/colorHomeTitle</item>
-          &lt;!&ndash; Inactive track color(30% transparency) switch关闭时的轨迹的颜色  30%这个颜色 &ndash;&gt;
-          <item name="android:colorForeground">@color/colorPhoneBind</item>-->
+        
+        
     </style>
     <style name="pic_act_fullscree_animation" parent="android:Theme.Holo.Light.NoActionBar.Fullscreen">
-        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
-        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@style/enter_center_anim</item>
     </style>
     <style name="px20_999">
@@ -3268,7 +3268,7 @@
         <item name="android:textSize">@dimen/title_size</item>
         <item name="android:background">@drawable/selector_tab_bg</item>
         <item name="android:textColor">@color/color212121</item>
-        <!--@color/color_seletor_main_color_21  颜色也变-->
+        
         <item name="android:button">@null</item>
         <item name="android:textStyle">bold</item>
         <item name="android:paddingLeft">@dimen/dm005</item>
@@ -3462,15 +3462,15 @@
     </declare-styleable>
     <declare-styleable name="BezierRadarHeader"><attr name="srlPrimaryColor"/><attr name="srlAccentColor"/><attr name="srlEnableHorizontalDrag"/></declare-styleable>
     <declare-styleable name="BorderLabelTextView">
-        <!--边框的宽度，默认为1dp-->
+        
         <attr format="dimension" name="strokeWidth"/>
-        <!--圆角半径，默认为2dp-->
+        
         <attr format="dimension" name="cornerRadius"/>
-        <!--边框颜色，默认是没有边框即颜色为Color.TRANSPARENT-->
+        
         <attr format="color" name="strokeColor"/>
-        <!--边框是否跟随文字颜色，默认是true-->
+        
         <attr format="boolean" name="followTextColor"/>
-        <!--实心或空心，默认空心-->
+        
         <attr format="boolean" name="isSolid"/>
     </declare-styleable>
     <declare-styleable name="BottomNavigationView"><attr name="menu"/><attr name="itemIconTint"/><attr name="itemTextColor"/><attr name="itemBackground"/><attr name="elevation"/></declare-styleable>

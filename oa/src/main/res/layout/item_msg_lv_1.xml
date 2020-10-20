@@ -10,10 +10,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dm010"
         android:layout_marginLeft="@dimen/dm020"
-        android:layout_marginRight="@dimen/dm020"
         android:layout_marginTop="@dimen/dm005"
+        android:layout_marginRight="@dimen/dm020"
+        android:layout_marginBottom="@dimen/dm010"
         android:background="@drawable/shape_white_20px"
         android:padding="@dimen/dm025">
 
@@ -28,19 +28,18 @@
             android:maxWidth="@dimen/dm420"
             android:singleLine="true" />
 
-
-        <com.android.livevideo.view.BorderLabelTextView
-            android:id="@+id/status_tv"
+        <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/msg_sdv_iv"
             style="@style/px24_999"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/msg_pic_width"
+            android:layout_height="@dimen/msg_pic_height"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:gravity="center"
-            android:includeFontPadding="false"
-            android:paddingBottom="@dimen/dm005"
-            android:paddingLeft="@dimen/dm010"
-            android:paddingRight="@dimen/dm010"
-            android:paddingTop="@dimen/dm005" /><!--    brlabel:strokeColor="@color/white"-->
+            android:scaleType="centerCrop"
+            fresco:failureImage="@drawable/ic_error_img"
+            fresco:placeholderImage="@drawable/ic_error_img"
+            fresco:placeholderImageScaleType="centerCrop" />
 
         <TextView
             android:id="@+id/msg_item_time_tv"
@@ -48,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/msg_item_title_tv"
+            android:layout_marginTop="@dimen/dm005"
             android:text="" />
 
         <TextView
@@ -57,8 +57,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/msg_item_time_tv"
             android:layout_marginTop="@dimen/dm020"
-            android:ellipsize="end"
-            android:maxLines="1" />
+            android:paddingRight="@dimen/dm010"
+            android:layout_toLeftOf="@id/msg_sdv_iv"
+          />
 
         <TextView
             android:id="@+id/msg_item_tv_2"
@@ -68,9 +69,8 @@
             android:layout_below="@id/msg_item_tv_1"
             android:ellipsize="end"
             android:maxLines="1"
-            android:paddingTop="@dimen/dm010"
-            android:text=""
-            android:visibility="gone" />
+            android:paddingTop="@dimen/dm005"
+            android:text="" />
 
         <TextView
             android:id="@+id/msg_item_tv_3"
@@ -90,8 +90,8 @@
             android:id="@+id/red_tag"
             android:layout_width="@dimen/dm014"
             android:layout_height="@dimen/dm014"
-            android:layout_alignParentRight="true"
             android:layout_below="@+id/msg_item_title_tv"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="@dimen/dm007"
             android:layout_marginRight="@dimen/dm007"
             android:background="@drawable/shape_circle_red"

@@ -2396,6 +2396,8 @@ dimen md_title_textsize
 dimen me_filter_rb_height
 dimen me_item_line_margin_left
 dimen month_title_height
+dimen msg_pic_height
+dimen msg_pic_width
 dimen next_padding_right
 dimen notification_action_icon_size
 dimen notification_action_text_size
@@ -3495,6 +3497,7 @@ id msg_item_tv_2
 id msg_item_tv_3
 id msg_name_tag_tv
 id msg_name_tv
+id msg_sdv_iv
 id msg_tab_0
 id msg_tab_1
 id msg_tab_rg

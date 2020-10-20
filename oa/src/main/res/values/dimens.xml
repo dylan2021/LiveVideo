@@ -37,6 +37,8 @@
     <dimen name="recommend_item_from_pic">@dimen/dm038</dimen>
     <dimen name="recommend_item_game_pic_hight">@dimen/dm260</dimen>
     <dimen name="card_detail_file_gv_item">@dimen/dm055</dimen>
+    <dimen name="msg_pic_width">@dimen/dm300</dimen>
+    <dimen name="msg_pic_height">@dimen/dm180</dimen>
     <dimen name="process_pb_height">@dimen/dm025</dimen>
     <dimen name="dialog_tv_size">@dimen/dm015</dimen>
 

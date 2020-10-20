@@ -49,7 +49,7 @@ public final class R {
         public static final int changing = 0x7f0900a0;
         public static final int crop_image = 0x7f0900c2;
         public static final int done_cancel_bar = 0x7f0900f5;
-        public static final int never = 0x7f09022c;
+        public static final int never = 0x7f09022d;
     }
     public static final class layout {
         private layout() {}

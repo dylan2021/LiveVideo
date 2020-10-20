@@ -376,11 +376,11 @@ public class Utils {
     }
 
     public static int getStatusColor(Context context, int status) {
-        int[] statusColorArr = {R.color.transparent, R.color.status_waiting,
-                R.color.status_auditing, R.color.status_passed,
+        int[] statusColorArr = {R.color.status_waiting, R.color.status_auditing,
+                R.color.status_rejuct, R.color.status_passed,
                 R.color.status_rejuct, R.color.status_back, R.color.status_deleted};
         return ContextCompat.getColor(context,
-                (status > statusColorArr.length - 1 ? 0 : statusColorArr[status]));
+                (status > statusColorArr.length - 1 ? statusColorArr[0] : statusColorArr[status]));
     }
 
     public static int getStatusDrawable(int status) {
@@ -391,9 +391,9 @@ public class Utils {
     }
 
     public static String getStatusText(int status) {
-        String[] statusArr = {"", "等待发起", "正在审核", "审核通过",
-                "驳回申请", "撤销", "废除"};
-        return status > statusArr.length - 1 ? "" : statusArr[status];
+        String[] statusArr = {"未检测", "正常", "开裂",
+                "鼓起", "", ""};
+        return status > statusArr.length - 1 ? "检测问题" : statusArr[status];
     }
 
     public static String getObjDouble(JsonObject object, String key) {

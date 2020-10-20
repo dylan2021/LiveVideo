@@ -45,6 +45,9 @@ public class MsgInfo implements Serializable {
     public String isRead;
     public String lastNode;
     public String directorNameOfApplicant;
+    public int resultStatus;
+    public double resultValue;
+    public String resultPic;
 
 
     public MsgInfo(int id, String title, String time, String msgType,
