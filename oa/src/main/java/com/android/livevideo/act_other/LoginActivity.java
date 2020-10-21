@@ -62,7 +62,7 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
         et_user.setKeyListener(DigitsKeyListener.getInstance(getString(R.string.account_digits)));
         et_pwd = (MaterialEditText) findViewById(R.id.et_login_pwd);
         username = sp.getString(KeyConst.username, "Dylan");//统之源 13100637291 111111
-        pwd = sp.getString(Constant.sp_pwd, "Dylan123");
+        pwd = sp.getString(Constant.sp_pwd, "");
 
         welcomeIv = (ImageView) findViewById(R.id.welcome_iv);
         bt_find_pwd = (TextView) findViewById(R.id.tv_find_pwd);
@@ -137,11 +137,11 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
                             dialogHelper.hideAlert();
                         }
                         if (result == null) {
-                            if (isAutoLogin) {
+                       /*     if (isAutoLogin) {
                                 startActivity(new Intent(context, MainActivity.class));
                                 context.finish();
                                 return;
-                            }
+                            }*/
                             ToastUtil.show(context, getString(R.string.server_exception));
                             return;
                         }
@@ -167,22 +167,23 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
                                 DialogUtils.showTipDialog(context, msg);
                             }
                         } catch (JSONException e) {
+                            ToastUtil.show(context,R.string.server_exception);
                         }
-                        if (isAutoLogin) {
+                     /*   if (isAutoLogin) {
                             startActivity(new Intent(context, MainActivity.class));
                             context.finish();
                             return;
-                        }
+                        }*/
                     }
                 }, new Response.ErrorListener() {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                if (isAutoLogin) {
+            /*    if (isAutoLogin) {
                     startActivity(new Intent(context, MainActivity.class));
                     context.finish();
                     return;
-                }
+                }*/
                 if (null != context && !context.isFinishing()) {
                     dialogHelper.hideAlert();
                 }

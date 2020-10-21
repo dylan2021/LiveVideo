@@ -99,11 +99,11 @@ public final class R {
         public static final int dark = 0x7f0900c7;
         public static final int icon_only = 0x7f090165;
         public static final int light = 0x7f0901bf;
-        public static final int none = 0x7f090232;
-        public static final int normal = 0x7f090233;
-        public static final int standard = 0x7f0902b0;
-        public static final int wide = 0x7f09033d;
-        public static final int wrap_content = 0x7f09036f;
+        public static final int none = 0x7f090233;
+        public static final int normal = 0x7f090234;
+        public static final int standard = 0x7f0902b1;
+        public static final int wide = 0x7f09033e;
+        public static final int wrap_content = 0x7f090370;
     }
     public static final class integer {
         private integer() {}

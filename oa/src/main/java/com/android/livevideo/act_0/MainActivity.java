@@ -257,7 +257,7 @@ public class MainActivity extends BaseFgActivity {
                                 try {
                                     JSONObject info = new JSONObject(result);
                                     serverVersionCode = info.getInt(KeyConst.versionCode);
-                                    remark = info.getString(KeyConst.remark) + "新版本号:" + serverVersionCode;
+                                    remark = info.getString(KeyConst.remark) + "新版本:" + serverVersionCode;
                                     //把除了头之外的内容读取出来 存为新的jsonobject 对象
                                     apkUrl = info.getString(KeyConst.url);
                                 } catch (JSONException e) {
@@ -366,7 +366,7 @@ public class MainActivity extends BaseFgActivity {
                     }
                 });
 
-                mDownloadManager.downloadApk(apkUrl, "监控预警", remark);//通知栏展示
+                mDownloadManager.downloadApk(apkUrl, "北盘江大桥塔顶视频监控", remark);//通知栏展示
             }
         });
         appUpdateDialog.show(getSupportFragmentManager().beginTransaction(), "successDialog");

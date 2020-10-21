@@ -93,22 +93,22 @@ public final class R {
         public static final int layout_bottom = 0x7f0901b0;
         public static final int layout_top = 0x7f0901b5;
         public static final int loading = 0x7f0901cf;
-        public static final int retry_text = 0x7f090277;
-        public static final int start = 0x7f0902b1;
-        public static final int start_layout = 0x7f0902b4;
-        public static final int surface_container = 0x7f0902bc;
-        public static final int thumb = 0x7f0902c6;
-        public static final int title = 0x7f0902ca;
-        public static final int total = 0x7f0902e3;
-        public static final int tv_brightness = 0x7f090304;
-        public static final int tv_current = 0x7f090308;
-        public static final int tv_duration = 0x7f090309;
-        public static final int tv_volume = 0x7f090313;
-        public static final int video_current_time = 0x7f090324;
-        public static final int video_item = 0x7f090325;
-        public static final int video_quality_wrapper_area = 0x7f090326;
-        public static final int volume_image_tip = 0x7f09032e;
-        public static final int volume_progressbar = 0x7f09032f;
+        public static final int retry_text = 0x7f090278;
+        public static final int start = 0x7f0902b2;
+        public static final int start_layout = 0x7f0902b5;
+        public static final int surface_container = 0x7f0902bd;
+        public static final int thumb = 0x7f0902c7;
+        public static final int title = 0x7f0902cb;
+        public static final int total = 0x7f0902e4;
+        public static final int tv_brightness = 0x7f090305;
+        public static final int tv_current = 0x7f090309;
+        public static final int tv_duration = 0x7f09030a;
+        public static final int tv_volume = 0x7f090314;
+        public static final int video_current_time = 0x7f090325;
+        public static final int video_item = 0x7f090326;
+        public static final int video_quality_wrapper_area = 0x7f090327;
+        public static final int volume_image_tip = 0x7f09032f;
+        public static final int volume_progressbar = 0x7f090330;
     }
     public static final class layout {
         private layout() {}

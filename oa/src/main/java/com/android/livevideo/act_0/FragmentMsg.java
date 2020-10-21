@@ -30,6 +30,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.google.gson.reflect.TypeToken;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import org.json.JSONException;
@@ -99,8 +100,14 @@ public class FragmentMsg extends BaseSearchFragment {
                 getMsgData();
             }
         });
+        mRefreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
+            @Override
+            public void onLoadmore(RefreshLayout refreshlayout) {
+                refreshlayout.finishLoadmore();
+                ToastUtil.show(context,"已经到底了哦~");
+            }
+        });
         mRefreshLayout.autoRefresh();
-
     }
 
     @Override

@@ -211,6 +211,7 @@ com/android/livevideo/act_0/FragmentMsg.java
  com.android.livevideo.act_0.FragmentMsg$5
  com.android.livevideo.act_0.FragmentMsg$6
  com.android.livevideo.act_0.FragmentMsg$7
+ com.android.livevideo.act_0.FragmentMsg$8
 com/android/livevideo/bean/GroupInfo.java
  com.android.livevideo.bean.GroupInfo
  com.android.livevideo.bean.GroupInfo$ChildrenBean

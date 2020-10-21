@@ -100,7 +100,7 @@
                   android:maxLength="16"
                   android:paddingLeft="@dimen/dm090"
                   android:singleLine="true"
-                  android:text="Dylan123"
+                  android:text=""
                   android:textColor="@color/color_000000"
                   android:textColorHint="@color/color_000000"
                   android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
