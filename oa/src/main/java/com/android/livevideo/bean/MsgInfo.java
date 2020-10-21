@@ -47,6 +47,8 @@ public class MsgInfo implements Serializable {
     public String directorNameOfApplicant;
     public int resultStatus;
     public double resultValue;
+    public String checkTime;
+    public String camera;
     public String resultPic;
 
 

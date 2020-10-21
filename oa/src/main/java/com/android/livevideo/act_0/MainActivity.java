@@ -149,12 +149,12 @@ public class MainActivity extends BaseFgActivity {
 
         mMenuNameTv.setText(App.username);
         iconTv.setText(TextUtil.getLast2(App.username));
-        deptNameTv.setText("武汉盛世利华科技有限公司");
+        deptNameTv.setText("北盘江大桥管理员");
     }
 
     private void requestPermissions() {
         //两个日历权限和一个数据读写权限
-        String[] permissions = new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 //        PermissionsUtils.showSystemSetting = false;//是否支持显示系统设置权限设置窗口跳转
         //这里的this不是上下文，是Activity对象！
         PermissionsUtils.getInstance().chekPermissions(this, permissions, permissionsResult);
@@ -244,12 +244,12 @@ public class MainActivity extends BaseFgActivity {
             }
             ToastUtil.show(context, R.string.no_store_permission);
         } else {
-            String url = "http://106.58.168.63:58822/apk/check.json";
+            String url = Constant.WEB_SITE + "/ai/apk/check";
             StringRequest jsonObjRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String result) {
-                            Log.d("更新下载", ""+result);
+                            Log.d("更新下载", "" + result);
                             if (result != null) {
                                 int serverVersionCode = 0;
                                 String apkUrl = "";
@@ -257,11 +257,11 @@ public class MainActivity extends BaseFgActivity {
                                 try {
                                     JSONObject info = new JSONObject(result);
                                     serverVersionCode = info.getInt(KeyConst.versionCode);
-                                    remark = info.getString(KeyConst.remark);
+                                    remark = info.getString(KeyConst.remark) + "新版本号:" + serverVersionCode;
                                     //把除了头之外的内容读取出来 存为新的jsonobject 对象
                                     apkUrl = info.getString(KeyConst.url);
                                 } catch (JSONException e) {
-                                    Log.d(TAG, "更新下载解析失败: "+e.toString());
+                                    Log.d(TAG, "更新下载解析失败: " + e.toString());
                                 }
                                 //有新版本
                                 int localVersionCode = Utils.getVersionName(context);
@@ -532,7 +532,7 @@ public class MainActivity extends BaseFgActivity {
     public void setCompanyName() {
         if (accountInfo != null) {
             String deptName = accountInfo.deptName;
-            deptNameTv.setText("武汉预警监控有限公司" + deptName);
+            deptNameTv.setText("北盘江大桥管理员");
             if (workFragment != null) {
                 ((TextView) findViewById(R.id.work_center_title_tv)).setText(deptName);
             }

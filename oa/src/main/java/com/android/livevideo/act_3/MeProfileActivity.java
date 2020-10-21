@@ -23,20 +23,12 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.livevideo.bean.AccountInfo;
-import com.android.livevideo.bean.DictInfo;
-import com.android.livevideo.core.net.GsonRequest;
-import com.android.livevideo.core.utils.TextUtil;
-import com.android.livevideo.exception.NoSDCardException;
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.livevideo.App;
 import com.android.livevideo.R;
 import com.android.livevideo.act_other.BaseFgActivity;
-import com.android.livevideo.util.Utils;
+import com.android.livevideo.bean.AccountInfo;
+import com.android.livevideo.bean.DictInfo;
+import com.android.livevideo.core.net.GsonRequest;
 import com.android.livevideo.core.utils.Constant;
 import com.android.livevideo.core.utils.DialogHelper;
 import com.android.livevideo.core.utils.FileUtil;
@@ -44,7 +36,14 @@ import com.android.livevideo.core.utils.ImageUtil;
 import com.android.livevideo.core.utils.KeyConst;
 import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.core.utils.UrlConstant;
+import com.android.livevideo.exception.NoSDCardException;
 import com.android.livevideo.util.ToastUtil;
+import com.android.livevideo.util.Utils;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.gson.reflect.TypeToken;
 import com.soundcloud.android.crop.Crop;
@@ -225,38 +224,37 @@ public class MeProfileActivity extends BaseFgActivity {
     }
 
     private void setLayoutData() {
-        info = (AccountInfo) getIntent().getSerializableExtra(KeyConst.OBJ_INFO);
+ /*       info = (AccountInfo) getIntent().getSerializableExtra(KeyConst.OBJ_INFO);
         if (info == null) {
             ToastUtil.show(context, R.string.server_exception);
             return;
-        }
+        }*/
         itemLayout = (LinearLayout) findViewById(R.id.item_layout);
-        addItem("姓名", info.employeeName);
-        addItem("部门", info.deptName);
-        addItem("工号", info.employeeNo);
+        addItem("姓名", App.username);
+        addItem("部门", "工程部");
+        addItem("工号", "100466523");
         //addItem("邮箱", "");
-        addItem("电话", info.employeeMobile);
-        addItem("职位", info.positionName);
-        addItem("岗位职级", "");
-        addItem("员工类型", "");
-        addItem("员工状态", "");
-        addItem("入职日期", info.employmentDate);
-        addItem("转正日期", info.correctionDate);
-        String probationPeriod = info.probationPeriod;
+        addItem("电话", "17644326728");
+        addItem("职位", "管理员");
+        addItem("员工类型", "正式员工");
+        addItem("员工状态", "在职");
+        addItem("入职日期", "2015-08-22");
+        addItem("转正日期", "2015-11-21");
+  /*      String probationPeriod = info.probationPeriod;
         if (!TextUtil.isEmpty(probationPeriod)) {
             probationPeriod = probationPeriod.replace(".00", "");
         }
         addItem("试用期", probationPeriod + "个月");
         requestLeave(info.employeeId);
         requestTypeData(info.employeeType);
-        requestStatusData(info.employeeStatus);
+        requestStatusData(info.employeeStatus);*/
     }
 
     private void requestLeave(int employeeId) {
         if (!NetUtil.isNetworkConnected(context)) {
             return;
         }
-        String url = Constant.WEB_SITE + "/upms/employees/"+employeeId;
+        String url = Constant.WEB_SITE + "/upms/employees/" + employeeId;
         Response.Listener<AccountInfo> successListener = new Response
                 .Listener<AccountInfo>() {
             @Override

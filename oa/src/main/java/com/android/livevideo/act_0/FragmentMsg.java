@@ -3,7 +3,6 @@ package com.android.livevideo.act_0;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +24,7 @@ import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.dialogfragment.SimpleDialogFragment;
 import com.android.livevideo.util.ToastUtil;
 import com.android.livevideo.util.Utils;
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -35,7 +35,9 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -119,7 +121,6 @@ public class FragmentMsg extends BaseSearchFragment {
                 .Listener<DataInfo>() {
             @Override
             public void onResponse(DataInfo result) {
-                Log.d(TAG, "犯规: "+result.toString());
                 if (null != context && !context.isFinishing()) {
                     mRefreshLayout.finishRefresh(0);
                 }
@@ -163,12 +164,12 @@ public class FragmentMsg extends BaseSearchFragment {
                     }
                 }, new TypeToken<DataInfo>() {
                 }.getType()) {
-                    /*@Override
+                    @Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
                         Map<String, String> params = new HashMap<>();
                         params.put("X-Requested-With", "XMLHttpRequest");
                         return params;
-                    }*/
+                    }
                 };
         App.requestQueue.add(versionRequest);
     }

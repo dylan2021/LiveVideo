@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/msg_item_time_tv"
-            android:layout_marginTop="@dimen/dm020"
+            android:layout_marginTop="@dimen/dm015"
             android:paddingRight="@dimen/dm010"
             android:layout_toLeftOf="@id/msg_sdv_iv"
           />

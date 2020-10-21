@@ -103,7 +103,7 @@ public class MsgAdapter extends BaseAdapter {
             int resultStatus = info.resultStatus;
             //holder.redTag.setVisibility("1".equals(isRead) ? View.VISIBLE : View.GONE);
 
-            holder.titleTv.setText("摄像头" + (position + 1));
+            holder.titleTv.setText(info.camera);
             int color = Utils.getStatusColor(context, resultStatus);
             holder.statusTv.setText(Utils.getStatusText(resultStatus));
             holder.statusTv.setTextColor(color);
@@ -112,7 +112,7 @@ public class MsgAdapter extends BaseAdapter {
             NumberFormat nf = NumberFormat.getPercentInstance();
             nf.setMaximumFractionDigits(2);
 
-            holder.tv1.setText("开裂时间:2010-08-20 08:88:66");
+            holder.tv1.setText("检查时间:"+info.checkTime);
             holder.tv2.setText("开裂相似度:" + nf.format(resultValue));
 
             final String uriString = info.resultPic;

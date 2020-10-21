@@ -149,7 +149,7 @@ public class MeApplyListActivity extends BaseFgActivity {
                         if (null != context && !context.isFinishing()) {
                             mRefreshLayout.finishRefresh(0);
                         }
-                        ToastUtil.show(context, R.string.server_exception);
+                        ToastUtil.show(context, R.string.no_data);
                     }
                 }, new TypeToken<List<MsgInfo>>() {
                 }.getType()) {
