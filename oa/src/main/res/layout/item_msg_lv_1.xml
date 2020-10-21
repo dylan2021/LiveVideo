@@ -37,8 +37,8 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             android:scaleType="centerCrop"
-            fresco:failureImage="@drawable/ic_error_img"
-            fresco:placeholderImage="@drawable/ic_error_img"
+            fresco:failureImage="@drawable/ic_def_logo_720_288"
+            fresco:placeholderImage="@drawable/ic_def_logo_720_288"
             fresco:placeholderImageScaleType="centerCrop" />
 
         <TextView

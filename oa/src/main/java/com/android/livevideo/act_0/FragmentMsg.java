@@ -19,7 +19,6 @@ import com.android.livevideo.bean.DataInfo;
 import com.android.livevideo.bean.MsgInfo;
 import com.android.livevideo.core.net.GsonRequest;
 import com.android.livevideo.core.utils.Constant;
-import com.android.livevideo.core.utils.KeyConst;
 import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.dialogfragment.SimpleDialogFragment;
 import com.android.livevideo.util.ToastUtil;
@@ -32,9 +31,6 @@ import com.google.gson.reflect.TypeToken;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.List;
@@ -104,7 +100,7 @@ public class FragmentMsg extends BaseSearchFragment {
             @Override
             public void onLoadmore(RefreshLayout refreshlayout) {
                 refreshlayout.finishLoadmore();
-                ToastUtil.show(context,"已经到底了哦~");
+                ToastUtil.show(context, "已经到底了哦~");
             }
         });
         mRefreshLayout.autoRefresh();
@@ -131,11 +127,18 @@ public class FragmentMsg extends BaseSearchFragment {
                 if (null != context && !context.isFinishing()) {
                     mRefreshLayout.finishRefresh(0);
                 }
+                if (result == null || result.getData() == null) {
+                    msgAdapter.setDate(null, 0);
+                    emptyTv.setText(context.getString(R.string.no_data));
+                    emptyTv.setVisibility(View.VISIBLE);
+                    return;
+                }
                 DataInfo.DataBean bean = result.getData();
-                List<MsgInfo> data =  bean.getList();
-                msgAdapter.setDate(data, 0);
+                List<MsgInfo> data = bean.getList();
 
+                msgAdapter.setDate(data, 0);
                 if (data == null || data.size() == 0) {
+                    ToastUtil.show(context, R.string.no_data);
                     emptyTv.setText(context.getString(R.string.no_data));
                     emptyTv.setVisibility(View.VISIBLE);
                     return;
@@ -151,8 +154,9 @@ public class FragmentMsg extends BaseSearchFragment {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                         mRefreshLayout.finishRefresh(0);
-                        emptyTv.setVisibility(View.GONE);
-                        if (volleyError != null && volleyError.networkResponse != null
+                        emptyTv.setVisibility(View.VISIBLE);
+                        emptyTv.setText(R.string.server_exception);
+                /*        if (volleyError != null && volleyError.networkResponse != null
                                 && volleyError.networkResponse.data != null) {
                             byte[] data = volleyError.networkResponse.data;
                             String errMsg = new String(data);
@@ -166,8 +170,8 @@ public class FragmentMsg extends BaseSearchFragment {
                                 }
                             } catch (JSONException e) {
                             }
-                        }
-                        ToastUtil.show(context, R.string.server_exception);
+                        }*/
+                        //ToastUtil.show(context, R.string.server_exception);
                     }
                 }, new TypeToken<DataInfo>() {
                 }.getType()) {

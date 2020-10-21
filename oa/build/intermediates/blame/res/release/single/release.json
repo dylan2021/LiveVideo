@@ -24,12 +24,12 @@
         "source": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\src\\main\\res\\drawable\\shape_white_30px.xml"
     },
     {
-        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_common_google_signin_btn_icon_light_normal.9.png.flat",
-        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\7d098fc9fc987bf545f875ff8f35133a\\play-services-base-8.4.0\\res\\drawable-hdpi\\common_google_signin_btn_icon_light_normal.9.png"
-    },
-    {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_common_google_signin_btn_text_light_pressed.9.png.flat",
         "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\7d098fc9fc987bf545f875ff8f35133a\\play-services-base-8.4.0\\res\\drawable-hdpi\\common_google_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_common_google_signin_btn_icon_light_normal.9.png.flat",
+        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\7d098fc9fc987bf545f875ff8f35133a\\play-services-base-8.4.0\\res\\drawable-hdpi\\common_google_signin_btn_icon_light_normal.9.png"
     },
     {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-v21_design_password_eye.xml.flat",
@@ -68,36 +68,36 @@
         "source": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\src\\main\\res\\drawable-xxxhdpi\\ic_work_04.png"
     },
     {
-        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\animator-v21_design_appbar_state_list_animator.xml.flat",
-        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\c5aa5acfa1539d688933ad21ec16d6d4\\design-26.0.0-alpha1\\res\\animator-v21\\design_appbar_state_list_animator.xml"
-    },
-    {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\899b8389eb97a31634fdce923efc2df7\\appcompat-v7-26.1.0\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\animator-v21_design_appbar_state_list_animator.xml.flat",
+        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\c5aa5acfa1539d688933ad21ec16d6d4\\design-26.0.0-alpha1\\res\\animator-v21\\design_appbar_state_list_animator.xml"
     },
     {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable_shape_corner5px_main_color.xml.flat",
         "source": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\src\\main\\res\\drawable\\shape_corner5px_main_color.xml"
     },
     {
-        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_common_plus_signin_btn_text_light_disabled.9.png.flat",
-        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\7d098fc9fc987bf545f875ff8f35133a\\play-services-base-8.4.0\\res\\drawable-xxhdpi\\common_plus_signin_btn_text_light_disabled.9.png"
-    },
-    {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_change_reduce_arrow.png.flat",
         "source": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\src\\main\\res\\drawable-xxxhdpi\\ic_change_reduce_arrow.png"
+    },
+    {
+        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_common_plus_signin_btn_text_light_disabled.9.png.flat",
+        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\7d098fc9fc987bf545f875ff8f35133a\\play-services-base-8.4.0\\res\\drawable-xxhdpi\\common_plus_signin_btn_text_light_disabled.9.png"
     },
     {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\c5aa5acfa1539d688933ad21ec16d6d4\\design-26.0.0-alpha1\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
     },
     {
-        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\899b8389eb97a31634fdce923efc2df7\\appcompat-v7-26.1.0\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_work_13.png.flat",
         "source": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\src\\main\\res\\drawable-xxxhdpi\\ic_work_13.png"
+    },
+    {
+        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\899b8389eb97a31634fdce923efc2df7\\appcompat-v7-26.1.0\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_common_plus_signin_btn_text_dark_pressed.9.png.flat",
@@ -168,12 +168,12 @@
         "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\899b8389eb97a31634fdce923efc2df7\\appcompat-v7-26.1.0\\res\\drawable-xhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\899b8389eb97a31634fdce923efc2df7\\appcompat-v7-26.1.0\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable_shape_fragment0_item_nomal.xml.flat",
         "source": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\src\\main\\res\\drawable\\shape_fragment0_item_nomal.xml"
+    },
+    {
+        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\899b8389eb97a31634fdce923efc2df7\\appcompat-v7-26.1.0\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-tvdpi_common_google_signin_btn_text_dark_disabled.9.png.flat",
@@ -2252,10 +2252,6 @@
         "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\899b8389eb97a31634fdce923efc2df7\\appcompat-v7-26.1.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_welcome_new.png.flat",
-        "source": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\src\\main\\res\\drawable-xxhdpi\\ic_welcome_new.png"
-    },
-    {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable_jz_bottom_seek_progress.xml.flat",
         "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\0bb525b6bcb5b3235af878529d6a1fa5\\jiaozivideoplayer-6.1.1\\res\\drawable\\jz_bottom_seek_progress.xml"
     },
@@ -3634,6 +3630,10 @@
     {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable_jz_dialog_progress.xml.flat",
         "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\0bb525b6bcb5b3235af878529d6a1fa5\\jiaozivideoplayer-6.1.1\\res\\drawable\\jz_dialog_progress.xml"
+    },
+    {
+        "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_welcome_new.jpg.flat",
+        "source": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\src\\main\\res\\drawable-xhdpi\\ic_welcome_new.jpg"
     },
     {
         "merged": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_common_google_signin_btn_icon_dark_pressed.9.png.flat",
