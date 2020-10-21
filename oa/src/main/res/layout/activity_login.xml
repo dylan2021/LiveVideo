@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_login"
+        android:background="@drawable/ic_welcome_new"
         android:orientation="vertical">
 
 
@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/dm170"
+            android:layout_marginTop="@dimen/dm120"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -31,9 +31,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginTop="@dimen/dm040"
+                android:layout_marginTop="@dimen/dm030"
                 android:text="@string/login_title"
-                android:textColor="@color/color_000000"
+                android:textColor="@color/white"
                 android:textSize="@dimen/dm034"
                 android:textStyle="bold" />
 
@@ -45,8 +45,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/login_bt_margin_left_right"
+            android:layout_marginTop="@dimen/dm400"
             android:layout_marginRight="@dimen/login_bt_margin_left_right"
-            android:layout_marginTop="@dimen/dm100">
+            android:background="@color/transparent_light5"
+            android:paddingTop="@dimen/dm020">
 
 
             <com.rengwuxian.materialedittext.MaterialEditText
@@ -58,19 +60,19 @@
                 android:gravity="center_vertical"
                 android:hint="@string/login_name_hint"
                 android:maxLength="11"
-                android:paddingLeft="@dimen/dm090"
+                android:paddingLeft="@dimen/dm030"
                 android:singleLine="true"
                 android:text="Dylan"
-                android:textColor="@color/color_000000"
+                android:textColor="@color/white"
                 android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
                 android:textSize="@dimen/dm028"
                 app:met_autoValidate="true"
-                app:met_baseColor="@color/color_000000"
+                app:met_baseColor="@color/white"
                 app:met_clearButton="true"
                 app:met_errorColor="@color/mainColor"
                 app:met_floatingLabelPadding="@dimen/dm010"
                 app:met_primaryColor="@color/mainColor"
-                app:met_underlineColor="@color/color_000000" />
+                app:met_underlineColor="@color/white" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -79,48 +81,49 @@
                 android:layout_marginLeft="@dimen/dm040"
                 android:paddingBottom="@dimen/dm025"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_login_name" />
+                android:src="@drawable/ic_login_name"
+                android:visibility="gone" />
         </RelativeLayout>
         <!-- ================== 密码 ========================= -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/login_bt_margin_left_right"
-            android:layout_marginRight="@dimen/login_bt_margin_left_right">
+            android:layout_marginRight="@dimen/login_bt_margin_left_right"
+            android:background="@color/transparent_light5">
 
-             <com.rengwuxian.materialedittext.MaterialEditText
-                  android:id="@+id/et_login_pwd"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:digits="@string/account_digits"
-                  android:focusableInTouchMode="true"
-                  android:gravity="center_vertical"
-                  android:hint="@string/login_pwd_hint"
-                  android:inputType="textPassword"
-                  android:maxLength="16"
-                  android:paddingLeft="@dimen/dm090"
-                  android:singleLine="true"
-                  android:text=""
-                  android:textColor="@color/color_000000"
-                  android:textColorHint="@color/color_000000"
-                  android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
-                  android:textSize="@dimen/dm028"
-                  app:met_autoValidate="true"
-                  app:met_baseColor="@color/color_000000"
-                  app:met_clearButton="true"
-                  app:met_errorColor="@color/mainColor"
-                  app:met_floatingLabelPadding="@dimen/dm020"
-                  app:met_primaryColor="@color/mainColor"
-                  app:met_underlineColor="@color/color_000000" />
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_login_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/account_digits"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="@string/login_pwd_hint"
+                android:inputType="textPassword"
+                android:maxLength="16"
+               android:paddingLeft="@dimen/dm030"   
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
+                android:textSize="@dimen/dm028"
+                app:met_autoValidate="true"
+                app:met_baseColor="@color/white"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/mainColor"
+                app:met_floatingLabelPadding="@dimen/dm020"
+                app:met_primaryColor="@color/mainColor"
+                app:met_underlineColor="@color/white" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dm040"
                 android:paddingBottom="@dimen/dm010"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_login_password" />
+                android:src="@drawable/ic_login_password"
+                android:visibility="gone" />
 
             <ImageButton
                 android:id="@+id/bt_show_pwd"
@@ -137,10 +140,10 @@
         <Button
             android:id="@+id/but_login"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/main_bt_height"
-            android:layout_marginLeft="@dimen/dm050"
-            android:layout_marginRight="@dimen/dm050"
-            android:layout_marginTop="@dimen/dm067"
+            android:layout_height="@dimen/dm080"
+            android:layout_marginLeft="@dimen/dm080"
+            android:layout_marginTop="@dimen/dm070"
+            android:layout_marginRight="@dimen/dm080"
             android:background="@drawable/selector_login_bt"
             android:onClick="onLoginClick"
             android:text="@string/login_now"
@@ -155,7 +158,7 @@
             android:gravity="center"
             android:padding="@dimen/dm030"
             android:text="@string/forgeter_pwd"
-            android:textColor="@color/color999"
+            android:textColor="@color/white"
             android:textSize="@dimen/dm024" />
 
         <RelativeLayout
@@ -163,8 +166,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/dm034"
-            android:layout_marginRight="@dimen/dm034"
             android:layout_marginTop="@dimen/dm010"
+            android:layout_marginRight="@dimen/dm034"
             android:gravity="center_vertical"
             android:visibility="gone">
 
@@ -192,28 +195,28 @@
                 android:layout_width="@dimen/dm090"
                 android:layout_height="@dimen/dm090"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="@dimen/dm050"
                 android:layout_marginLeft="@dimen/dm170"
+                android:layout_marginBottom="@dimen/dm050"
                 android:scaleType="centerInside" />
 
             <ImageView
                 android:id="@+id/login_wechat_bt"
                 android:layout_width="@dimen/login_margin_left"
                 android:layout_height="@dimen/login_margin_left"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginBottom="@dimen/dm050"
+                android:layout_alignParentBottom="true"
                 android:layout_marginRight="@dimen/dm170"
+                android:layout_marginBottom="@dimen/dm050"
                 android:scaleType="centerInside" />
 
             <ImageView
                 android:id="@+id/login_sina_bt"
                 android:layout_width="@dimen/login_margin_left"
                 android:layout_height="@dimen/login_margin_left"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginBottom="@dimen/dm050"
+                android:layout_alignParentBottom="true"
                 android:layout_marginRight="@dimen/dm100"
+                android:layout_marginBottom="@dimen/dm050"
                 android:scaleType="centerInside"
                 android:visibility="gone" />
 
@@ -222,9 +225,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/dm150"
                 android:layout_marginLeft="@dimen/login_bt_margin_left_right"
                 android:layout_marginRight="@dimen/login_bt_margin_left_right"
+                android:layout_marginBottom="@dimen/dm150"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 

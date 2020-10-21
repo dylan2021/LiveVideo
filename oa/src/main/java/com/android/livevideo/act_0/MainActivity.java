@@ -245,7 +245,7 @@ public class MainActivity extends BaseFgActivity {
             ToastUtil.show(context, R.string.no_store_permission);
         } else {
             String url = Constant.WEB_SITE + "/ai/apk/check";
-            StringRequest jsonObjRequest = new StringRequest(Request.Method.GET, url,
+            StringRequest jsonObjRequest= new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String result) {
