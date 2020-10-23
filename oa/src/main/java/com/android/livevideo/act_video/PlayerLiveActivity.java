@@ -74,12 +74,11 @@ public class PlayerLiveActivity extends BaseFgActivity {
 
         player = new PlayerView(this, rootView)
                 .setTitle(title)
+                .hideSteam(false)
+                .setForbidDoulbeUp(false)
                 .setScaleType(PlayStateParams.fitparent)
+                .forbidTouch(false)
                 .hideMenu(true)
-                .hideSteam(true)
-                .setForbidDoulbeUp(true)
-                .hideCenterPlayer(true)
-                .hideControlPanl(true)
                 .showThumbnail(new OnShowThumbnailListener() {
                     @Override
                     public void onShowThumbnail(ImageView ivThumbnail) {
