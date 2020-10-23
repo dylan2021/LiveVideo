@@ -206,7 +206,7 @@
             android:layout_below="@id/center_tv"
             android:layout_alignParentLeft="true"
             android:layout_margin="@dimen/dm050"
-            android:background="@drawable/shape_circle_main_color"
+            android:background="@drawable/ic_my"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="@dimen/dm030" />

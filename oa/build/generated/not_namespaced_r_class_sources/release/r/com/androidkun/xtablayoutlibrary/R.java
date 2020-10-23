@@ -610,7 +610,7 @@ public final class R {
         public static final int abc_textfield_search_material = 0x7f080057;
         public static final int design_fab_background = 0x7f08008f;
         public static final int design_snackbar_background = 0x7f080093;
-        public static final int notification_template_icon_bg = 0x7f080159;
+        public static final int notification_template_icon_bg = 0x7f08015a;
     }
     public static final class id {
         private id() {}

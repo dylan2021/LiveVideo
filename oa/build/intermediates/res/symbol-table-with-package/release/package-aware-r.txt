@@ -2680,6 +2680,7 @@ drawable ic_me_password
 drawable ic_me_pressed
 drawable ic_me_setting
 drawable ic_more
+drawable ic_my
 drawable ic_next
 drawable ic_next_black
 drawable ic_notice_normal

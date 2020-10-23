@@ -33,7 +33,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="@dimen/dm030"
                 android:text="@string/login_title"
-                android:textColor="@color/white"
+                android:textColor="@color/color212121"
                 android:textSize="@dimen/dm034"
                 android:textStyle="bold" />
 
@@ -62,7 +62,7 @@
                 android:maxLength="11"
                 android:paddingLeft="@dimen/dm030"
                 android:singleLine="true"
-                android:text="Dylan"
+                android:text="admin"
                 android:textColor="@color/white"
                 android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
                 android:textSize="@dimen/dm028"

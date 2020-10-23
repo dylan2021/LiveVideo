@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.livevideo"
     android:targetSandboxVersion="2"
-    android:versionCode="1005"
-    android:versionName="1.0.5" >
+    android:versionCode="1007"
+    android:versionName="1.0.7" >
 
     <uses-sdk
         android:maxSdkVersion="23"
@@ -58,7 +58,6 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/appName"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/theme_appcompat" >
         <activity android:name="com.android.livevideo.act_video.VideoListActivity" />
         <activity

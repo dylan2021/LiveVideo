@@ -96,8 +96,12 @@ public class FragmentAddress extends BaseSearchFragment {
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        if (onlineStatus == 1) {
+                            getItemData(id, title);
+                        } else {
+                            ToastUtil.show(context,"该设备当前不在线");
+                        }
                         //请求单个摄像头播放地址
-                        getItemData(id, title);
                     }
                 });
                 deptLayout.addView(itemView);

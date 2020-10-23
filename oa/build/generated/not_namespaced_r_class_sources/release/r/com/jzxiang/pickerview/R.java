@@ -474,11 +474,11 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f080055;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f080056;
         public static final int abc_textfield_search_material = 0x7f080057;
-        public static final int notification_template_icon_bg = 0x7f080159;
-        public static final int timepicker_divider_line = 0x7f0801da;
-        public static final int timepicker_sel_text_item = 0x7f0801db;
-        public static final int wheel_bg = 0x7f0801de;
-        public static final int wheel_val = 0x7f0801df;
+        public static final int notification_template_icon_bg = 0x7f08015a;
+        public static final int timepicker_divider_line = 0x7f0801db;
+        public static final int timepicker_sel_text_item = 0x7f0801dc;
+        public static final int wheel_bg = 0x7f0801df;
+        public static final int wheel_val = 0x7f0801e0;
     }
     public static final class id {
         private id() {}

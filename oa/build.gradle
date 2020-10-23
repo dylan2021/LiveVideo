@@ -29,8 +29,8 @@ android {
         applicationId "com.android.livevideo"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 1005
-        versionName "1.0.5"
+        versionCode 1007
+        versionName "1.0.7"
 
         ndk {
             moduleName "Crc8Jni"

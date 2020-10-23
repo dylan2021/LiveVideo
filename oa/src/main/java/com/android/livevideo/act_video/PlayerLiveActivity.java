@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.PowerManager;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -61,6 +62,7 @@ public class PlayerLiveActivity extends BaseFgActivity {
         Intent i = getIntent();
         initStatusBar();
         url = i.getStringExtra(KeyConst.url);
+        Log.d("播放", "播放" + url);
         title = i.getStringExtra(KeyConst.title);
         rootView = getLayoutInflater().from(this).inflate(R.layout.simple_player_view_player, null);
         setContentView(rootView);

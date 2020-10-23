@@ -79,7 +79,6 @@ public class MainActivity extends BaseFgActivity {
     private TextView tabTv1, tabTv4, tabTv3;
     private int colorDark;
     private int colorNormal;
-    private TextView iconTv;
     private SharedPreferences sp;
     private SharedPreferences.Editor editor;
     private Button tabBt3;
@@ -127,11 +126,11 @@ public class MainActivity extends BaseFgActivity {
         tabTv3 = (TextView) findViewById(R.id.menu_gamehub_tv);
         tabTv4 = (TextView) findViewById(R.id.menu_manager_tv);
 
-        iconTv = (TextView) findViewById(R.id.me_icon_tv);
+        //iconTv = (TextView) findViewById(R.id.me_icon_tv);
         mMenuNameTv = (TextView) findViewById(R.id.me_user_name_tv);
         deptNameTv = (TextView) findViewById(R.id.me_department_tv);
 
-        iconTv.setOnClickListener(mItemLayoutClickListener);
+        //iconTv.setOnClickListener(mItemLayoutClickListener);
         mMenuNameTv.setOnClickListener(mItemLayoutClickListener);
 
         colorDark = getResources().getColor(R.color.mainColor);
@@ -148,7 +147,7 @@ public class MainActivity extends BaseFgActivity {
         checkAppUpdate();
 
         mMenuNameTv.setText(App.username);
-        iconTv.setText(TextUtil.getLast2(App.username));
+        //iconTv.setText(TextUtil.getLast2(App.username));
         deptNameTv.setText("北盘江大桥管理员");
     }
 
@@ -447,7 +446,7 @@ public class MainActivity extends BaseFgActivity {
                 App.employeeId = info.employeeId;
 
                 mMenuNameTv.setText(App.employeeName);
-                iconTv.setText(TextUtil.getLast2(App.employeeName));
+                //iconTv.setText(TextUtil.getLast2(App.employeeName));
 
                 setCompanyName();
 
