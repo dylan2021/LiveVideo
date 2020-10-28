@@ -190,8 +190,8 @@
 
     <ProgressBar
         android:id="@+id/loading"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/dm040"
+        android:layout_height="@dimen/dm040"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:indeterminateDrawable="@drawable/jz_loading"

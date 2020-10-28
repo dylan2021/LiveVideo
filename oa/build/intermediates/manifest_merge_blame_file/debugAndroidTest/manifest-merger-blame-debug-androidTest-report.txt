@@ -3,31 +3,31 @@
 3    package="com.android.livevideo.test" >
 4
 5    <uses-sdk
-5-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:5:5-74
+5-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:5:5-74
 6        android:minSdkVersion="19"
-6-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:5:15-41
+6-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:5:15-41
 7        android:targetSdkVersion="26" />
-7-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:5:42-71
+7-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:5:42-71
 8
 9    <instrumentation
-9-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:11:5-15:71
+9-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:11:5-15:71
 10        android:name="android.support.test.runner.AndroidJUnitRunner"
-10-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:11:22-83
+10-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:11:22-83
 11        android:functionalTest="false"
-11-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:14:22-52
+11-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:14:22-52
 12        android:handleProfiling="false"
-12-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:13:22-53
+12-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:13:22-53
 13        android:label="Tests for com.android.livevideo"
-13-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:15:22-69
+13-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:15:22-69
 14        android:targetPackage="com.android.livevideo" />
-14-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:12:22-67
+14-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:12:22-67
 15
 16    <application android:debuggable="true" >
-16-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:7:5-9:19
-16-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:7:18-43
+16-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:7:5-9:19
+16-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:7:18-43
 17        <uses-library android:name="android.test.runner" />
-17-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:8:9-60
-17-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger5611648063002772411.xml:8:23-57
+17-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:8:9-60
+17-->C:\Projects_LiveVideo\LiveVideo\oa\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6037977683966321935.xml:8:23-57
 18    </application>
 19
 20</manifest>

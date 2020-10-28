@@ -8,8 +8,6 @@
     android:clipToPadding="false"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
-
-
     <com.dou361.ijkplayer.widget.IjkVideoView
         android:id="@+id/video_view"
         android:background="#e5e5e5"

@@ -8134,21 +8134,22 @@ public final class R {
     public static final int notification_template_media_custom=0x7f0b00e6;
     public static final int notification_template_part_chronometer=0x7f0b00e7;
     public static final int notification_template_part_time=0x7f0b00e8;
-    public static final int pull_to_load_footer=0x7f0b00e9;
-    public static final int pull_to_refresh_header=0x7f0b00ea;
-    public static final int select_dialog_item_material=0x7f0b00eb;
-    public static final int select_dialog_multichoice_material=0x7f0b00ec;
-    public static final int select_dialog_singlechoice_material=0x7f0b00ed;
-    public static final int simple_player_controlbar=0x7f0b00ee;
-    public static final int simple_player_list_item=0x7f0b00ef;
-    public static final int simple_player_topbar=0x7f0b00f0;
-    public static final int simple_player_touch_gestures=0x7f0b00f1;
-    public static final int simple_player_view_player=0x7f0b00f2;
-    public static final int support_simple_spinner_dropdown_item=0x7f0b00f3;
-    public static final int timepicker_layout=0x7f0b00f4;
-    public static final int timepicker_line=0x7f0b00f5;
-    public static final int timepicker_toolbar=0x7f0b00f6;
-    public static final int tooltip=0x7f0b00f7;
+    public static final int player_view_player=0x7f0b00e9;
+    public static final int pull_to_load_footer=0x7f0b00ea;
+    public static final int pull_to_refresh_header=0x7f0b00eb;
+    public static final int select_dialog_item_material=0x7f0b00ec;
+    public static final int select_dialog_multichoice_material=0x7f0b00ed;
+    public static final int select_dialog_singlechoice_material=0x7f0b00ee;
+    public static final int simple_player_controlbar=0x7f0b00ef;
+    public static final int simple_player_list_item=0x7f0b00f0;
+    public static final int simple_player_topbar=0x7f0b00f1;
+    public static final int simple_player_touch_gestures=0x7f0b00f2;
+    public static final int simple_player_view_player=0x7f0b00f3;
+    public static final int support_simple_spinner_dropdown_item=0x7f0b00f4;
+    public static final int timepicker_layout=0x7f0b00f5;
+    public static final int timepicker_line=0x7f0b00f6;
+    public static final int timepicker_toolbar=0x7f0b00f7;
+    public static final int tooltip=0x7f0b00f8;
   }
   public static final class menu {
     public static final int card_menu=0x7f0c0000;

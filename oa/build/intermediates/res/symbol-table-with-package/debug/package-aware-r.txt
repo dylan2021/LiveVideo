@@ -4078,6 +4078,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout player_view_player
 layout pull_to_load_footer
 layout pull_to_refresh_header
 layout select_dialog_item_material

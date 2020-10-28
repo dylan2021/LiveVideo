@@ -283,9 +283,6 @@ com/android/livevideo/core/utils/SPUtils.java
  com.android.livevideo.core.utils.SPUtils$SharedPreferencesCompat
 com/android/livevideo/act_video/PlayerLiveActivity.java
  com.android.livevideo.act_video.PlayerLiveActivity
- com.android.livevideo.act_video.PlayerLiveActivity$1
- com.android.livevideo.act_video.PlayerLiveActivity$2
- com.android.livevideo.act_video.PlayerLiveActivity$3
 android/support/compat/R.java
  android.support.compat.R
  android.support.compat.R$attr
@@ -1242,6 +1239,8 @@ com/android/livevideo/adapter/MyExpandableListAdapter.java
  com.android.livevideo.adapter.MyExpandableListAdapter$GroupViewHolder
 com/android/livevideo/util/TimeUtils.java
  com.android.livevideo.util.TimeUtils
+com/android/livevideo/act_video/NgameJZVideoPlayerStandard.java
+ com.android.livevideo.act_video.NgameJZVideoPlayerStandard
 com/android/livevideo/exception/CrashHandler.java
  com.android.livevideo.exception.CrashHandler
  com.android.livevideo.exception.CrashHandler$1

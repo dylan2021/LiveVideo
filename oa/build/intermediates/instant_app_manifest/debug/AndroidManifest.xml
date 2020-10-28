@@ -63,8 +63,8 @@
         <activity android:name="com.android.livevideo.act_video.VideoListActivity" />
         <activity
             android:name="com.android.livevideo.act_video.PlayerLiveActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/AppTheme" />
+            android:configChanges="orientation|screenSize|keyboardHidden|navigation"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.android.livevideo.act_video.HPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

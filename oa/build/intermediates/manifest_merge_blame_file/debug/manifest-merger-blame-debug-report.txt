@@ -129,13 +129,13 @@
 62-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:57:9-85
 62-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:57:19-83
 63        <activity
-63-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:58:9-61:47
+63-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:58:9-61:52
 64            android:name="com.android.livevideo.act_video.PlayerLiveActivity"
 64-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:59:13-78
-65            android:configChanges="orientation|keyboardHidden|screenSize"
-65-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:60:13-74
-66            android:theme="@style/AppTheme" />
-66-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:61:13-44
+65            android:configChanges="orientation|screenSize|keyboardHidden|navigation"
+65-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:60:13-85
+66            android:screenOrientation="portrait" />
+66-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:61:13-49
 67        <activity
 67-->C:\Projects_LiveVideo\LiveVideo\oa\src\main\AndroidManifest.xml:62:9-66:47
 68            android:name="com.android.livevideo.act_video.HPlayerActivity"

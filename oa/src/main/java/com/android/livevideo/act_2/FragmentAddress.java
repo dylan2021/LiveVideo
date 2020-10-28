@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.android.livevideo.App;
 import com.android.livevideo.R;
 import com.android.livevideo.act_0.MainActivity;
-import com.android.livevideo.act_video.PlayerLiveActivity;
+import com.android.livevideo.act_video.PlayerActivity;
 import com.android.livevideo.base.fragment.BaseSearchFragment;
 import com.android.livevideo.bean.CameraInfo;
 import com.android.livevideo.bean.CamerasListInfo;
@@ -127,7 +127,7 @@ public class FragmentAddress extends BaseSearchFragment {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable(KeyConst.OBJ_INFO, (Serializable) null);
 
-                Intent intent = new Intent(context, PlayerLiveActivity.class);
+                Intent intent = new Intent(context, PlayerActivity.class);
                 intent.putExtra(KeyConst.id, id);
                 intent.putExtra(KeyConst.url, liveUrl);
                 intent.putExtras(bundle);

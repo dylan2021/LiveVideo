@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.android.livevideo.R;
-import com.bumptech.glide.Glide;
+import com.android.livevideo.core.utils.KeyConst;
 import com.dou361.ijkplayer.listener.OnPlayerBackListener;
 import com.dou361.ijkplayer.listener.OnShowThumbnailListener;
 import com.dou361.ijkplayer.widget.PlayStateParams;
@@ -31,20 +31,20 @@ public class PlayerActivity extends Activity {
         this.mContext = this;
         rootView = getLayoutInflater().from(this).inflate(R.layout.simple_player_view_player, null);
         setContentView(rootView);
-        String url = "http://183.6.245.249/v.cctv.com/flash/mp4video6/TMS/2011/01/05/cf752b1c12ce452b3040cab2f90bc265_h264818000nero_aac32-1.mp4";
+        String url = getIntent().getStringExtra(KeyConst.url);
         player = new PlayerView(this, rootView)
-                .setTitle("摄像头")
+                .setTitle(getIntent().getStringExtra(KeyConst.title))
                 .setScaleType(PlayStateParams.fitparent)
                 .forbidTouch(false)
                 .hideMenu(true)
                 .showThumbnail(new OnShowThumbnailListener() {
                     @Override
                     public void onShowThumbnail(ImageView ivThumbnail) {
-                        Glide.with(mContext)
+             /*           Glide.with(mContext)
                                 .load("http://pic2.nipic.com/20090413/406638_125424003_2.jpg")
                                 .placeholder(R.color.gray_1)
                                 .error(R.color.red_deduction)
-                                .into(ivThumbnail);
+                                .into(ivThumbnail);*/
                     }
                 })
                 .setPlaySource(url)
