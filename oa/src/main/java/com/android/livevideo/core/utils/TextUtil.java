@@ -543,7 +543,7 @@ public class TextUtil {
             case 1:
                 return "在线";
             case 2:
-                return "不在线";
+                return "离线";
             default:
                 return "未知";
         }

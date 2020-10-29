@@ -2,11 +2,14 @@ package com.android.livevideo.act_video;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.livevideo.R;
 import com.android.livevideo.core.utils.KeyConst;
@@ -31,9 +34,12 @@ public class PlayerActivity extends Activity {
         this.mContext = this;
         rootView = getLayoutInflater().from(this).inflate(R.layout.simple_player_view_player, null);
         setContentView(rootView);
-        String url = getIntent().getStringExtra(KeyConst.url);
+        Intent i = getIntent();
+        ((TextView) findViewById(R.id.app_title_tv)).setText(i.getStringExtra(KeyConst.title));
+        String url = i.getStringExtra(KeyConst.url);
+        Log.d("播放", "播放" + url);
         player = new PlayerView(this, rootView)
-                .setTitle(getIntent().getStringExtra(KeyConst.title))
+                .setTitle(i.getStringExtra(KeyConst.title))
                 .setScaleType(PlayStateParams.fitparent)
                 .forbidTouch(false)
                 .hideMenu(true)
