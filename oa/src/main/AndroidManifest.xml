@@ -41,10 +41,10 @@
         android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.android.livevideo"
         android:protectionLevel="normal"></permission>
     <!-- 百度推送权限 end -->
-
+<!--
     <uses-feature
         android:name="android.hardware.bluetooth_le"
-        android:required="false" />
+        android:required="false" />-->
 
     <application
         android:name="com.android.livevideo.App"
@@ -53,8 +53,8 @@
         android:label="@string/appName"
         android:supportsRtl="true"
         android:theme="@style/theme_appcompat"
-        tools:replace="icon,label,theme,allowBackup">
-        <activity android:name="com.android.livevideo.act_video.VideoListActivity"/>
+        tools:replace="android:label,android:allowBackup">
+        <activity android:name="com.android.livevideo.act_video.VideoListActivity" />
         <activity
             android:name="com.android.livevideo.act_video.PlayerLiveActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|navigation"
@@ -158,8 +158,10 @@
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true"
+            >
             <meta-data
+                tools:replace="android:resource"
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>

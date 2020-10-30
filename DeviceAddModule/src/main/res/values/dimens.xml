@@ -1,0 +1,43 @@
+<resources>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+
+    <dimen name="add_device_common_margin_5">5dp</dimen>
+    <dimen name="add_device_common_margin_8">8dp</dimen>
+    <dimen name="add_device_common_margin_15">15dp</dimen>
+    <dimen name="add_device_common_margin_10">10dp</dimen>
+    <dimen name="add_device_common_margin_25">25dp</dimen>
+    <dimen name="add_device_common_margin_35">35dp</dimen>
+    <dimen name="add_device_common_margin_56">56dp</dimen>
+    <dimen name="add_device_common_edit_height">49dp</dimen>
+    <dimen name="add_device_common_tip_img_height">220dp</dimen>
+
+    <dimen name="add_device_common_coutdownview_height">80dp</dimen>
+
+    <dimen name="add_device_qrcode_tip_img_height">100dp</dimen>
+    <dimen name="add_device_qrcode_tip_img_width">213dp</dimen>
+    <!-- common title -->
+    <dimen name="common_divider_wider">0.5dp</dimen>
+    <dimen name="page_margin">15dp</dimen>
+
+    <dimen name="text_size_mid">15sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <dimen name="wheel_picker_selected_text_size">22sp</dimen>
+    <dimen name="wheel_picker_text_size">20sp</dimen>
+    <dimen name="margin_normal">10dp</dimen>
+
+    <dimen name="btn_height">44dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+</resources>

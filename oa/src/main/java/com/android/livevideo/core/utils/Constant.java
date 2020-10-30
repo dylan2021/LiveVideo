@@ -98,4 +98,6 @@ public class Constant {
     public static final String WAGE_PIECEDETAIL_AUDIT = "WAGE_PIECEDETAIL_AUDIT";
     public static final int INPUT_MAX_LENGTH = 19;
     public static final int INPUT_DOT_LENGTH = 2;
+    public static final String appId="lca4d217e39e22461f";
+    public static final String appSecret="7ee28d6ef5c848439f6ceeaf908d21";
 }

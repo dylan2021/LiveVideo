@@ -6,14 +6,15 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.method.DigitsKeyListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.livevideo.App;
 import com.android.livevideo.R;
-import com.android.livevideo.act_0.MainActivity;
 import com.android.livevideo.core.utils.Constant;
 import com.android.livevideo.core.utils.DialogHelper;
 import com.android.livevideo.core.utils.KeyConst;
@@ -26,6 +27,12 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.lechange.demo.tools.RootUtil;
+import com.lechange.demo.ui.DeviceListActivity;
+import com.mm.android.deviceaddmodule.CommonParam;
+import com.mm.android.deviceaddmodule.LCDeviceEngine;
+import com.mm.android.deviceaddmodule.mobilecommon.utils.PreferencesHelper;
+import com.mm.android.deviceaddmodule.openapi.CONST;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import org.json.JSONException;
@@ -93,6 +100,35 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
             }, 1500);
 
         }
+
+        boolean deviceRooted = false;
+        try {
+            deviceRooted = RootUtil.isDeviceRooted();
+            if (deviceRooted) {
+                Toast.makeText(this, "设备已被Root", Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        appUrl = PreferencesHelper.getInstance(this).getString(DOMESTIC_URL, CONST.Envirment.CHINA_PRO.url);
+
+        try {
+            CommonParam commonParam = new CommonParam();
+            commonParam.setEnvirment(appUrl);
+            commonParam.setContext(getApplication());
+            commonParam.setAppId(appId);
+            commonParam.setAppSecret(appSecret);
+            LCDeviceEngine.newInstance().init(commonParam);
+
+            PreferencesHelper.getInstance(context).set(DOMESTIC_APP_ID_KEY, appId);
+            PreferencesHelper.getInstance(context).set(DOMESTIC_APP_SECRET_KEY, appSecret);
+            PreferencesHelper.getInstance(context).set(DOMESTIC_URL, appUrl);
+        } catch (Throwable e) {
+            ToastUtil.show(context, "项目配置异常,请稍后重试");
+            Log.d("项目失败", "项目失败:" + e.toString());
+            //return;
+        }
     }
 
     @Override
@@ -125,11 +161,19 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
         }
     }
 
+    private static final String DOMESTIC_APP_ID_KEY = "DOMESTIC_APP_ID";
+    private static final String DOMESTIC_APP_SECRET_KEY = "DOMESTIC_APP_SECRET";
+    private static final String DOMESTIC_URL = "DOMESTIC_URL";
+
+    private String appUrl = "";
+    private String appId = Constant.appId;
+    private String appSecret = Constant.appSecret;
+
     private void doLogin(final boolean isAutoLogin) {
-        String url = Constant.WEB_SITE + Constant.URL_USER_LOGIN
+        String url_login = Constant.WEB_SITE + Constant.URL_USER_LOGIN
                 + "?username=" + username + "&password=" + pwd;
 
-        StringRequest versionRequest = new StringRequest(Request.Method.GET, url,
+        StringRequest versionRequest = new StringRequest(Request.Method.GET, url_login,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String result) {
@@ -160,14 +204,15 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
                                 App.username = username;
                                 App.phone = username;
                                 App.phone = username;
-                                startActivity(new Intent(context, MainActivity.class));
+                                startActivity(new Intent(context, DeviceListActivity.class));
+
                                 context.finish();
                                 return;
                             } else {
                                 DialogUtils.showTipDialog(context, msg);
                             }
                         } catch (JSONException e) {
-                            ToastUtil.show(context,R.string.server_exception);
+                            ToastUtil.show(context, R.string.server_exception);
                         }
                      /*   if (isAutoLogin) {
                             startActivity(new Intent(context, MainActivity.class));

@@ -15,6 +15,7 @@ import com.android.livevideo.core.utils.Log;
 import com.android.livevideo.core.utils.SPUtils;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.common.openapi.ClassInstanceManager;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
@@ -86,6 +87,8 @@ public class App extends Application {
         StrictMode.setVmPolicy(builder.build());
         builder.detectFileUriExposure();
 
+        ClassInstanceManager.newInstance().init(this);
+        //Logger.setLogLevel(5,"");
     }
 
     @Override

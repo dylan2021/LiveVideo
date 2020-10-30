@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="colorPrimary">#ff000000</color>
+    <color name="colorPrimaryDark">#ff000000</color>
+
+
+    <color name="lc_color_4ea7f2">#4ea7f2</color>
+    <color name="color_0fff">#00ffffff</color>
+    <color name="color_F6F6F6">#F6F6F6</color>
+    <color name="c41">#8F8F8F</color>
+    <color name="c40">#2C2C2C</color>
+    <color name="c32">#4F78FF</color>
+    <color name="c53">#E0E0E0</color>          <!--分割线底色-->
+    <color name="c42">#C2C2C2</color>        <!--暗提示色-->
+    <color name="cf4">#FF4F4F</color>        <!--暗提示色-->
+
+</resources>

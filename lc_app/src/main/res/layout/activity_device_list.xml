@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DeviceListActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_100"
+        android:background="@color/lc_demo_color_ffffff">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/px_20"
+            android:paddingRight="@dimen/px_20">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/lc_demo_nav_back"></ImageView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/px_36"
+            android:textColor="@color/lc_demo_color_2c2c2c"
+            android:textStyle="bold"
+            android:text="@string/lc_demo_main_title"></TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/px_20"
+            android:paddingRight="@dimen/px_20">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/lc_demo_nav_add"></ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_no_device"
+        android:orientation="vertical"
+        android:layout_below="@id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="@dimen/px_200"
+            android:id="@+id/iv_no_device"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/lc_demo_common_pic_nodevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iv_no_device"
+            android:layout_marginTop="@dimen/px_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/px_30"
+            android:textColor="@color/lc_demo_color_8f8f8f"
+            android:text="@string/lc_demo_main_no_device"></TextView>
+    </RelativeLayout>
+    <com.lechange.demo.view.LcPullToRefreshRecyclerView
+        android:layout_below="@id/rl_title"
+        android:id="@+id/device_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderTextColor="@color/c51"
+        ptr:ptrDrawable="@mipmap/lc_demo_loading_orange"
+        ptr:ptrDrawableIng="@drawable/lc_demo_org_progress_style"
+        ptr:ptrDrawableStart="@drawable/indicator_arrow" />
+</RelativeLayout>

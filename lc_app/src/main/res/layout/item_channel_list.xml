@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_detail"
+        android:layout_width="@dimen/px_600"
+        android:layout_height="@dimen/px_337"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="@dimen/px_600"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/lc_demo_default_bg"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/lc_demo_home_btn_bigmode_play"></ImageView>
+
+        <RelativeLayout
+            android:id="@+id/rl_offline"
+            android:layout_width="@dimen/px_620"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/lc_demo_color_66000000"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_offline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/lc_demo_main_offline"
+                android:textColor="@color/lc_demo_color_ffffff"></TextView>
+        </RelativeLayout>
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/px_15"
+            android:layout_marginLeft="@dimen/px_15"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lc_demo_color_ffffff"
+            android:textSize="@dimen/px_30"></TextView>
+    </RelativeLayout>
+</LinearLayout>

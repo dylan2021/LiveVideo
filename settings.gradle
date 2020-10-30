@@ -1,1 +1,1 @@
-include ':oa', 'jjdxm-ijkplayer', ':imglib'
+include ':oa', 'jjdxm-ijkplayer', ':imglib', ':third-zxing', ':DeviceAddModule', ':lc_app'

@@ -27,14 +27,13 @@ android {
     }
     defaultConfig {
         applicationId "com.android.livevideo"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 1007
         versionName "1.0.7"
-
         ndk {
-            moduleName "Crc8Jni"
-            abiFilters "armeabi", "armeabi-v7a", "x86"
+            //moduleName "Crc8Jni"
+            abiFilters "armeabi","arm64-v8a"
         }
         // Enabling multidex support.
         multiDexEnabled true
@@ -107,7 +106,7 @@ android {
             //jni.srcDirs = []                          //设置禁止gradle生成Android.mk
             //jniLibs.srcDirs = ['src/main/jniLibs']      //设置目标的so存放路径
             jniLibs.srcDirs = ['libs']
-           /* jni.srcDirs = []*/
+            /* jni.srcDirs = []*/
         }
     }
 
@@ -134,10 +133,12 @@ dependencies {
     implementation 'com.facebook.fresco:animated-gif:0.12.0'
     implementation 'net.lingala.zip4j:zip4j:1.3.2'
     //文件压缩
-    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    //implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     implementation project(path: ':imglib')
+    implementation project(':lc_app')
+    //implementation project(':DeviceAddModule')
     implementation 'com.google.android.gms:play-services-appindexing:8.4.0'
-    implementation 'com.android.support:design:26.0.0-alpha1'
+    //implementation 'com.android.support:design:26.0.0-alpha1'
     implementation files('libs/mpermissions.jar')
     implementation 'com.android.support:multidex:1.0.2'
     //解决 multidex
