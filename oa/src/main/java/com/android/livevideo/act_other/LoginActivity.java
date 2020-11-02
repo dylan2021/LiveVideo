@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.android.livevideo.App;
 import com.android.livevideo.R;
+import com.android.livevideo.act_0.MainActivity;
 import com.android.livevideo.core.utils.Constant;
 import com.android.livevideo.core.utils.DialogHelper;
 import com.android.livevideo.core.utils.KeyConst;
@@ -28,7 +29,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.lechange.demo.tools.RootUtil;
-import com.lechange.demo.ui.DeviceListActivity;
 import com.mm.android.deviceaddmodule.CommonParam;
 import com.mm.android.deviceaddmodule.LCDeviceEngine;
 import com.mm.android.deviceaddmodule.mobilecommon.utils.PreferencesHelper;
@@ -204,7 +204,8 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
                                 App.username = username;
                                 App.phone = username;
                                 App.phone = username;
-                                startActivity(new Intent(context, DeviceListActivity.class));
+                                //startActivity(new Intent(context, DeviceListActivity.class));
+                                startActivity(new Intent(context, MainActivity.class));
 
                                 context.finish();
                                 return;

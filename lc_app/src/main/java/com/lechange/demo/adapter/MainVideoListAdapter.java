@@ -22,11 +22,11 @@ import com.lechange.demo.tools.MediaPlayHelper;
 import java.util.List;
 
 
-public class ChannelListAdapter extends RecyclerView.Adapter<ChannelListAdapter.ChannelHolder> {
+public class MainVideoListAdapter extends RecyclerView.Adapter<MainVideoListAdapter.ChannelHolder> {
     private Context mContext;
     private List<DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean> datas;
 
-    public ChannelListAdapter(Context mContext, List<DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean> datas) {
+    public MainVideoListAdapter(Context mContext, List<DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean> datas) {
         this.mContext = mContext;
         this.datas = datas;
     }
@@ -35,7 +35,7 @@ public class ChannelListAdapter extends RecyclerView.Adapter<ChannelListAdapter.
     @Override
     public ChannelHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_channel_list, parent, false);
-        return new ChannelListAdapter.ChannelHolder(view);
+        return new MainVideoListAdapter.ChannelHolder(view);
     }
 
     @Override

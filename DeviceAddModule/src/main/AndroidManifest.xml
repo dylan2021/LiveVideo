@@ -28,7 +28,8 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />  <!--允许应用程序请求安装包。针对API大于22必须持有该许可使用ACTION_INSTALL_PACKAGE应用。应该没在用？？？-->
     <uses-permission android:name="android.permission.VIBRATE" />
     <application
-        >
+        android:theme="@style/theme_appcompat"
+      >
         <service android:name=".services.TimeFilterService" />
 
         <receiver android:name=".receiver.SucceedClickReceiver" />
@@ -47,7 +48,6 @@
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name=".device_wifi.DeviceWifiPasswordActivity"

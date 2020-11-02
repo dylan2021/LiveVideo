@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/px_30"
     android:background="@color/lc_demo_color_ffffff"
     android:orientation="vertical"
     android:paddingLeft="@dimen/px_30"
@@ -14,7 +13,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:paddingTop="@dimen/px_30"
-        android:paddingBottom="@dimen/px_30">
+        android:paddingBottom="@dimen/px_30"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/tv_name"
@@ -28,20 +28,21 @@
             android:id="@+id/iv_detail"
             android:layout_width="@dimen/px_50"
             android:layout_height="@dimen/px_50"
+
             android:src="@mipmap/lc_demo_common_nav_settings_white_disable"></ImageView>
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/fr_detail"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_320">
+        android:layout_height="match_parent">
 
         <RelativeLayout
-            android:gravity="center"
-            android:layout_gravity="center"
             android:id="@+id/rl_detail"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/iv_bg"
@@ -75,12 +76,12 @@
                     android:textColor="@color/lc_demo_color_ffffff"></TextView>
             </RelativeLayout>
         </RelativeLayout>
+
         <android.support.v7.widget.RecyclerView
-            android:visibility="gone"
-            android:layout_gravity="center"
-            android:id="@+id/rcv_channel"
+            android:id="@+id/vedio_rv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </android.support.v7.widget.RecyclerView>
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"></android.support.v7.widget.RecyclerView>
     </FrameLayout>
 </LinearLayout>

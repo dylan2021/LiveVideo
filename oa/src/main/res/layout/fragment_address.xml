@@ -16,50 +16,27 @@
         android:singleLine="true"
         android:text="@string/main_bottom_tab_03" />
 
+    <include
+        android:id="@+id/line"
+        layout="@layout/layout_line_1px_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_below="@id/alarm_center_tv" />
+
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/alarm_center_tv"
+        android:layout_below="@id/line"
         android:background="@color/white"
         android:overScrollMode="never"
         android:scrollbars="none">
 
-        <LinearLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_address"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
+            android:overScrollMode="never" />
 
-            <TextView
-                android:id="@+id/search_bt"
-                style="@style/px26_a5a5a5"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dm060"
-                android:layout_marginLeft="@dimen/main_margin_left_x"
-                android:layout_marginTop="@dimen/dm010"
-                android:layout_marginRight="@dimen/main_margin_left_x"
-                android:layout_marginBottom="@dimen/main_margin_left_x"
-                android:background="@drawable/shape_eee_7px"
-                android:drawableLeft="@drawable/ic_search_gray"
-                android:drawablePadding="@dimen/dm010"
-                android:gravity="center_vertical"
-                android:includeFontPadding="false"
-                android:paddingLeft="@dimen/dm020"
-                android:paddingTop="@dimen/dm010"
-                android:paddingBottom="@dimen/dm010"
-                android:text="@string/search" />
-
-            <include layout="@layout/layout_line_height_f5"></include>
-
-            <LinearLayout
-                android:id="@+id/department_list_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/main_margin_left_x"
-                android:background="@drawable/shape_line_divider_bottom"
-                android:focusableInTouchMode="false"
-                android:orientation="vertical"></LinearLayout>
-        </LinearLayout>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </RelativeLayout>

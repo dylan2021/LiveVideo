@@ -53,7 +53,7 @@
         android:label="@string/appName"
         android:supportsRtl="true"
         android:theme="@style/theme_appcompat"
-        tools:replace="android:label,android:allowBackup">
+        tools:replace="android:label,android:allowBackup,android:theme">
         <activity android:name="com.android.livevideo.act_video.VideoListActivity" />
         <activity
             android:name="com.android.livevideo.act_video.PlayerLiveActivity"

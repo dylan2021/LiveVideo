@@ -8,10 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -57,17 +55,14 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
         });
         if (datas.get(position).channels.size() > 1) {
             //多通道
-            holder.ivDetail.setVisibility(View.VISIBLE);
+            //holder.ivDetail.setVisibility(View.VISIBLE);
             holder.rlDetail.setVisibility(View.GONE);
-            holder.rcvChannel.setVisibility(View.VISIBLE);
-            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
-            linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-            holder.rcvChannel.setLayoutManager(linearLayoutManager);
-            holder.rcvChannel.removeItemDecoration(decoration);
-            holder.rcvChannel.addItemDecoration(decoration);
-            ChannelListAdapter channelListAdapter = new ChannelListAdapter(mContext, datas.get(position).channels);
-            holder.rcvChannel.setAdapter(channelListAdapter);
-            channelListAdapter.setOnItemClickListener(new ChannelListAdapter.OnChannelClickListener() {
+            holder.vedioRV.setVisibility(View.VISIBLE);
+      /*      holder.vedioRV.removeItemDecoration(decoration);
+            holder.vedioRV.addItemDecoration(decoration);*/
+            MainVideoListAdapter channelListAdapter = new MainVideoListAdapter(mContext, datas.get(position).channels);
+            holder.vedioRV.setAdapter(channelListAdapter);
+            channelListAdapter.setOnItemClickListener(new MainVideoListAdapter.OnChannelClickListener() {
                 @Override
                 public void onChannelClick(int channelPosition) {
                     if (onItemClickListener != null) {
@@ -77,9 +72,9 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
             });
         } else if (datas.get(position).channels.size() == 0){
             //多通道NVR,但是没有通道数
-            holder.ivDetail.setVisibility(View.VISIBLE);
+            //holder.ivDetail.setVisibility(View.VISIBLE);
             holder.ivPlay.setVisibility(View.GONE);
-            holder.rcvChannel.setVisibility(View.GONE);
+            holder.vedioRV.setVisibility(View.GONE);
             holder.rlDetail.setVisibility(View.VISIBLE);
             holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_demo_default_bg));
             holder.rlOffline.setVisibility(View.VISIBLE);
@@ -88,9 +83,9 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
             holder.rlDetail.setOnClickListener(null);
         } else{
             //单通道
-            holder.ivDetail.setVisibility(View.VISIBLE);
+            //holder.ivDetail.setVisibility(View.VISIBLE);
             holder.rlDetail.setVisibility(View.VISIBLE);
-            holder.rcvChannel.setVisibility(View.GONE);
+            holder.vedioRV.setVisibility(View.GONE);
             if ("online".equals(datas.get(position).status)&&datas.get(position).channels.size()>0) {
                 holder.ivPlay.setVisibility(View.VISIBLE);
                 holder.rlOffline.setVisibility(View.GONE);
@@ -162,7 +157,7 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
         TextView tvOffline;
         ImageView ivPlay;
         RelativeLayout rlDetail;
-        RecyclerView rcvChannel;
+        RecyclerView vedioRV;
         FrameLayout frDetail;
 
         public DeviceListHolder(Context context, View itemView) {
@@ -175,8 +170,11 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
             rlOffline = itemView.findViewById(R.id.rl_offline);
             tvOffline = itemView.findViewById(R.id.tv_offline);
             ivPlay = itemView.findViewById(R.id.iv_play);
-            rcvChannel = itemView.findViewById(R.id.rcv_channel);
-            frDetail.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            vedioRV = itemView.findViewById(R.id.vedio_rv);
+            vedioRV.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL,
+                    false));
+            //vedioRV.setItemAnimator(new DefaultItemAnimator());
+           /* frDetail.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                 @Override
                 public void onGlobalLayout() {
                     LinearLayout.LayoutParams mLayoutParams = (LinearLayout.LayoutParams) frDetail.getLayoutParams();
@@ -185,7 +183,7 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
                     mLayoutParams.setMargins(0, 0, 0, 0);
                     frDetail.setLayoutParams(mLayoutParams);
                 }
-            });
+            });*/
         }
     }
 

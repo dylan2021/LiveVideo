@@ -4,6 +4,7 @@
     package="com.lechange.demo">
 
     <application
+        android:theme="@style/theme_appcompat"
         >
         <activity
             android:name=".ui.EnvGuideActivity"
