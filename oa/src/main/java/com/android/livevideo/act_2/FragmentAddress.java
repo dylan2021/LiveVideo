@@ -8,11 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.livevideo.R;
 import com.android.livevideo.act_0.MainActivity;
 import com.android.livevideo.base.fragment.BaseSearchFragment;
+import com.android.livevideo.util.ToastUtil;
 import com.android.livevideo.util.Utils;
 import com.common.openapi.ClassInstanceManager;
 import com.common.openapi.DeviceListService;
@@ -23,7 +23,6 @@ import com.common.openapi.entity.DeviceListData;
 import com.lechange.demo.adapter.DeviceListAdapter;
 import com.lechange.demo.ui.DeviceDetailActivity;
 import com.lechange.demo.ui.DeviceOnlineMediaPlayActivity;
-import com.mm.android.deviceaddmodule.mobilecommon.utils.LogUtil;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
@@ -70,7 +69,6 @@ public class FragmentAddress extends BaseSearchFragment {
 
     private void initRecyclerView() {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
-     /*   mRecyclerView.setItemAnimator(new DefaultItemAnimator());*/
         deviceListAdapter = new DeviceListAdapter(context, datas);
         mRecyclerView.setAdapter(deviceListAdapter);
         deviceListAdapter.setOnItemClickListener(new DeviceListAdapter.OnItemClickListener() {
@@ -128,22 +126,13 @@ public class FragmentAddress extends BaseSearchFragment {
             getDeviceList(true);
         }
     }
-    //乐橙分页index
-    public long baseBindId = -1;
-    //开放平台分页index
-    public long openBindId = -1;
 
     private void getDeviceList(boolean isLoadMore) {
-        if (!isLoadMore) {
-            baseBindId = -1;
-            openBindId = -1;
-            datas.clear();
-        }
+        datas.clear();
         DeviceListService deviceVideoService = ClassInstanceManager.newInstance().
                 getDeviceListService();
         DeviceListData deviceListData = new DeviceListData();
-        deviceListData.data.openBindId = this.openBindId;
-        deviceListData.data.baseBindId = this.baseBindId;
+
         deviceVideoService.deviceBaseList(deviceListData, new IGetDeviceInfoCallBack.IDeviceListCallBack() {
             @Override
             public void deviceList(DeviceDetailListData.Response responseData) {
@@ -152,40 +141,29 @@ public class FragmentAddress extends BaseSearchFragment {
                 if (context == null) {
                     return;
                 }
-                if (responseData.baseBindId != -1) {
-                    baseBindId = responseData.baseBindId;
+                if ((responseData.data == null || responseData.data.deviceList == null || responseData.data.deviceList.size() == 0)) {
+                    ToastUtil.show(context, R.string.no_data);
+                    return;
                 }
-                if (responseData.openBindId != -1) {
-                    openBindId = responseData.openBindId;
-                }
-                if (responseData.data != null && responseData.data.deviceList != null && responseData.data.deviceList.size() != 0) {
-                    Iterator<DeviceDetailListData.ResponseData.DeviceListBean> iterator = responseData.data.deviceList.iterator();
-                    while (iterator.hasNext()) {
-                        DeviceDetailListData.ResponseData.DeviceListBean next = iterator.next();
-                        if (next.channels.size() == 0 && !next.catalog.contains("NVR")) {
-                            // 使用迭代器中的remove()方法,可以删除元素.
-                            iterator.remove();
-                        }
+
+                Iterator<DeviceDetailListData.ResponseData.DeviceListBean> iterator = responseData.data.deviceList.iterator();
+                while (iterator.hasNext()) {
+                    DeviceDetailListData.ResponseData.DeviceListBean next = iterator.next();
+                    if (next.channels.size() == 0 && !next.catalog.contains("NVR")) {
+                        // 使用迭代器中的remove()方法,可以删除元素.
+                        iterator.remove();
                     }
                 }
-                //没有数据
-                if ((responseData.data == null || responseData.data.deviceList == null || responseData.data.deviceList.size() == 0) && datas.size() == 0) {
-                    //本次未拉到数据且上次也没有数据
-                } else {
-                    if ((responseData.data == null || responseData.data.deviceList == null || responseData.data.deviceList.size() == 0)) {
-                        return;
-                    }
-                    datas.addAll(responseData.data.deviceList);
-                    deviceListAdapter.notifyDataSetChanged();
-                }
+
+                datas.addAll(responseData.data.deviceList);
+                deviceListAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onError(Throwable throwable) {
                 mRefreshLayout.finishRefresh();
                 mRefreshLayout.finishLoadmore();
-                LogUtil.errorLog(TAG, "error", throwable);
-                Toast.makeText(context, throwable.getMessage(), Toast.LENGTH_SHORT).show();
+              //获取数据异常
             }
         });
     }

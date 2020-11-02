@@ -67,6 +67,7 @@ dependencies {
     api files('libs/PullToRefreshListView-release.aar')
     api files('libs/DHMobileToolset-1.1.1.aar')
     api files('libs/DHScanner-1.0.7.aar')
+    //api files('libs/lechangeSDK.jar')
 
 }
 configurations {
