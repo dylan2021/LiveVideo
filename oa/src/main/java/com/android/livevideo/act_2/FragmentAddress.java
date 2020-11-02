@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -87,6 +88,7 @@ public class FragmentAddress extends BaseSearchFragment {
 
             @Override
             public void onDetailClick(int position) {
+                Log.d("视频数据", "详情点击" + position);
                 if (datas.size() == 0) {
                     return;
                 }
@@ -105,11 +107,15 @@ public class FragmentAddress extends BaseSearchFragment {
                 if (datas.size() == 0) {
                     return;
                 }
-                if (!datas.get(outPosition).channels.get(innerPosition).status.equals("online")) {
+                DeviceDetailListData.ResponseData.DeviceListBean info = datas.get(outPosition);
+
+                Log.d("视频数据", outPosition + "视频数据:" + innerPosition);
+                Log.d("视频数据", "视频数据渠道:" + info.toString());
+                if (!info.channels.get(innerPosition).status.equals("online")) {
                     return;
                 }
                 Bundle bundle = new Bundle();
-                DeviceDetailListData.ResponseData.DeviceListBean deviceListBean = datas.get(outPosition);
+                DeviceDetailListData.ResponseData.DeviceListBean deviceListBean = info;
                 deviceListBean.checkedChannel = innerPosition;
                 bundle.putSerializable(MethodConst.ParamConst.deviceDetail, deviceListBean);
                 Intent intent = new Intent(context, DeviceOnlineMediaPlayActivity.class);
@@ -163,7 +169,7 @@ public class FragmentAddress extends BaseSearchFragment {
             public void onError(Throwable throwable) {
                 mRefreshLayout.finishRefresh();
                 mRefreshLayout.finishLoadmore();
-              //获取数据异常
+                //获取数据异常
             }
         });
     }
