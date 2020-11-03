@@ -29,6 +29,7 @@ import com.lechange.demo.adapter.DeviceListAdapter;
 import com.lechange.demo.ui.DeviceDetailActivity;
 import com.lechange.demo.ui.DeviceOnlineMediaPlayActivity;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.ArrayList;
@@ -215,6 +216,13 @@ public class FragmentAddress extends BaseSearchFragment {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
                 getDeviceList();
+            }
+        });
+        mRefreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
+            @Override
+            public void onLoadmore(RefreshLayout refreshlayout) {
+                refreshlayout.finishLoadmore();
+                ToastUtil.show(context, R.string.no_more_data);
             }
         });
     }

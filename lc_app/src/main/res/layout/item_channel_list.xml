@@ -17,7 +17,8 @@
             android:layout_width="@dimen/px_600"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@mipmap/lc_demo_default_bg"></ImageView>
+            android:background="@color/c2"
+            ></ImageView>
 
         <ImageView
             android:id="@+id/iv_play"

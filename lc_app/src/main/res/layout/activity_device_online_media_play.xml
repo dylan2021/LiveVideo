@@ -39,6 +39,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:gravity="center"
+            android:visibility="invisible"
             android:paddingLeft="@dimen/px_20"
             android:paddingRight="@dimen/px_20">
 

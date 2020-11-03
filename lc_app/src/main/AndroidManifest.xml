@@ -3,44 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.lechange.demo">
 
-    <application
-        android:theme="@style/theme_appcompat"
-        >
+    <!--     android:theme="@style/AppTheme.NoActionBar"-->
+    <application>
         <activity
             android:name=".ui.EnvGuideActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ui.DeviceListActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
-            android:launchMode="singleTop"
             android:exported="false"
-            android:screenOrientation="portrait"></activity>
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ui.DeviceDetailActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
-            android:launchMode="singleTop"
             android:exported="false"
-            android:screenOrientation="portrait"></activity>
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ui.DeviceOnlineMediaPlayActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
-            android:launchMode="singleTop"
             android:exported="false"
-            android:screenOrientation="portrait"></activity>
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ui.DeviceRecordListActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
-            android:launchMode="singleTop"
             android:exported="false"
-            android:screenOrientation="portrait"></activity>
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ui.DeviceRecordPlayActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
-            android:launchMode="singleTop"
             android:exported="false"
-            android:screenOrientation="portrait"></activity>
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 </manifest>

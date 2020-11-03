@@ -100,7 +100,7 @@ public class FragmentMsg extends BaseSearchFragment {
             @Override
             public void onLoadmore(RefreshLayout refreshlayout) {
                 refreshlayout.finishLoadmore();
-                ToastUtil.show(context, "已经到底了哦~");
+                ToastUtil.show(context, R.string.no_more_data);
             }
         });
         mRefreshLayout.autoRefresh();
