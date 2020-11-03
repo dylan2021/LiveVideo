@@ -10,21 +10,17 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.android.livevideo.App;
 import com.android.livevideo.R;
 import com.android.livevideo.act_0.MainActivity;
 import com.android.livevideo.base.fragment.BaseSearchFragment;
-import com.android.livevideo.core.net.GsonRequest;
-import com.android.livevideo.core.utils.Constant;
-import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.util.ToastUtil;
 import com.android.livevideo.util.Utils;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
+import com.common.openapi.ClassInstanceManager;
+import com.common.openapi.DeviceListService;
+import com.common.openapi.IGetDeviceInfoCallBack;
 import com.common.openapi.MethodConst;
 import com.common.openapi.entity.DeviceDetailListData;
-import com.google.gson.reflect.TypeToken;
+import com.common.openapi.entity.DeviceListData;
 import com.lechange.demo.adapter.DeviceListAdapter;
 import com.lechange.demo.ui.DeviceDetailActivity;
 import com.lechange.demo.ui.DeviceOnlineMediaPlayActivity;
@@ -32,13 +28,14 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * Gool Lee
  */
 @SuppressLint({"WrongConstant", "ValidFragment"})
-public class FragmentAddress extends BaseSearchFragment {
+public class FragmentAddressLC extends BaseSearchFragment {
     private int id;
     private MainActivity context;
     private View view;
@@ -49,10 +46,10 @@ public class FragmentAddress extends BaseSearchFragment {
     private DeviceListAdapter deviceListAdapter;
     private List<DeviceDetailListData.ResponseData.DeviceListBean> datas = new ArrayList<>();
 
-    public FragmentAddress() {
+    public FragmentAddressLC() {
     }
 
-    public FragmentAddress(int chooseId) {
+    public FragmentAddressLC(int chooseId) {
         id = chooseId;
     }
 
@@ -68,7 +65,7 @@ public class FragmentAddress extends BaseSearchFragment {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_address);
         initView();
         initRecyclerView();
-        getDeviceList();
+        getDeviceList(false);
     }
 
     private void initRecyclerView() {
@@ -132,44 +129,13 @@ public class FragmentAddress extends BaseSearchFragment {
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
         if (!hidden) {
-            getDeviceList();
+            getDeviceList(true);
         }
     }
 
-    private void getDeviceList() {
-        if (!NetUtil.isNetworkConnected(context)) {
-            return;
-        }
+    private void getDeviceList(boolean isLoadMore) {
         datas.clear();
-        String url = Constant.WEB_SITE + "/ai/camera/pluginList";
-        Response.Listener<DeviceDetailListData.ResponseData> successListener = new Response
-                .Listener<DeviceDetailListData.ResponseData>() {
-            @Override
-            public void onResponse(DeviceDetailListData.ResponseData result) {
-                mRefreshLayout.finishRefresh();
-                if (null == context || result == null) {
-                    ToastUtil.show(context, R.string.no_data);
-                    return;
-                }
-
-                datas.addAll(result.deviceList);
-                deviceListAdapter.notifyDataSetChanged();
-            }
-        };
-
-        Request<DeviceDetailListData.ResponseData> versionRequest = new
-                GsonRequest<DeviceDetailListData.ResponseData>(Request.Method.GET, url,
-                        successListener, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        mRefreshLayout.finishRefresh();
-                    }
-                }, new TypeToken<DeviceDetailListData.ResponseData>() {
-                }.getType()) {
-
-                };
-        App.requestQueue.add(versionRequest);
-       /* DeviceListService deviceVideoService = ClassInstanceManager.newInstance().
+        DeviceListService deviceVideoService = ClassInstanceManager.newInstance().
                 getDeviceListService();
         DeviceListData deviceListData = new DeviceListData();
 
@@ -205,7 +171,7 @@ public class FragmentAddress extends BaseSearchFragment {
                 mRefreshLayout.finishLoadmore();
                 //获取数据异常
             }
-        });*/
+        });
     }
 
     private void initView() {
@@ -214,7 +180,7 @@ public class FragmentAddress extends BaseSearchFragment {
         mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
-                getDeviceList();
+                getDeviceList(false);
             }
         });
     }
