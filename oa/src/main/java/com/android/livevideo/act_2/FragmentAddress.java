@@ -113,14 +113,15 @@ public class FragmentAddress extends BaseSearchFragment {
                 }
                 DeviceDetailListData.ResponseData.DeviceListBean info = datas.get(outPosition);
 
-                Log.d("视频数据", outPosition + "视频数据:" + innerPosition);
-                Log.d("视频数据", "视频数据渠道:" + info.toString());
+                Log.d("视频数据", "playToken:" + info.playToken);
+                Log.d("视频数据", "ability:" + info.ability);
                 if (!info.channels.get(innerPosition).status.equals("online")) {
                     return;
                 }
                 Bundle bundle = new Bundle();
                 DeviceDetailListData.ResponseData.DeviceListBean deviceListBean = info;
                 deviceListBean.checkedChannel = innerPosition;
+                Log.d("视频数据", "单个:ability:" + info.channels.get(innerPosition).ability);
                 bundle.putSerializable(MethodConst.ParamConst.deviceDetail, deviceListBean);
                 Intent intent = new Intent(context, DeviceOnlineMediaPlayActivity.class);
                 intent.putExtras(bundle);
