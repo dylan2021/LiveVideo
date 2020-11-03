@@ -99,5 +99,5 @@ public class Constant {
     public static final int INPUT_MAX_LENGTH = 19;
     public static final int INPUT_DOT_LENGTH = 2;
     public static final String appId="lca4d217e39e22461f";
-    public static final String appSecret="7ee28d6ef5c848439f6ceeaf908d21";
+    public static final String appSecret="e76d3d9b36e746e5999f3e3059fa4b";
 }

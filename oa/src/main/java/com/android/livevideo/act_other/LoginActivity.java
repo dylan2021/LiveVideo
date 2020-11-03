@@ -125,7 +125,7 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
             PreferencesHelper.getInstance(context).set(DOMESTIC_APP_SECRET_KEY, appSecret);
             PreferencesHelper.getInstance(context).set(DOMESTIC_URL, appUrl);
         } catch (Throwable e) {
-            ToastUtil.show(context, "项目配置异常,请稍后重试");
+            ToastUtil.show(context, "项目配置已更改,请联系管理员");
             Log.d("项目失败", "项目失败:" + e.toString());
             //return;
         }
