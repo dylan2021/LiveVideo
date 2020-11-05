@@ -1014,7 +1014,9 @@ public class DeviceOnlineMediaPlayActivity extends AppCompatActivity implements 
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 mCurrentOrientation = Configuration.ORIENTATION_PORTRAIT;
             }
-            ivChangeScreen.setImageDrawable(mCurrentOrientation == Configuration.ORIENTATION_LANDSCAPE ? getResources().getDrawable(R.mipmap.live_btn_smallscreen) : getResources().getDrawable(R.mipmap.video_fullscreen));
+            int mipmap = mCurrentOrientation == Configuration.ORIENTATION_LANDSCAPE ?
+                    R.mipmap.live_btn_smallscreen : R.mipmap.video_fullscreen;
+            ivChangeScreen.setImageDrawable(getResources().getDrawable(mipmap));
         } else if (id == R.id.ll_detail) {
             Bundle bundle = new Bundle();
             bundle.putSerializable(MethodConst.ParamConst.deviceDetail, deviceListBean);
@@ -1123,7 +1125,7 @@ public class DeviceOnlineMediaPlayActivity extends AppCompatActivity implements 
             ivCloudStage1.setImageDrawable(supportPTZ
                     ? getDrawable(R.mipmap.live_video_icon_h_cloudterrace_off)
                     : getDrawable(R.mipmap.live_video_icon_h_cloudterrace_off_disable));
-            llVideoContent.setVisibility(mCurrentOrientation == Configuration.ORIENTATION_PORTRAIT ? View.VISIBLE : View.GONE);
+            llVideoContent.setVisibility(mCurrentOrientation == Configuration.ORIENTATION_PORTRAIT ? View.GONE : View.GONE);
             rudderView.setVisibility(View.GONE);
         }
     }
