@@ -29,8 +29,8 @@ android {
         applicationId "com.android.livevideo"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 1008
-        versionName "1.0.8"
+        versionCode 2000
+        versionName "2.0.0"
         ndk {
             //moduleName "Crc8Jni"
             abiFilters "armeabi","arm64-v8a"
@@ -57,11 +57,9 @@ android {
         debug {
             // 显示Log
             buildConfigField "boolean", "LOG_DEBUG", "true"
-            /* //minifyEnabled false
             // signingConfigs signingConfigs.debug
             // proguardFiles 'proguard-rules.pro'*/
 //            versionNameSuffix "-debug"
-            // minifyEnabled true
 //            zipAlignEnabled false
             //shrinkResources false
             minifyEnabled false
@@ -70,10 +68,6 @@ android {
 
         }
         release {
-            //signingConfig signingConfigs.release
-            /*minifyEnabled false
-            signingConfigs signingConfigs.debug
-            proguardFiles 'proguard-rules.pro'*/
             // 不显示Log
             minifyEnabled false
             buildConfigField "boolean", "LOG_DEBUG", "true"

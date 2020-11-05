@@ -62,7 +62,7 @@
                 android:maxLength="11"
                 android:paddingLeft="@dimen/dm030"
                 android:singleLine="true"
-                android:text="admin"
+                android:text=""
                 android:textColor="@color/white"
                 android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
                 android:textSize="@dimen/dm028"

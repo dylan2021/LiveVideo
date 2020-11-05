@@ -68,8 +68,8 @@ public class LoginActivity extends BaseFgActivity implements View.OnClickListene
         et_user = (MaterialEditText) findViewById(R.id.et_login_user);
         et_user.setKeyListener(DigitsKeyListener.getInstance(getString(R.string.account_digits)));
         et_pwd = (MaterialEditText) findViewById(R.id.et_login_pwd);
-        username = sp.getString(KeyConst.username, "admin");//统之源 13100637291 111111
-        pwd = sp.getString(Constant.sp_pwd, "hpdi12345");
+        username = sp.getString(KeyConst.username, "");//统之源 13100637291 111111
+        pwd = sp.getString(Constant.sp_pwd, "");//admin  hpdi12345
 
         welcomeIv = (ImageView) findViewById(R.id.welcome_iv);
         bt_find_pwd = (TextView) findViewById(R.id.tv_find_pwd);
