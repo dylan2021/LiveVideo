@@ -76,7 +76,7 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
             holder.ivPlay.setVisibility(View.GONE);
             holder.vedioRV.setVisibility(View.GONE);
             holder.rlDetail.setVisibility(View.VISIBLE);
-            holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_demo_default_bg));
+            holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_video_def_bg));
             holder.rlOffline.setVisibility(View.VISIBLE);
             holder.rlOffline.setBackground(mContext.getDrawable(R.color.transparent));
             holder.tvOffline.setText(R.string.lc_demo_device_nvr_no_channel);
@@ -118,13 +118,13 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
                     if (bitmapDrawable != null) {
                         holder.ivBg.setImageDrawable(bitmapDrawable);
                     } else {
-                        holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_demo_default_bg));
+                        holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_video_def_bg));
                     }
                 }
 
                 @Override
                 public void onError(Throwable throwable) {
-                    holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_demo_default_bg));
+                    holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_video_def_bg));
                 }
             });
         }

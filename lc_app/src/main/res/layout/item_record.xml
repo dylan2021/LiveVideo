@@ -14,7 +14,7 @@
         <ImageView
             android:scaleType="centerCrop"
             android:id="@+id/iv_bg"
-            android:src="@mipmap/lc_demo_default_bg"
+            android:src="@mipmap/lc_video_def_bg"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px_160"
        ></ImageView>

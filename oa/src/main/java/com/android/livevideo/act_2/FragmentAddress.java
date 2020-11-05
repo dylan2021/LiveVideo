@@ -230,12 +230,12 @@ public class FragmentAddress extends BaseSearchFragment {
 
     @Override
     protected void onFirstUserVisible() {
-
+        Log.d("界面显示", "显示0");
     }
 
     @Override
     protected void onUserVisible() {
-
+        //getDeviceList();
     }
 
     @Override

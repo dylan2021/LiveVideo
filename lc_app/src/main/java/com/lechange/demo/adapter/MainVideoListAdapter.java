@@ -60,13 +60,13 @@ public class MainVideoListAdapter extends RecyclerView.Adapter<MainVideoListAdap
                 if (bitmapDrawable != null) {
                     holder.ivBg.setImageDrawable(bitmapDrawable);
                 } else {
-                    holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_demo_default_bg));
+                    holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_video_def_bg));
                 }
             }
 
             @Override
             public void onError(Throwable throwable) {
-                holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_demo_default_bg));
+                holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_video_def_bg));
             }
         });
         holder.itemView.setOnClickListener(new View.OnClickListener() {

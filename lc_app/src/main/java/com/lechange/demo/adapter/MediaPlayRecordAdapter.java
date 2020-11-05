@@ -72,7 +72,7 @@ public class MediaPlayRecordAdapter extends RecyclerView.Adapter<MediaPlayRecord
             } else {
                 //设备录像
                 holder.tvLoadingMore.setVisibility(View.GONE);
-                holder.ivImg.setImageDrawable(context.getDrawable(R.mipmap.lc_demo_default_bg));
+                holder.ivImg.setImageDrawable(context.getDrawable(R.mipmap.lc_video_def_bg));
             }
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

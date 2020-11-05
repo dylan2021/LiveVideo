@@ -7,7 +7,7 @@
     <ImageView
         android:scaleType="centerCrop"
         android:id="@+id/iv_img"
-        android:src="@mipmap/lc_demo_default_bg"
+        android:src="@mipmap/lc_video_def_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </ImageView>

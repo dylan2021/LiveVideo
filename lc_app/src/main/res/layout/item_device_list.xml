@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/lc_demo_default_bg"></ImageView>
+                android:src="@mipmap/lc_video_def_bg"></ImageView>
 
             <ImageView
                 android:id="@+id/iv_play"
