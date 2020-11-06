@@ -49,10 +49,9 @@ public class App extends Application {
 
     public static boolean isDeleteApk = false;
     public static boolean allowAnyNet = false;
-    public static boolean isReceiveMsg = false;
     public static String userCode;
-    public static String amTime=Constant.DEFT_AM;
-    public static String pmTime=Constant.DEFT_PM;
+    public static String amTime = Constant.DEFT_AM;
+    public static String pmTime = Constant.DEFT_PM;
     public static String loginType;
     public static String[] authsArr;
 
@@ -69,10 +68,8 @@ public class App extends Application {
         loginType = (String) SPUtils.get(this, Constant.CONFIG_LOGIN_TYPE, "1");
         AUTH_TYPE = (int) SPUtils.get(this, AuthsConstant.AUTH_TYPE, 0);
 
-        isReceiveMsg = (boolean) SPUtils.get(this, Constant.CFG_RECEIVE_MSG, true);
         allowAnyNet = (boolean) SPUtils.get(this, Constant.CFG_ALLOW_4G_LOAD, false);
         isDeleteApk = (boolean) SPUtils.get(this, Constant.CFG_DELETE_APK, false);
-
         //设置全局异常处理器
 
         requestQueue = Volley.newRequestQueue(getApplicationContext());

@@ -12,16 +12,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.android.livevideo.App;
 import com.android.livevideo.R;
-import com.android.livevideo.act_other.BaseFgActivity;
 import com.android.livevideo.act_0.MainActivity;
+import com.android.livevideo.act_other.BaseFgActivity;
 import com.android.livevideo.act_other.ChangePhoneShowActivity;
 import com.android.livevideo.act_other.ChangePwdActivity;
 import com.android.livevideo.act_other.LoginActivity;
 import com.android.livevideo.core.utils.Constant;
 import com.android.livevideo.core.utils.KeyConst;
+import com.android.livevideo.core.utils.SPUtils;
 import com.android.livevideo.util.DialogUtils;
+import com.android.livevideo.util.ToastUtil;
 import com.android.livevideo.util.Utils;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -61,6 +64,9 @@ public class SysSettingsActivity extends BaseFgActivity {
         });
         sp = getSharedPreferences(Constant.CONFIG_FILE_NAME, MODE_PRIVATE).edit();
         tv_clear = (TextView) findViewById(R.id.tv_clear);
+
+        ((TextView) findViewById(R.id.play_type_tv)).setText(playArr[
+                (SPUtils.isSimpleType(content) ? 0 : 1)]);
         RelativeLayout changePhone = (RelativeLayout) findViewById(R.id.layout_1);
         changePhone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +76,7 @@ public class SysSettingsActivity extends BaseFgActivity {
             }
         });
 
-        ((TextView) findViewById(R.id.version_tv)).setText(Utils.getVersionCode(content) );
+        ((TextView) findViewById(R.id.version_tv)).setText("Version " + Utils.getVersionCode(content));
 
     }
 
@@ -140,5 +146,22 @@ public class SysSettingsActivity extends BaseFgActivity {
     protected void onDestroy() {
         super.onDestroy();
         content = null;
+    }
+
+    private String[] playArr = {"公共流模式", "私有流模式"};
+
+    public void onPlayTypeClick(View v) {
+        new MaterialDialog.Builder(this)
+                .items(playArr)// 列表数据
+                .itemsCallback(new MaterialDialog.ListCallback() {
+                    @Override
+                    public void onSelection(MaterialDialog dialog, View itemView,
+                                            int position, CharSequence text) {
+                        SPUtils.setSimplePlayType(content, position == 0);
+                        ((TextView) v).setText(text);
+                        ToastUtil.show(content, "设置成功");
+                    }
+                }).show();
+
     }
 }

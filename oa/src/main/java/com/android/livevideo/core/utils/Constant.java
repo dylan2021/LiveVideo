@@ -34,7 +34,7 @@ public class Constant {
     public static final String CONFIG_NICK_NAME = "NickName";
     public static final String sp_pwd = "PassWord";
     public static final String CONFIG_HEAD_PHONE = "HeadUrl";
-    public static final String CFG_RECEIVE_MSG = "ReceiveMsg";
+    public static final String is_simple_play = "is_simple_play";
     public static final String CFG_DELETE_APK = "DeleteApk";
     public static final String CFG_ALLOW_4G_LOAD = "AllowLoadBy4G";
     public static final String URL_USER_LOGIN = "/ai/user/login";

@@ -84,14 +84,14 @@ public class MainVideoListAdapter extends RecyclerView.Adapter<MainVideoListAdap
                     }
                 }
             });
-            holder.simple_play_bt.setOnClickListener(new View.OnClickListener() {
+           /* holder.simple_play_bt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (onChannelClickListener != null) {
                         onChannelClickListener.onChannelClick(position,true);
                     }
                 }
-            });
+            });*/
         }
     }
 

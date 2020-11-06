@@ -19,6 +19,7 @@ import com.android.livevideo.core.net.GsonRequest;
 import com.android.livevideo.core.utils.Constant;
 import com.android.livevideo.core.utils.KeyConst;
 import com.android.livevideo.core.utils.NetUtil;
+import com.android.livevideo.core.utils.SPUtils;
 import com.android.livevideo.util.ToastUtil;
 import com.android.livevideo.util.Utils;
 import com.android.volley.Request;
@@ -83,13 +84,11 @@ public class FragmentAddress extends BaseSearchFragment {
         mRecyclerView.setAdapter(deviceListAdapter);
         deviceListAdapter.setOnItemClickListener(new MainVideoListAdapter.OnChannelClickListener() {
             @Override
-            public void onChannelClick(int position, boolean isSimplePlay) {
-                //todo 直接去掉最外层recycleView,用最里层的就行
+            public void onChannelClick(int position, boolean isSimple) {
                 channelsInfo = channels.get(position);
                 Intent intent = new Intent();
                 Bundle bundle = new Bundle();
-
-                if (isSimplePlay) {
+                if (SPUtils.isSimpleType(context)) {
                     intent.setClass(context, PlayerActivity.class);
                     bundle.putSerializable(KeyConst.OBJ_INFO, (Serializable) null);
                     intent.putExtra(KeyConst.id, channelsInfo.channelId);
