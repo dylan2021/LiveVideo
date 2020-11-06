@@ -64,7 +64,8 @@ public class DeviceOnlineMediaPlayActivity extends AppCompatActivity implements 
     private FrameLayout frLiveWindow, frLiveWindowContent;
     private TextView tvNoVideo, tvDeviceName, tvCloudVideo, tvLocalVideo, tvLoadingMsg;
     private RecyclerView rcvVideoList;
-    private LinearLayout llVideoContent, llVideo, llSpeak, llScreenShot, llCloudStage, llFullScreen, llSound, llPlayStyle, llPlayPause, llDetail, llBack, llVideo1, llSpeak1, llScreenShot1, llCloudStage1;
+    private LinearLayout llVideoContent, llVideo, llSpeak, llScreenShot, llCloudStage, llFullScreen, llSound, llPlayStyle, llPlayPause,
+            llDetail, llBack, llVideo1, llSpeak1, llScreenShot1, llCloudStage1;
     private ImageView ivPalyPause, ivPlayStyle, ivSound, ivCloudStage, ivScreenShot, ivSpeak, ivVideo, ivCloudStage1, ivScreenShot1, ivSpeak1, ivVideo1;
     private ProgressBar pbLoading;
     private RelativeLayout rlLoading;
@@ -1018,11 +1019,19 @@ public class DeviceOnlineMediaPlayActivity extends AppCompatActivity implements 
                     R.mipmap.live_btn_smallscreen : R.mipmap.video_fullscreen;
             ivChangeScreen.setImageDrawable(getResources().getDrawable(mipmap));
         } else if (id == R.id.ll_detail) {
-            Bundle bundle = new Bundle();
+  /*          Bundle bundle = new Bundle();
             bundle.putSerializable(MethodConst.ParamConst.deviceDetail, deviceListBean);
             Intent intent = new Intent(DeviceOnlineMediaPlayActivity.this, DeviceDetailActivity.class);
             intent.putExtras(bundle);
-            startActivityForResult(intent, 0);
+            startActivityForResult(intent, 0);*/
+
+      /*      Intent intent = new Intent(DeviceOnlineMediaPlayActivity.this,
+                    PlayerActivity.class);
+            intent.putExtra("id", id);
+            intent.putExtra("url", liveUrl);
+            intent.putExtra("title", title);
+            startActivity(intent);*/
+
         } else if (id == R.id.ll_paly_pause) {
             //播放暂停
             if (playStatus == PlayStatus.PLAY) {

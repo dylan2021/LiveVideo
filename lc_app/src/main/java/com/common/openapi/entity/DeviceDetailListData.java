@@ -50,6 +50,7 @@ public class DeviceDetailListData implements Serializable {
                 public String channelName;//东塔柱内侧壁
                 public String ability;//RemoteControl,PTZ,AudioTalkV1,FrameReverse,AudioEncode,AudioEncodeControl,AlarmMD,MDW,MDS
                 public String status;//online 在线
+                public String cameraLive;
             }
 
         }

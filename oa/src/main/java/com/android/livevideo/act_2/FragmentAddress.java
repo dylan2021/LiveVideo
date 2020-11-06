@@ -13,9 +13,11 @@ import android.widget.TextView;
 import com.android.livevideo.App;
 import com.android.livevideo.R;
 import com.android.livevideo.act_0.MainActivity;
+import com.android.livevideo.act_video.PlayerActivity;
 import com.android.livevideo.base.fragment.BaseSearchFragment;
 import com.android.livevideo.core.net.GsonRequest;
 import com.android.livevideo.core.utils.Constant;
+import com.android.livevideo.core.utils.KeyConst;
 import com.android.livevideo.core.utils.NetUtil;
 import com.android.livevideo.util.ToastUtil;
 import com.android.livevideo.util.Utils;
@@ -25,13 +27,13 @@ import com.android.volley.VolleyError;
 import com.common.openapi.MethodConst;
 import com.common.openapi.entity.DeviceDetailListData;
 import com.google.gson.reflect.TypeToken;
-import com.lechange.demo.adapter.DeviceListAdapter;
-import com.lechange.demo.ui.DeviceDetailActivity;
+import com.lechange.demo.adapter.MainVideoListAdapter;
 import com.lechange.demo.ui.DeviceOnlineMediaPlayActivity;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,8 +49,11 @@ public class FragmentAddress extends BaseSearchFragment {
     private TextView topNameTv;
     private RefreshLayout mRefreshLayout;
     private RecyclerView mRecyclerView;
-    private DeviceListAdapter deviceListAdapter;
+    private MainVideoListAdapter deviceListAdapter;
     private List<DeviceDetailListData.ResponseData.DeviceListBean> datas = new ArrayList<>();
+    private List<DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean> channels;
+    private DeviceDetailListData.ResponseData.DeviceListBean listBean;
+    private DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean channelsInfo;
 
     public FragmentAddress() {
     }
@@ -73,13 +78,37 @@ public class FragmentAddress extends BaseSearchFragment {
     }
 
     private void initRecyclerView() {
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
-        deviceListAdapter = new DeviceListAdapter(context, datas);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        deviceListAdapter = new MainVideoListAdapter(context, channels);
         mRecyclerView.setAdapter(deviceListAdapter);
-        deviceListAdapter.setOnItemClickListener(new DeviceListAdapter.OnItemClickListener() {
+        deviceListAdapter.setOnItemClickListener(new MainVideoListAdapter.OnChannelClickListener() {
+            @Override
+            public void onChannelClick(int position, boolean isSimplePlay) {
+                //todo 直接去掉最外层recycleView,用最里层的就行
+                channelsInfo = channels.get(position);
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+
+                if (isSimplePlay) {
+                    intent.setClass(context, PlayerActivity.class);
+                    bundle.putSerializable(KeyConst.OBJ_INFO, (Serializable) null);
+                    intent.putExtra(KeyConst.id, channelsInfo.channelId);
+                    intent.putExtra(KeyConst.url, channelsInfo.cameraLive);
+                    intent.putExtra(KeyConst.title, channelsInfo.channelName);
+                } else {
+                    intent.setClass(context, DeviceOnlineMediaPlayActivity.class);
+                    listBean.checkedChannel = position;
+                    bundle.putSerializable(MethodConst.ParamConst.deviceDetail, listBean);
+                }
+
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
+       /* deviceListAdapter.setOnItemClickListener(new DeviceListAdapter.OnItemClickListener() {
             @Override
             public void onSettingClick(int position) {
-                if (datas.size() == 0) {
+         *//*       if (datas.size() == 0) {
                     return;
                 }
                 Bundle bundle = new Bundle();
@@ -87,12 +116,12 @@ public class FragmentAddress extends BaseSearchFragment {
                 bundle.putString(MethodConst.ParamConst.fromList, MethodConst.ParamConst.fromList);
                 Intent intent = new Intent(context, DeviceDetailActivity.class);
                 intent.putExtras(bundle);
-                startActivity(intent);
+                startActivity(intent);*//*
             }
 
             @Override
             public void onDetailClick(int position) {
-                Log.d("视频数据", "详情点击" + position);
+            *//*    Log.d("视频数据", "详情点击" + position);
                 if (datas.size() == 0) {
                     return;
                 }
@@ -103,7 +132,7 @@ public class FragmentAddress extends BaseSearchFragment {
                 bundle.putSerializable(MethodConst.ParamConst.deviceDetail, datas.get(position));
                 Intent intent = new Intent(context, DeviceOnlineMediaPlayActivity.class);
                 intent.putExtras(bundle);
-                startActivity(intent);
+                startActivity(intent);*//*
             }
 
             @Override
@@ -112,22 +141,20 @@ public class FragmentAddress extends BaseSearchFragment {
                     return;
                 }
                 DeviceDetailListData.ResponseData.DeviceListBean info = datas.get(outPosition);
-
-                Log.d("视频数据", "playToken:" + info.playToken);
-                Log.d("视频数据", "ability:" + info.ability);
                 if (!info.channels.get(innerPosition).status.equals("online")) {
+                    ToastUtil.show(context,"设备当前处于离线状态,无法观看");
                     return;
                 }
+
+                //todo 直接去掉最外层recycleView,用最里层的就行
                 Bundle bundle = new Bundle();
-                DeviceDetailListData.ResponseData.DeviceListBean deviceListBean = info;
-                deviceListBean.checkedChannel = innerPosition;
-                Log.d("视频数据", "单个:ability:" + info.channels.get(innerPosition).ability);
-                bundle.putSerializable(MethodConst.ParamConst.deviceDetail, deviceListBean);
+                info.checkedChannel = innerPosition;
+                bundle.putSerializable(MethodConst.ParamConst.deviceDetail, info);
                 Intent intent = new Intent(context, DeviceOnlineMediaPlayActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
     @Override
@@ -154,8 +181,10 @@ public class FragmentAddress extends BaseSearchFragment {
                     return;
                 }
 
-                datas.addAll(result.deviceList);
-                deviceListAdapter.notifyDataSetChanged();
+                //datas = result.deviceList;
+                listBean = result.deviceList.get(0);
+                channels = listBean.channels;
+                deviceListAdapter.setData(channels);
             }
         };
 

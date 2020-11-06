@@ -62,14 +62,14 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
             holder.vedioRV.addItemDecoration(decoration);*/
             MainVideoListAdapter channelListAdapter = new MainVideoListAdapter(mContext, datas.get(position).channels);
             holder.vedioRV.setAdapter(channelListAdapter);
-            channelListAdapter.setOnItemClickListener(new MainVideoListAdapter.OnChannelClickListener() {
+           /* channelListAdapter.setOnItemClickListener(new MainVideoListAdapter.OnChannelClickListener() {
                 @Override
                 public void onChannelClick(int channelPosition) {
                     if (onItemClickListener != null) {
                         onItemClickListener.onChannelClick(position, channelPosition);
                     }
                 }
-            });
+            });*/
         } else if (datas.get(position).channels.size() == 0){
             //多通道NVR,但是没有通道数
             //holder.ivDetail.setVisibility(View.VISIBLE);

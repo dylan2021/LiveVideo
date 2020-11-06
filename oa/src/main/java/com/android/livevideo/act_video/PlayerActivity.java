@@ -1,17 +1,15 @@
 package com.android.livevideo.act_video;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.android.livevideo.R;
+import com.android.livevideo.act_other.BaseFgActivity;
 import com.android.livevideo.core.utils.KeyConst;
 import com.dou361.ijkplayer.listener.OnPlayerBackListener;
 import com.dou361.ijkplayer.listener.OnShowThumbnailListener;
@@ -22,7 +20,7 @@ import com.dou361.ijkplayer.widget.PlayerView;
 /**
  * 描 述：点播全屏竖屏场景
  */
-public class PlayerActivity extends Activity {
+public class PlayerActivity extends BaseFgActivity {
 
     private PlayerView player;
     private Context mContext;
@@ -31,13 +29,13 @@ public class PlayerActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initStatusBar();
         this.mContext = this;
         rootView = getLayoutInflater().from(this).inflate(R.layout.simple_player_view_player, null);
         setContentView(rootView);
+        initTitleBackBt(getIntent().getStringExtra(KeyConst.title));
         Intent i = getIntent();
-        ((TextView) findViewById(R.id.app_title_tv)).setText(i.getStringExtra(KeyConst.title));
         String url = i.getStringExtra(KeyConst.url);
-        Log.d("播放", "播放" + url);
         player = new PlayerView(this, rootView)
                 .setTitle(i.getStringExtra(KeyConst.title))
                 .setScaleType(PlayStateParams.fitparent)

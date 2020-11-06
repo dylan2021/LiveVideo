@@ -2,11 +2,13 @@ package com.lechange.demo.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -24,11 +26,13 @@ import java.util.List;
 
 public class MainVideoListAdapter extends RecyclerView.Adapter<MainVideoListAdapter.ChannelHolder> {
     private Context mContext;
-    private List<DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean> datas;
+    private List<DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean> list;
+    private final Drawable picDef;
 
-    public MainVideoListAdapter(Context mContext, List<DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean> datas) {
+    public MainVideoListAdapter(Context mContext, List<DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean> list) {
         this.mContext = mContext;
-        this.datas = datas;
+        this.list = list;
+        picDef = mContext.getDrawable(R.mipmap.lc_video_def_bg);
     }
 
     @NonNull
@@ -40,52 +44,70 @@ public class MainVideoListAdapter extends RecyclerView.Adapter<MainVideoListAdap
 
     @Override
     public void onBindViewHolder(@NonNull final ChannelHolder holder, final int position) {
-        if ("online".equals(datas.get(position).status)) {
+        String status = list.get(position).status;
+        if ("online".equals(status)) {
             holder.ivPlay.setVisibility(View.VISIBLE);
             holder.rlOffline.setVisibility(View.GONE);
         } else {
             holder.ivPlay.setVisibility(View.GONE);
             holder.rlOffline.setVisibility(View.VISIBLE);
         }
-        holder.tvName.setText(datas.get(position).channelName);
-        //获取设备缓存信息
-        DeviceLocalCacheData deviceLocalCacheData = new DeviceLocalCacheData();
-        deviceLocalCacheData.setDeviceId(datas.get(position).deviceId);
-        deviceLocalCacheData.setChannelId(datas.get(position).channelId);
-        DeviceLocalCacheService deviceLocalCacheService = ClassInstanceManager.newInstance().getDeviceLocalCacheService();
-        deviceLocalCacheService.findLocalCache(deviceLocalCacheData, new IGetDeviceInfoCallBack.IDeviceCacheCallBack() {
-            @Override
-            public void deviceCache(DeviceLocalCacheData deviceLocalCacheData) {
-                BitmapDrawable bitmapDrawable = MediaPlayHelper.picDrawable(deviceLocalCacheData.getPicPath());
-                if (bitmapDrawable != null) {
-                    holder.ivBg.setImageDrawable(bitmapDrawable);
-                } else {
-                    holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_video_def_bg));
+        if (list != null) {
+            holder.tvName.setText(list.get(position).channelName);
+            //获取设备缓存信息
+            DeviceLocalCacheData deviceLocalCacheData = new DeviceLocalCacheData();
+            deviceLocalCacheData.setDeviceId(list.get(position).deviceId);
+            deviceLocalCacheData.setChannelId(list.get(position).channelId);
+            DeviceLocalCacheService deviceLocalCacheService = ClassInstanceManager.newInstance().getDeviceLocalCacheService();
+            deviceLocalCacheService.findLocalCache(deviceLocalCacheData, new IGetDeviceInfoCallBack.IDeviceCacheCallBack() {
+                @Override
+                public void deviceCache(DeviceLocalCacheData deviceLocalCacheData) {
+                    String picPath = deviceLocalCacheData.getPicPath();
+                    BitmapDrawable bitmapDrawable = MediaPlayHelper.picDrawable(picPath);
+                    if (bitmapDrawable != null) {
+                        holder.ivBg.setBackground(bitmapDrawable);
+                    } else {
+                        holder.ivBg.setImageDrawable(picDef);
+                    }
                 }
-            }
 
-            @Override
-            public void onError(Throwable throwable) {
-                holder.ivBg.setImageDrawable(mContext.getDrawable(R.mipmap.lc_video_def_bg));
-            }
-        });
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (onChannelClickListener != null) {
-                    onChannelClickListener.onChannelClick(position);
+                @Override
+                public void onError(Throwable throwable) {
+                    holder.ivBg.setImageDrawable(picDef);
                 }
-            }
-        });
+            });
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onChannelClickListener != null) {
+                        onChannelClickListener.onChannelClick(position,false);
+                    }
+                }
+            });
+            holder.simple_play_bt.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onChannelClickListener != null) {
+                        onChannelClickListener.onChannelClick(position,true);
+                    }
+                }
+            });
+        }
     }
 
     @Override
     public int getItemCount() {
-        return datas == null ? 0 : datas.size();
+        return list == null ? 0 : list.size();
+    }
+
+    public void setData(List<DeviceDetailListData.ResponseData.DeviceListBean.ChannelsBean> channels) {
+        list=channels;
+        notifyDataSetChanged();
     }
 
     static class ChannelHolder extends RecyclerView.ViewHolder {
         ImageView ivBg;
+        Button simple_play_bt;
         RelativeLayout rlOffline;
         TextView tvOffline;
         ImageView ivPlay;
@@ -100,13 +122,14 @@ public class MainVideoListAdapter extends RecyclerView.Adapter<MainVideoListAdap
             ivPlay = itemView.findViewById(R.id.iv_play);
             rlDetail = itemView.findViewById(R.id.rl_detail);
             tvName = itemView.findViewById(R.id.tv_name);
+            simple_play_bt = itemView.findViewById(R.id.simple_play_bt);
         }
     }
 
     private OnChannelClickListener onChannelClickListener;
 
     public interface OnChannelClickListener {
-        void onChannelClick(int position);
+        void onChannelClick(int position,boolean isSimplePlay);
     }
 
     public void setOnItemClickListener(OnChannelClickListener onChannelClickListener) {

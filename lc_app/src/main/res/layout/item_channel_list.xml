@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-    android:layout_height="@dimen/px_337">
+    android:layout_height="@dimen/px_337"
+    android:layout_marginTop="@dimen/dp_10">
 
     <RelativeLayout
         android:id="@+id/rl_detail"
@@ -14,11 +14,10 @@
 
         <ImageView
             android:id="@+id/iv_bg"
-            android:layout_width="@dimen/px_600"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
             android:background="@color/c2"
-            ></ImageView>
+            android:scaleType="centerCrop"></ImageView>
 
         <ImageView
             android:id="@+id/iv_play"
@@ -49,10 +48,20 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/px_15"
-            android:layout_marginBottom="@dimen/px_15"
+            android:layout_marginTop="@dimen/px_15"
             android:textColor="@color/lc_demo_color_ffffff"
             android:textSize="@dimen/px_30"></TextView>
+
+        <Button
+            android:id="@+id/simple_play_bt"
+            android:layout_width="wrap_content"
+            android:text="精简播放"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/px_50"
+            android:textColor="#666666"
+            android:textSize="@dimen/px_28"></Button>
     </RelativeLayout>
 </LinearLayout>
