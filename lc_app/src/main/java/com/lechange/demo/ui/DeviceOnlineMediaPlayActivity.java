@@ -798,7 +798,8 @@ public class DeviceOnlineMediaPlayActivity extends AppCompatActivity implements 
                 Integer.parseInt(deviceListBean.channels.get(deviceListBean.checkedChannel).channelId),
                 psk,
                 deviceListBean.playToken,
-                videoMode == VideoMode.MODE_HD ? 0 : 1,
+               // videoMode == VideoMode.MODE_HD ? 0 : 1,//升级sdk后,改成这个
+                videoMode == VideoMode.MODE_HD ? 1 : 1,
                 true
         );
         mPlayWin.playRtspReal(paramReal);

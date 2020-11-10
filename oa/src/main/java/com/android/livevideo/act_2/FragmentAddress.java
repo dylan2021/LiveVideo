@@ -89,15 +89,15 @@ public class FragmentAddress extends BaseSearchFragment {
                 Intent intent = new Intent();
                 Bundle bundle = new Bundle();
                 if (SPUtils.isSimpleType(context)) {
+                    intent.setClass(context, DeviceOnlineMediaPlayActivity.class);
+                    listBean.checkedChannel = position;
+                    bundle.putSerializable(MethodConst.ParamConst.deviceDetail, listBean);
+                } else {
                     intent.setClass(context, PlayerActivity.class);
                     bundle.putSerializable(KeyConst.OBJ_INFO, (Serializable) null);
                     intent.putExtra(KeyConst.id, channelsInfo.channelId);
                     intent.putExtra(KeyConst.url, channelsInfo.cameraLive);
                     intent.putExtra(KeyConst.title, channelsInfo.channelName);
-                } else {
-                    intent.setClass(context, DeviceOnlineMediaPlayActivity.class);
-                    listBean.checkedChannel = position;
-                    bundle.putSerializable(MethodConst.ParamConst.deviceDetail, listBean);
                 }
 
                 intent.putExtras(bundle);

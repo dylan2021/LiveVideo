@@ -377,8 +377,8 @@ public class Utils {
 
     public static int getStatusColor(Context context, int status) {
         int[] statusColorArr = {R.color.status_waiting, R.color.status_auditing,
-                R.color.status_rejuct, R.color.status_passed,
-                R.color.status_rejuct, R.color.status_back, R.color.status_deleted};
+                R.color.e15a57, R.color.status_rejuct,
+                R.color.warnig_yellow, R.color.status_back, R.color.status_deleted};
         return ContextCompat.getColor(context,
                 (status > statusColorArr.length - 1 ? statusColorArr[0] : statusColorArr[status]));
     }
@@ -392,8 +392,8 @@ public class Utils {
 
     public static String getStatusText(int status) {
         String[] statusArr = {"未检测", "正常", "开裂",
-                "鼓起", "", ""};
-        return status > statusArr.length - 1 ? "检测问题" : statusArr[status];
+                "鼓起", "钢筋外露", ""};
+        return status > statusArr.length - 1 ? "其他" : statusArr[status];
     }
 
     public static String getObjDouble(JsonObject object, String key) {

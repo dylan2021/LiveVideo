@@ -41,7 +41,7 @@
             android:layout_centerVertical="true"
             android:drawableRight="@drawable/ic_next"
             android:drawablePadding="@dimen/dm010"
-            android:text="公共流模式" />
+            android:text="私有流模式" />
 
     </RelativeLayout>
 

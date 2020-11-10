@@ -148,7 +148,7 @@ public class SysSettingsActivity extends BaseFgActivity {
         content = null;
     }
 
-    private String[] playArr = {"公共流模式", "私有流模式"};
+    private String[] playArr = {"私有流模式","公共流模式"};
 
     public void onPlayTypeClick(View v) {
         new MaterialDialog.Builder(this)
