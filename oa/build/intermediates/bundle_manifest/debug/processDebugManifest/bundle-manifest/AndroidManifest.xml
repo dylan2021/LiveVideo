@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.livevideo"
-    android:versionCode="1007"
-    android:versionName="1.0.7" >
+    android:versionCode="2202"
+    android:versionName="2.2.02" >
 
     <uses-sdk
         android:maxSdkVersion="23"
-        android:minSdkVersion="19"
+        android:minSdkVersion="21"
         android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -40,16 +40,26 @@
     <permission
         android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.android.livevideo"
         android:protectionLevel="normal" />
-    <!-- 百度推送权限 end -->
 
-    <uses-feature
-        android:name="android.hardware.bluetooth_le"
-        android:required="false" />
+    <!-- 程序可以读取设备外部存储空间(内置SDcard和外置SDCard)的文件，我的文件等 -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" /> <!-- 允许程序请求验证从AccountManager？？？ -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" /> <!-- 允许改变WiFi多播状态？？？ -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 允许程序显示系统窗口，应该已经不适用了？？？ -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序访问摄像头进行拍照，二维码扫描补光、拍照上传图片等 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 允许访问闪光灯，二维码扫描补光 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 允许程序改变WiFi状态，配网等 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
 
     <meta-data
         android:name="android.support.VERSION"
-        android:value="26.0.0-alpha1" />
-
+        android:value="26.0.0-alpha1" /> <!-- 百度推送权限 end -->
+    <!--
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+    -->
     <application
         android:name="com.android.livevideo.App"
         android:allowBackup="false"
@@ -57,7 +67,6 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/appName"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/theme_appcompat" >
         <activity android:name="com.android.livevideo.act_video.VideoListActivity" />
         <activity
@@ -165,9 +174,119 @@
         </provider>
         <!-- 调用相机 -->
 
+        <activity
+            android:name="com.lechange.demo.ui.EnvGuideActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.lechange.demo.ui.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.lechange.demo.ui.DeviceDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.lechange.demo.ui.DeviceOnlineMediaPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.lechange.demo.ui.DeviceRecordListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.lechange.demo.ui.DeviceRecordPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name="com.mm.android.deviceaddmodule.services.TimeFilterService" />
+
+        <receiver android:name="com.mm.android.deviceaddmodule.receiver.SucceedClickReceiver" />
+        <receiver android:name="com.mm.android.deviceaddmodule.receiver.TimeoutClickReceiver" />
+
+        <activity
+            android:name="com.mm.android.deviceaddmodule.DeviceAddActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:label="@string/mobile_common_device"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.mm.android.deviceaddmodule.device_wifi.DeviceWifiListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.mm.android.deviceaddmodule.device_wifi.DeviceWifiPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.mm.android.deviceaddmodule.device_wifi.ErrorTipActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.mm.android.deviceaddmodule.device_wifi.HiddenWifiActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <service android:name="com.mm.android.deviceaddmodule.SeachDeviceService" />
+
+        <meta-data
+            android:name="meta-data4type"
+            android:value="@string/client_type" />
+        <meta-data
+            android:name="meta-data4host"
+            android:value="@string/host" />
+        <meta-data
+            android:name="meta-ishttps"
+            android:value="false" />
+
+        <activity
+            android:name="com.mm.android.deviceaddmodule.mobilecommon.base.ProgressActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent" />
+
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.1.0" />
+
+        <activity
+            android:name="com.zxing.qrcode.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

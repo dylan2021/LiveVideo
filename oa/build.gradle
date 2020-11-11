@@ -29,8 +29,8 @@ android {
         applicationId "com.android.livevideo"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 2200
-        versionName "2.2.0"
+        versionCode 2202
+        versionName "2.2.02"
         ndk {
             //moduleName "Crc8Jni"
             abiFilters "armeabi","arm64-v8a"

@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DeviceAddModule/DeviceAddModule.iml" filepath="$PROJECT_DIR$/DeviceAddModule/DeviceAddModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/LiveVideo.iml" filepath="$PROJECT_DIR$/LiveVideo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imglib/imglib.iml" filepath="$PROJECT_DIR$/imglib/imglib.iml" />
       <module fileurl="file://$PROJECT_DIR$/jjdxm-ijkplayer/jjdxm-ijkplayer.iml" filepath="$PROJECT_DIR$/jjdxm-ijkplayer/jjdxm-ijkplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lc_app/lc_app.iml" filepath="$PROJECT_DIR$/lc_app/lc_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/oa/oa.iml" filepath="$PROJECT_DIR$/oa/oa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/third-zxing/third-zxing.iml" filepath="$PROJECT_DIR$/third-zxing/third-zxing.iml" />
     </modules>
   </component>
 </project>

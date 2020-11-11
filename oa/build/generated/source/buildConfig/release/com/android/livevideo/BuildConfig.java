@@ -8,8 +8,8 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.android.livevideo";
   public static final String BUILD_TYPE = "release";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 1007;
-  public static final String VERSION_NAME = "1.0.7";
+  public static final int VERSION_CODE = 2201;
+  public static final String VERSION_NAME = "2.2.01";
   // Fields from build type: release
   public static final boolean LOG_DEBUG = true;
 }

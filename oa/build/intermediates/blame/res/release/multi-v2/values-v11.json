@@ -4,26 +4,7 @@
             "outputFile": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\eccf55fba6ea1b18ce43505b89ceb222\\core-0.9.1.0\\res\\values-v11\\values-v11.xml",
-                    "from": {
-                        "startLines": "2,19",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,1094",
-                        "endLines": "18,35",
-                        "endColumns": "12,12",
-                        "endOffsets": "1089,2110"
-                    },
-                    "to": {
-                        "startLines": "80,97",
-                        "startColumns": "4,4",
-                        "startOffsets": "5639,6678",
-                        "endLines": "96,113",
-                        "endColumns": "12,12",
-                        "endOffsets": "6673,7694"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\899b8389eb97a31634fdce923efc2df7\\appcompat-v7-26.1.0\\res\\values-v11\\values-v11.xml",
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\87e5eaf881b41e678cb044b0b8c72542\\appcompat-v7-26.1.0\\res\\values-v11\\values-v11.xml",
                     "from": {
                         "startLines": "2,8,14,20,26,32,38,39,43,47,48,52,56,57,61,66,71,76,78,80,81,82,136,191",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -39,6 +20,25 @@
                         "endLines": "7,13,19,25,31,37,38,42,46,47,51,55,56,60,65,70,75,77,79,114,115,169,224,225",
                         "endColumns": "12,12,12,12,12,12,88,12,12,100,12,12,102,12,12,12,12,12,12,70,82,12,12,90",
                         "endOffsets": "469,894,1322,1748,2175,2600,2689,2935,3184,3285,3537,3792,3895,4148,4556,4976,5398,5505,5634,7765,7848,11873,16041,16132"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\06ee079321b6e3b6e246af1a895deeb2\\core-0.9.1.0\\res\\values-v11\\values-v11.xml",
+                    "from": {
+                        "startLines": "2,19",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,1094",
+                        "endLines": "18,35",
+                        "endColumns": "12,12",
+                        "endOffsets": "1089,2110"
+                    },
+                    "to": {
+                        "startLines": "80,97",
+                        "startColumns": "4,4",
+                        "startOffsets": "5639,6678",
+                        "endLines": "96,113",
+                        "endColumns": "12,12",
+                        "endOffsets": "6673,7694"
                     }
                 }
             ]

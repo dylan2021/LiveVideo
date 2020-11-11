@@ -4,24 +4,7 @@
             "outputFile": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn-rMN\\values-mn-rMN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\8cf60bf748685cf1d9dbb6251e04231c\\play-services-basement-8.4.0\\res\\values-mn-rMN\\common_strings.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "170",
-                        "endColumns": "259",
-                        "endOffsets": "425"
-                    },
-                    "to": {
-                        "startLines": "19",
-                        "startColumns": "4",
-                        "startOffsets": "2853",
-                        "endColumns": "255",
-                        "endOffsets": "3104"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\7d098fc9fc987bf545f875ff8f35133a\\play-services-base-8.4.0\\res\\values-mn-rMN\\base_strings.xml",
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\523fd9e73b37a9a1010a535a59a38cc8\\play-services-base-8.4.0\\res\\values-mn-rMN\\base_strings.xml",
                     "from": {
                         "startLines": "24,10,9,8,7,5,6,4,19,18,17,16,3,28,27,26,25,21,20,22,12,11,15,14,13,23,29,30",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,6 +18,23 @@
                         "startOffsets": "105,390,525,714,848,977,1185,1393,1521,1707,1829,2002,2124,2259,2422,2556,2727,3109,3389,3514,3623,3815,3946,4146,4285,4483,4573,4665",
                         "endColumns": "284,134,188,133,128,207,207,127,185,121,172,121,134,162,133,170,125,279,124,108,191,130,199,138,197,89,91,106",
                         "endOffsets": "385,520,709,843,972,1180,1388,1516,1702,1824,1997,2119,2254,2417,2551,2722,2848,3384,3509,3618,3810,3941,4141,4280,4478,4568,4660,4767"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\4658660c083feece9af895d1136e770e\\play-services-basement-8.4.0\\res\\values-mn-rMN\\common_strings.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "170",
+                        "endColumns": "259",
+                        "endOffsets": "425"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "2853",
+                        "endColumns": "255",
+                        "endOffsets": "3104"
                     }
                 }
             ]

@@ -4,7 +4,7 @@
             "outputFile": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-kn-rIN\\values-kn-rIN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\7d098fc9fc987bf545f875ff8f35133a\\play-services-base-8.4.0\\res\\values-kn-rIN\\base_strings.xml",
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\523fd9e73b37a9a1010a535a59a38cc8\\play-services-base-8.4.0\\res\\values-kn-rIN\\base_strings.xml",
                     "from": {
                         "startLines": "24,10,9,8,7,5,6,4,19,18,17,16,3,28,27,26,25,21,20,22,12,11,15,14,13,23,29,30",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\8cf60bf748685cf1d9dbb6251e04231c\\play-services-basement-8.4.0\\res\\values-kn-rIN\\common_strings.xml",
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\4658660c083feece9af895d1136e770e\\play-services-basement-8.4.0\\res\\values-kn-rIN\\common_strings.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",

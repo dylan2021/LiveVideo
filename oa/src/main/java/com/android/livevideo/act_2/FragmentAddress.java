@@ -181,7 +181,12 @@ public class FragmentAddress extends BaseSearchFragment {
                 }
 
                 //datas = result.deviceList;
-                listBean = result.deviceList.get(0);
+                List<DeviceDetailListData.ResponseData.DeviceListBean> deviceList = result.deviceList;
+                if (deviceList==null) {
+                    ToastUtil.show(context, "暂无数据,稍后重试");
+                    return;
+                }
+                listBean = deviceList.get(0);
                 channels = listBean.channels;
                 deviceListAdapter.setData(channels);
             }

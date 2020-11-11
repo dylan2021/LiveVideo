@@ -4,24 +4,7 @@
             "outputFile": "C:\\Projects_LiveVideo\\LiveVideo\\oa\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-gl-rES\\values-gl-rES.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\8cf60bf748685cf1d9dbb6251e04231c\\play-services-basement-8.4.0\\res\\values-gl-rES\\common_strings.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "170",
-                        "endColumns": "255",
-                        "endOffsets": "421"
-                    },
-                    "to": {
-                        "startLines": "19",
-                        "startColumns": "4",
-                        "startOffsets": "2962",
-                        "endColumns": "251",
-                        "endOffsets": "3209"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\7d098fc9fc987bf545f875ff8f35133a\\play-services-base-8.4.0\\res\\values-gl-rES\\base_strings.xml",
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\523fd9e73b37a9a1010a535a59a38cc8\\play-services-base-8.4.0\\res\\values-gl-rES\\base_strings.xml",
                     "from": {
                         "startLines": "24,10,9,8,7,5,6,4,19,18,17,16,3,28,27,26,25,21,20,22,12,11,15,14,13,23,29,30",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,6 +18,23 @@
                         "startOffsets": "105,381,513,708,839,974,1195,1415,1549,1731,1853,2048,2181,2320,2492,2622,2816,3214,3481,3608,3719,3919,4056,4280,4421,4603,4699,4798",
                         "endColumns": "275,131,194,130,134,220,219,133,181,121,194,132,138,171,129,193,145,266,126,110,199,136,223,140,181,95,98,114",
                         "endOffsets": "376,508,703,834,969,1190,1410,1544,1726,1848,2043,2176,2315,2487,2617,2811,2957,3476,3603,3714,3914,4051,4275,4416,4598,4694,4793,4908"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\futur\\.gradle\\caches\\transforms-2\\files-2.1\\4658660c083feece9af895d1136e770e\\play-services-basement-8.4.0\\res\\values-gl-rES\\common_strings.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "170",
+                        "endColumns": "255",
+                        "endOffsets": "421"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "2962",
+                        "endColumns": "251",
+                        "endOffsets": "3209"
                     }
                 }
             ]
